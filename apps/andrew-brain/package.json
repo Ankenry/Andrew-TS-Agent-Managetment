@@ -10,8 +10,11 @@
     "dev": "vite --host 127.0.0.1 --port 5191 --strictPort",
     "api": "node server/index.mjs",
     "build": "tsc --noEmit && vite build",
-    "test": "node --test tests/reader.test.mjs",
-    "test:browser": "playwright test"
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "desktop": "/usr/bin/python3 desktop/andrew_brain.py",
+    "desktop:install": "node desktop/install.mjs",
+    "test:desktop": "/usr/bin/python3 -m unittest discover -s desktop -p 'test_*.py'"
   },
   "dependencies": {
     "react": "19.3.1",

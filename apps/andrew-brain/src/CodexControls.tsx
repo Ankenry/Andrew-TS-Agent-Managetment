@@ -1,0 +1,31 @@
+import {useEffect,useRef,useState} from 'react';
+import {Shield,ChevronDown,RefreshCw,Zap} from 'lucide-react';
+type Binding={agentId:string;incarnationId:string;worktreeId:string};
+type Pending={id:string;action:string;value:string;state:string};
+type Settings={supported:boolean;models:{id:string;name:string;fast:boolean}[];permissions:{id:string;name:string}[];runtime:{model?:string|null;permission?:string|null;serviceTier?:string|null};pending:Pending[];message?:string};
+type Props={id:string|null;binding:Binding|null;intent:string;connected:boolean;idle:boolean;observedModel?:string;observedTier?:string|null;observedPermission?:string|null;onBlocked:(value:boolean)=>void};
+export default function CodexControls({id,binding,intent,connected,idle,observedModel,observedTier,observedPermission,onBlocked}:Props){
+ const [settings,setSettings]=useState<Settings|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState(''),[revision,setRevision]=useState(0);const lock=useRef(false),selected=useRef(id),hadPending=useRef(false);
+ const headers={'X-Andrew-Intent':intent};
+ async function request(url:string,options:RequestInit={}){const r=await fetch(url,options);const data=await r.json();if(!r.ok)throw Error(data.error?.message||'Chưa đọc được cấu hình phiên.');return data;}
+ function apply(data:Settings){const confirmed=hadPending.current&&!data.pending?.length;hadPending.current=!!data.pending?.length;setSettings(data);if(confirmed)setNotice('Codex đã xác nhận cấu hình.');}
+ async function refresh(signal?:AbortSignal){if(!id||!binding)return;const data=await request('/api/workspace/chat/settings?'+new URLSearchParams({id,...binding}),{headers,signal});if(selected.current===id)apply(data);}
+ useEffect(()=>{if(selected.current!==id)hadPending.current=false;selected.current=id;setSettings(null);setError('');setNotice('');if(!id||!binding)return;const abort=new AbortController();void refresh(abort.signal).catch(e=>{if(e.name!=='AbortError')setError('Chưa đọc được cấu hình phiên. Bấm tải lại để thử lại.');});return()=>abort.abort();},[id,intent,revision,observedModel,observedTier,observedPermission]);
+ const pending=settings?.pending||[],waiting=pending.length>0,blocked=busy||pending.some(p=>p.action==='permission'||p.state==='sending'||p.state==='unconfirmed');
+ useEffect(()=>{onBlocked(blocked);return()=>onBlocked(false);},[blocked,onBlocked]);
+ useEffect(()=>{if(!waiting||!id)return;let attempts=0;const timer=setInterval(()=>{if(++attempts>8){clearInterval(timer);return;}void refresh().catch(()=>{});},2000);return()=>clearInterval(timer);},[waiting,id]);
+ async function change(action:string,value:string){if(!id||!binding||lock.current||!connected||!idle||waiting||!settings?.supported||!value)return;lock.current=true;setBusy(true);setError('');setNotice('');
+  try{const result=await request('/api/workspace/chat/settings',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({...binding,chatId:id,requestId:crypto.randomUUID(),action,value,confirm:true})});if(selected.current!==id)return;apply(result.settings);setNotice(result.settings.pending?.length?'Đã chuyển yêu cầu. Đang chờ Codex xác nhận.':'Codex đã xác nhận cấu hình.');}
+  catch(e){if(selected.current===id){setError((e as Error).message);await refresh().catch(()=>{});}}finally{lock.current=false;setBusy(false);}
+ }
+ async function acknowledge(){if(!id||!binding)return;setBusy(true);try{for(const p of pending)await request('/api/workspace/chat/settings/acknowledge',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({...binding,chatId:id,requestId:p.id})});await refresh();setNotice('Đã đối chiếu trong Orca. Giữ cấu hình quan sát được.');setError('');}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
+ const model=settings?.runtime.model||observedModel||'',permission=settings?(settings.runtime.permission||''):(observedPermission||''),tier=settings?.runtime.serviceTier||observedTier||'';
+ const disabled=!connected||!idle||!settings?.supported||busy||waiting;
+ const reason=!id?'Chọn phiên Codex trước.':!connected?'Kết nối lại hội thoại để đổi cấu hình.':!idle?'Chờ lượt trả lời hiện tại kết thúc.':settings?.message||'Đổi cấu hình cho phiên đang chọn.';
+ return <><div className="wm-codex-controls" aria-label="Cấu hình phiên Codex" title={reason}>
+  <label className="wm-control-select"><Shield size={13}/><span className="sr-only">Quyền của phiên</span><select aria-label="Quyền của phiên" value={permission} disabled={disabled} onChange={e=>void change('permission',e.target.value)}><option value="">Quyền: chưa rõ</option>{settings?.permissions.map(p=><option key={p.id} value={p.id}>{p.name}</option>)}</select><ChevronDown size={12}/></label>
+  <label className="wm-control-select wm-model-control"><span className="sr-only">Model của phiên</span><select aria-label="Model của phiên" value={model} disabled={disabled} onChange={e=>void change('model',e.target.value)}>{(!model||!settings?.models.some(m=>m.id===model))&&<option value={model}>{model||'Chọn model'}</option>}{settings?.models.map(m=><option key={m.id} value={m.id}>{m.name}</option>)}</select><ChevronDown size={12}/></label>
+  <label className="wm-control-select"><Zap size={13}/><span className="sr-only">Tốc độ của phiên</span><select aria-label="Tốc độ của phiên" value={tier==='default'?'standard':tier} disabled={disabled} onChange={e=>void change('speed',e.target.value)}><option value="">Fast: chưa rõ</option><option value="standard">Thường</option><option value="priority" disabled={!settings?.models.some(m=>m.id===model&&m.fast)}>Fast</option></select><ChevronDown size={12}/></label>
+ </div>{connected&&(error||notice||waiting)&&<div className={'wm-control-notice '+(error?'has-error':'')} role={error?'alert':'status'}><span>{error||notice||'Đang đối chiếu cấu hình với Codex.'}{pending.some(p=>p.action==='permission')?' Nếu Orca hỏi xác nhận quyền, hãy xác nhận tại đó.':''}</span><div><button type="button" disabled={busy||!id||!connected} onClick={()=>setRevision(v=>v+1)}><RefreshCw size={12}/>Tải lại cấu hình</button>{waiting&&<button type="button" disabled={busy} onClick={()=>void acknowledge()}>Đã kiểm tra trong Orca</button>}</div></div>}
+ </>;
+}

@@ -1,8 +1,33 @@
 # Andrew Brain — Second Brain và trợ lý theo nguồn
 
-## Trạng thái hiện tại — 06/11/2026
+## Trạng thái hiện tại — 10/11/2026
 
-App riêng `apps/andrew-brain`, bản build và API cùng origin `http://127.0.0.1:5191/`, do dedicated user service `andrew-brain.service` quản lý. Đọc/tìm/chọn nguồn là luồng thật; provider/model/credential vẫn OPEN, **AI chưa kết nối**. Không đồng nghĩa một trợ lý production đã hoạt động. User chọn card `sources` bằng chat “1”, sau đó yêu cầu DARK + developer; browser decision chưa được giả thành answer. Confirmation trong `.impeccable/planning/chat-confirmation.json` và surface brief.
+Andrew Brain có cửa sổ GTK/WebKit riêng mở từ icon desktop và bản web local tại `http://127.0.0.1:5191/`. Workspace chính gồm rail trái, thanh agent trên, checklist và chat giữa, folder/file phải; Thư viện Brain giữ luồng ghi chú phía dưới. Checklist lưu riêng, Brain và source project chỉ đọc. Chat Workspace dùng đúng phiên Codex local đang chạy trong Orca; trợ lý AI theo nguồn của Thư viện Brain vẫn chưa kết nối.
+
+## Luồng Workspace, chat và co giãn pane — 10/11/2026
+
+1. `src/App.tsx` đọc GET `/api/workspace` để lấy checklist, file được phép và metadata Orca trong đúng workspace. Không tự gửi prompt khi mở app/chọn agent.
+2. Focus ô Thêm công việc dùng viền amber liên tục quanh toàn bộ form, gồm icon và nút thêm. Input bên trong không có vòng outline riêng; keyboard focus vẫn hiện trên khung cha.
+3. `src/ResizablePanes.tsx` giữ nguyên hai section checklist và chat, đặt separator 9px ở giữa. Kéo trái/phải bằng pointer capture để thay đổi tỷ lệ, không remount chat hay gọi API agent. Thả chuột hoặc mất capture thì dừng kéo.
+4. Separator nhận Tab và có role/label/giá trị cho assistive technology. ←/→ đổi 1 điểm phần trăm, Shift đổi 10, Home/End tới giới hạn, Enter hoặc double-click đặt về tỷ lệ đều trong giới hạn hiện tại. Tỷ lệ chỉ nằm trong state cửa sổ.
+5. ResizeObserver cập nhật giới hạn khi cửa sổ đổi kích thước: checklist ít nhất 280px và chat 320px khi tổng phần pane đủ 600px; giới hạn chung 25–75%. Khi không đủ chỗ, giữ tỷ lệ đều và khóa kéo. Mobile 760px trở xuống ẩn separator, dùng các tab Công việc/Giao việc/Files như trước.
+6. Checklist POST `/api/workspace/tasks` thêm/đánh dấu task; DELETE cùng route nhận JSON `{id}` xóa đúng task sau khi người dùng bấm thùng rác bên cạnh nút đưa vào chat. Cả hai cần cùng Origin, JSON và intent; backend khóa/ghi nguyên tử, DELETE idempotent khi retry sau mất response, chỉ thay mảng tasks và giữ chat metadata. UI chờ kết quả rồi bỏ dòng/cập nhật đếm/thông báo; lỗi giữ task và chỉ rõ bấm thùng rác để thử xóa lại. Nút Tải lại checklist chỉ refresh và xóa lỗi hiển thị, không tự retry DELETE; pending khóa thao tác. Focus bàn phím chuyển sang task lân cận hoặc ô thêm việc. Chỉ cập nhật state app. Duyệt file GET `/api/workspace/file` giữ allowlist, chặn symlink/secrets và không ghi source.
+7. Chọn agent mở `/api/workspace/chat` và stream `/api/workspace/chat/events` với intent. Bridge kiểm terminal handle, incarnation, workspace và native Codex session của process đang chạy. Chỉ public user/assistant messages, commentary và activity được đưa vào UI; loại private reasoning/system/developer/tool logs/subagent sessions.
+8. Submit rõ ràng gửi qua Orca CLI vào đúng terminal. Chiều nhận đọc structured conversation của chính phiên Codex đó, không khởi tạo provider/harness mới. Request hashes/IDs/status chống gửi trùng qua restart, không sao chép transcript vào workspace state. Mất stream báo hoạt động chưa xác định, dừng thinking/timer; reconnect chỉ đọc tiếp cùng phiên, không gửi lại prompt.
+
+Kiểm chứng refinement dùng fixture riêng: viền focus cha/input, kéo và nhả chuột, giới hạn, keyboard reset, resize desktop và mobile, không gọi agent thật. Các kiểm tra native chat vẫn bao phủ thinking/phản hồi/reconnect. Smoke GTK/WebKit dùng adapter synthetic; screenshots tại `apps/andrew-brain/.impeccable/review/refinement-*.png`.
+
+## Đổi tên và điều khiển cấu hình phiên — 10/11/2026
+
+`AgentPicker.tsx` có chuột phải/Shift+F10 → Edit tên phiên và bút chì. POST `/api/workspace/agents/name` kiểm Origin/intent và đúng live terminal incarnation/workspace, gọi Orca terminal rename qua stdin/in-memory CLI rồi lưu nhãn cục bộ theo binding. Tên không được dùng để chọn agent, native session ID và outbox/bản nháp không đổi khi rename.
+
+`codex-conversation.mjs` lọc thêm metadata token_count cho thanh Context ngay trên composer: last_token_usage.total_tokens/model_context_window, thời gian native sample; compact/model-change xóa mẫu cũ. Unknown và mất nguồn không thành số 0 hoặc tiến độ hoàn thành.
+
+`CodexControls.tsx` đặt ba select quyền/model/tốc độ dưới textarea. GET `/api/workspace/chat/settings` cần intent và verified chat ID/binding; `codex-controls.mjs` kiểm native version/catalog và `codex-runtime.py` chỉ đọc row SQLite trùng ID/cwd/rollout_path, không đọc transcript/private text từ DB. POST cùng route nhận action/value whitelist, request ID và confirm rõ ràng; native turn phải idle và không còn prompt/config chưa đối chiếu. Gửi inline `/model`, `/model --speed=...`, `/permissions ...` qua Orca đúng terminal, không ghi config.toml hoặc resume thread vào harness khác.
+
+Ledger controlRequests giữ ID/digest/action/value/state riêng, không phát lại sau reconnect/restart; GET settings đối chiếu model/quyền với metadata, tier với native event. Pending permission/unconfirmed input khóa gửi chat; người dùng xử lý confirmation native trong Orca rồi tải lại. Nút Đã kiểm tra trong Orca chỉ ghi nhận người dùng đã đối chiếu, không đổi quyền hoặc trả lời native approval.
+
+## Luồng Thư viện Brain được giữ lại
 
 ## Mục tiêu và thao tác
 
@@ -12,23 +37,23 @@ Nút Tải lại nguồn đọc snapshot mới. Khi một note khác hash đang 
 
 ## Luồng và file
 
-1. `src/App.tsx`, `src/types.ts` gọi GET `/api/notes` qua cùng origin. Search debounce220ms; mỗi request có AbortController/generation, request cũ khi đổi filter/page bị bỏ.
-2. `server/index.mjs` nhận GET, kiểm Host/Origin loopback, gọi `server/brain-reader.mjs`; mọi phương thức ghi trả405. Không proxy các endpoint của TS Management hoặc provider.
+1. `src/BrainLibrary.tsx`, `src/types.ts` gọi GET `/api/notes` qua cùng origin. Search debounce220ms; mỗi request có AbortController/generation, request cũ khi đổi filter/page bị bỏ.
+2. `server/index.mjs` nhận GET, kiểm Host/Origin loopback, gọi `server/brain-reader.mjs`; các phương thức ghi của API ghi chú trả405. Không proxy các endpoint của TS Management hoặc provider.
 3. Reader đi qua8folder allowlist của `/home/avada/avada-brain`, bỏ README, dotfiles/private/secrets/credentials/auth/logs/sessions/memories/keys/tokens và symlinks. Frontmatter private/sensitive bị loại. Chỉ đọc file .md tối đa1MiB, lỗi một file làm `complete=false` kèm issues; không cắt source âm thầm.
 4. Frontmatter YAML safe parser lấy title/type/tags và warning. YAML lỗi vẫn trả nội dung gốc để đọc. Hash nguyên raw UTF-8, ID theo path, index revision theo các ID/hash. Cursor gắn query/filter/limit/revision; mismatch409.
 5. Ví dụ được nhận diện theo marker trong tên hoặc field example. `server/template-origin.json` chỉ chứa path/hash của2guide public và URL/commit template; bytes khớp mới là reference. Không coi mọi Markdown là note cá nhân hay khẳng định tác giả từ category.
 6. GET `/api/notes/:id?sourceHash=...` trả body/metadata và wikilinks có target duy nhất trong allowlist. SourceHash khác trả409; thiếu nguồn404. API không nhận arbitrary file path.
 7. ReactMarkdown+GFM không rawHTML; URL nguy hiểm không thành link, ảnh từ xa không tự tải. Code giữ nguyên nội dung, có cuộn ngang. Selection giữ ID/path/hash; source khác sau refresh/read được đánh dấu, không trộn câu trả lời giữa note.
-8. GET `/api/provider` chỉ trả configured=false và yêu cầu thiết lập. Không có POST chat, không inference, shell/action tool, training, ticket/Slack/Telegram, Hermes hoặc git sync.
+8. GET `/api/provider` chỉ trả configured=false và yêu cầu thiết lập. API trợ lý theo nguồn chưa có POST chat hay inference; chat Workspace là luồng riêng ở trên. Không tự training, gửi ticket/Slack/Telegram, dùng Hermes hoặc git sync.
 
 `src/styles.css` giữ dark tokens, density và focus state. Đường chạy thường dùng Node phục vụ `dist/` và `/api` ngay5191; Vite5191/API5190 chỉ còn là lựa chọn development khi đã dừng service riêng này. Config dự án và dependency/lock chỉ trong app. Không sửa root package, web/app, chrome-extension, controller/History/Analytics.
 
 ## Dữ liệu và quyền
 
 - Brain là nguồn đọc bên ngoài app, không bulk-copy vào repo. Chỉ local OS user có quyền đọc file; app không tạo account/PIN hoặc mở LAN. Đây không phải sandbox chống toàn bộ process cùng OS user.
-- Không source writes, không save note/rename/delete/commit/push. Selection/draft ở React memory, không localStorage/DB. App chỉ ghi artifacts build/test vào thư mục app/agent-artifacts được duyệt.
+- Không source writes, không save note/rename/delete/commit/push. Selection/draft ở React memory, không localStorage/DB. Ngoài artifacts build/test, Workspace ghi checklist và request metadata vào state app riêng, không ghi Brain.
 - Fixture mode chỉ trên server test có `BRAIN_FIXTURE=1`; UI gắn “Dữ liệu minh họa”. Captures không dùng notes thật.
-- Git history brain giữ main395f784ad16385670e7d98ed30bbe9a777f5ecb3 và backupbranch local-initial-20261105. Runtime không gọi Git.
+- Git history brain giữ main395f784ad16385670e7d98ed30bbe9a777f5ecb3 và backupbranch local-initial-20261105. Luồng đọc Brain không gọi Git; cây file Workspace dùng Git chỉ đọc để liệt kê source.
 - Chuẩn bị provider thật là bước riêng: chốt provider/model/auth và no-action contract; secret server-only; smoke có duyệt. Không dùng auth Codex hiện có qua endpoint unsupported.
 
 ## Cài/chạy/dừng
@@ -62,3 +87,11 @@ BOM UTF-8 không che được private frontmatter; invalid UTF-8 bị loại v�
 HTTP200 index/JS/CSS/health/notes/search/detail; sourceHash của guide public khớp disk. Các đường source/doc/private trả404. Browser Chrome cô lập tại URL thật desktop1440 và mobile390 render đúng, đọc guide từ template, không console error/request failure/response4xx, không screenshot note riêng. AI chưa kết nối và nút gửi vẫn disabled. Hash17Markdown trong phạm vi baseline, brain HEAD/branch/status đối chiếu trước/sau. Chưa kiểm bằng reboot host thật; persistence được xác minh bằng enabled unit + user manager/cgroup + Restart policy, không giả nghiệm thu24/7.
 
 Evidence/backup: `runtime/agent-artifacts/brain-access-fix-20261106/`.
+
+## Thay đổi
+
+- 10/11/2026: Viền focus ô thêm việc khớp toàn khung; thêm separator kéo/co giãn checklist–chat và điều khiển bàn phím theo ảnh `Zmug4QPQxAnS`. Cập nhật mô tả Workspace và chat Codex local qua Orca hiện hành; luồng Thư viện Brain vẫn chỉ đọc.
+
+- 10/11/2026: Thêm nút thùng rác xóa từng task theo ảnh `k0YZwFY8LdiF`, endpoint DELETE có intent/Origin và ghi nguyên tử; kiểm thử chỉ dùng task fixture.
+
+- 10/11/2026: Thêm Edit/pencil đổi tên tab, context đã dùng/tổng trên composer, select quyền/model/Fast phía dưới input; binding/dedupe và native confirmation được giữ.

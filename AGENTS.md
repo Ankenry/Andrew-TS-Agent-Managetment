@@ -15,6 +15,14 @@
 - Do not repeat the greeting in later turns unless the user explicitly requests it.
 - When the user says to add something to the rules ("thêm vào rule"), the agent writes it into this file (`AGENTS.md`) so every later session of every agent applies it, in the section that fits, and reports the file and section it changed. It also saves a memory note so the session that received the order keeps the context behind the rule. Rule writing is the task of the agent Hanrul (see "Rule writing (Hanrul)"); when a Hanrul session is active, the user or Hanlead hands the order to it, otherwise the agent that received the order writes the rule itself.
 
+## Git publishing (user order, 2026-11-10)
+
+- In this workspace, treat "đẩy lên git", "đẩy code lên git", "push lên git" and equivalent requests as authorization to review changes, stage eligible project files, commit and push to `https://github.com/Ankenry/Andrew-TS-Agent-Managetment.git`. Use `origin` and `main` unless the user specifies another destination. Do not ask the user to repeat the repository or approve these routine steps again.
+- Verify the workspace root and remote before publishing. Keep this authorization scoped to `/home/avada/Andrew Tools CS-TS/Andrew TS Tools`; do not publish the TS Elite clone or another repository under it.
+- Respect `.gitignore` and inspect staged content for secrets. Exclude credentials, `.env` files, customer/runtime data, logs, databases, dependencies, caches and generated builds; preserve all local files.
+- Use a normal push and preserve existing history and unrelated work. This instruction does not authorize force pushes, history rewrites, deletions or permission changes.
+- After pushing, verify that the remote branch points to the intended local commit and report the branch and commit link. Run this workflow when the user requests a push; remembering this rule alone does not trigger publication.
+
 ## Hanlead session scope (user order, 2026-10-16)
 
 - In session `01a14173-ca17-7c91-b170-cf1f58f0cda1`, use the fixed name "Hanlead". This replaces the default Hachimi identity for this session only, including after resuming or compaction; do not rename other sessions.

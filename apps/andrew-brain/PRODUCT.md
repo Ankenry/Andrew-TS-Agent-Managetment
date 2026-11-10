@@ -4,11 +4,11 @@
 
 ## Platform
 
-web
+Linux desktop (GTK 3 + WebKitGTK), with the existing local web interface retained.
 
 ## Stack
 
-React + TypeScript + Vite, với Node API riêng. Đây là phương án Hanlead đề xuất và An/Andrew đã chọn bằng câu trả lời “phương án 1 đi”. App có boundary độc lập tại `apps/andrew-brain`; không dùng chung server hoặc sửa giao diện TS Management.
+React + TypeScript + Vite, với Node API riêng. Theo yêu cầu ngày 10/11/2026, bản desktop dùng GTK 3 + WebKitGTK, có icon dưới Home trên desktop và trong danh sách ứng dụng. Cửa sổ tự quản lý reader loopback riêng và không phụ thuộc service web. App có boundary độc lập tại `apps/andrew-brain`; không dùng chung server hoặc sửa giao diện TS Management.
 
 ## Users
 
@@ -16,7 +16,7 @@ Người dùng cá nhân: An, tên làm việc Andrew; Technical Support, team C
 
 ## Product Purpose
 
-Một ứng dụng Second Brain và trợ lý ảo cho Andrew: tập hợp cách truy cập ghi chú hiện có, tìm lại kiến thức, đọc nguồn và trao đổi dựa trên những nguồn được chọn. Lát cắt đầu tiên phục vụ tìm kiếm và đọc; chưa cấp quyền sửa ghi chú.
+Một ứng dụng Second Brain và workspace cá nhân cho Andrew: tìm và đọc ghi chú, quản lý checklist cục bộ, duyệt file project và chat hai chiều với phiên Codex local đang kết nối qua Orca trong đúng workspace. Bố cục năm vùng được người dùng chỉ định ngày 10/11/2026. Kho ghi chú và source project vẫn chỉ đọc; AI theo nguồn chưa được kết nối.
 
 ## Positioning
 
@@ -33,21 +33,26 @@ Giữ ghi chú Markdown trong brain cá nhân làm nguồn gốc. Người dùng
 
 ### Confirmed scope
 
+- Theo ảnh `https://capture.avada.io/i/g4MUCONkt8Ra`: rail Work Space trái, agent strip trên, checklist giữa trái, khung chỉ thị agent giữa phải và folder/file phải. Giữ thư viện Brain làm view phụ và giữ palette hiện có.
+- Checklist riêng được phép thêm và tick trong state app trên máy; không liên hệ Done/status Helpdesk hay sửa note.
+- File project chỉ được duyệt/preview trong phạm vi đã xác định, bỏ secrets/runtime/dependencies/build và không theo symlink.
+- Chat qua Orca chỉ gửi khi người dùng chọn agent và submit. Bind đúng terminal/process/workspace/native Codex session; không tạo agent hay tự gửi prompt. Đọc lịch sử và stream message công khai của đúng phiên đó; không đưa raw reasoning, system/developer messages hoặc tool logs vào UI. Hiển thị hoạt động thực và thời gian đang xử lý; input acceptance khác với hoàn thành. Kết nối lại không gửi lại; app chỉ lưu request hashes/IDs/status chống trùng, transcript vẫn thuộc Codex.
+
 - Dùng brain cá nhân hiện có; connector chỉ đọc ở giai đoạn đầu.
 - Notes/list, tìm kiếm và đọc nội dung; chọn nguồn để chuẩn bị trao đổi với trợ lý.
 - Trợ lý ảo là mục tiêu sản phẩm; câu trả lời phải phân biệt nội dung có nguồn, suy luận và phần chưa biết.
 - Provider chưa kết nối phải có trạng thái rõ. Không tạo câu trả lời giả hoặc tự ghi rằng người dùng đã chọn demo/UI-first.
 - Không tự chạy AI khi mở app, đọc note hoặc đổi nguồn. Không tự sửa note, sync Git, tạo task Helpdesk, gọi bot hoặc huấn luyện.
 - Không cài Hermes; không dùng adapter agent/action cũ như đường chat chỉ-thảo-luận khi chưa xác minh ràng buộc.
-- Không đọc/đưa vào UI private, secrets, `.env`, credentials, auth, logs, agent sessions/memories hoặc merchant notes làm dữ liệu mẫu. Ví dụ thiết kế là dữ liệu minh họa được ghi nhãn.
+- Không đọc/đưa vào UI private, secrets, `.env`, credentials, auth, logs, agent memories, raw reasoning hoặc merchant notes làm dữ liệu mẫu. Chat chỉ đọc public messages của phiên Codex do người dùng chọn theo binding đã xác minh. Ví dụ thiết kế là dữ liệu minh họa được ghi nhãn.
 - Không thay đổi TS Management, extension, các pipeline đang có, rules hoặc model/account/config của Codex.
 
 ### Open decisions
 
 - Provider, model, credential/auth supported và quyền dùng dữ liệu đã chọn cho AI ngoài máy chưa được chốt.
-- Chưa chọn UI-first hay kết nối AI thật ngay. Thiếu provider không cản slice đọc/tìm note; cũng không cho phép gọi một UI mock là AI thật.
-- Quyền tạo/sửa/đổi tên/xóa note và chính sách lưu hội thoại chưa được duyệt; mặc định scope hiện tại không ghi vào brain.
-- Cách sử dụng từ thiết bị khác, auth cho LAN/team hoặc đóng gói desktop không thuộc lựa chọn web local hiện tại.
+- AI theo nguồn của Thư viện Brain chưa chọn provider; chat Workspace dùng chính Codex local đang chạy trong Orca, không cấu hình một provider hay account mới.
+- Quyền tạo/sửa/đổi tên/xóa note và chính sách lưu hội thoại dài hạn chưa được duyệt. Checklist cục bộ và chỉ thị chủ động ở Workspace là phạm vi riêng đã yêu cầu ngày 10/11/2026; không ghi vào brain.
+- Cách sử dụng từ thiết bị khác và auth cho LAN/team chưa được chọn. Desktop Linux đã được người dùng yêu cầu ngày 10/11/2026; phạm vi là cài cho tài khoản hiện tại, không phải phát hành đa nền tảng.
 - Tên hiển thị “Andrew Brain” là tên làm việc từ boundary/brain, chưa phải cam kết thương hiệu chính thức.
 
 ## Evidence on Hand
@@ -68,3 +73,7 @@ Giữ ghi chú Markdown trong brain cá nhân làm nguồn gốc. Người dùng
 ## Brand Commitments
 
 Đại tá đã chọn hướng “Nguồn cạnh câu hỏi” (sources) qua chat bằng câu trả lời “1”. Dark là mặc định của bản đầu; developer-oriented nghĩa là gọn, hierarchy rõ, panels theo nhiệm vụ, code/metadata monospace và keyboard/focus tốt. Không terminal giả, neon trang trí hoặc metric/provider status bịa.
+
+## Phiên Codex trong Workspace — 10/11/2026
+
+Người dùng có thể sửa tên tab Orca bằng edit/pencil mà giữ đúng terminal/session, nhìn token context đã dùng/tổng ngay trên composer và chọn quyền/model/Fast dưới input. Controls chỉ gửi khi người dùng chọn, bind lại đúng native source, dùng catalog local và metadata của đúng phiên; không khởi tạo agent hoặc sửa model/account/permissions toàn cục. Native permissions vẫn có thể yêu cầu người dùng xác nhận trong Orca. Phân biệt accepted, pending và confirmed; không có telemetry thì hiện unknown. Thư viện Brain theo nguồn vẫn chưa cấu hình AI.

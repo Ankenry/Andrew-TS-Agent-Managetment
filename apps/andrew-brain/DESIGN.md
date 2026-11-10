@@ -220,6 +220,8 @@ components:
 
 ## Overview
 
+The primary screen now follows the user's annotated workspace reference of 10 November 2026 (`https://capture.avada.io/i/g4MUCONkt8Ra`). It extends the existing green-charcoal/amber identity into five working regions. The original source-based Brain library remains a secondary view; the library and AI states documented below apply to that retained view.
+
 **Creative North Star: "Nguồn cạnh câu hỏi"**
 
 “Nguồn cạnh câu hỏi” is the confirmed direction for this personal web workspace. Its dark default combines green-charcoal task panels, warm amber selection and readable working text. Familiar table, reading and form controls express the developer-oriented brief without a simulated terminal or decorative neon.
@@ -280,7 +282,19 @@ The source uses a practical role-based ramp, not a fixed mathematical ratio. Des
 
 ## Layout
 
-The current desktop surface is a fixed viewport workspace: a 208px rail next to a flexible main region, with a 60px topbar. The remaining work grid pairs a flexible library/reader column with a 320px assistant. The shell uses `100dvh`, a 600px minimum height and contained overflow. The library sits above the reader with a 56% maximum height and 260px minimum height; its table scrolls independently. The reader and assistant have their own overflow regions. This is the current surface expression, not a mandate that every future screen repeat these columns.
+### Primary workspace board
+
+The desktop board uses a 192px workspace rail, a flexible middle region and a 288px file rail. A 76px connected-agent strip spans the middle and file rail. Under it, the central region defaults to equal checklist and agent chat panes, with a 9px draggable divider. Each pane scrolls within its viewport rather than scrolling the desktop. At 1800px and wider the rails are 208px and 308px; from 761–1200px they are 164px and 236px. At 760px and below the workspace becomes a 230px drawer, the agent strip remains horizontally scrollable, and a 46px tab bar selects Công việc, Giao việc or Files.
+
+Keep the five regions in these positions: they are the user's composition, not interchangeable cards. File preview is a tab in the instruction pane, so inspecting a file preserves the instruction draft. A task's arrow transfers its text to the draft; it does not submit it. The active agent is selected through a bordered connection chip or native select, bound to its current identity. The strip says connected rather than inventing busy/idle. The selected Codex chat shows native turn activity, public commentary and actual completion separately from connection status.
+
+The checklist heading uses 23px/600 (21px on compact desktop), area headings 14px/600 and chat tab headings 13px/600. Empty-state titles use 22px/500 or 18px/500; task prose is 13px at 1.6 line height, 14px on mobile. These compact additions use the incumbent Arial stack. Fine separators, muted panels, amber focus and checked states remain the visual grammar; no new visual world or raster art was introduced.
+
+The only selected mobile tab is in the tab sequence; Left/Right wrap, Home/End jump, and each tab controls its named panel. Agent and file controls retain text labels. Capture transitions after they settle; transitional selected colors are not the intended final state.
+
+### Retained Brain library
+
+The retained library is a fixed viewport surface: a 208px rail next to a flexible main region, with a 60px topbar. The remaining work grid pairs a flexible library/reader column with a 320px assistant. The shell uses `100dvh`, a 600px minimum height and contained overflow. The library sits above the reader with a 56% maximum height and 260px minimum height; its table scrolls independently. The reader and assistant have their own overflow regions.
 
 Library padding is 20px 26px 0; reader content is 25px 30px 48px; assistant padding is 26px 21px 20px. The reader toolbar is 48px high. Chosen sources have a 240px maximum-height scrolling region. Spacing is compact and role-specific: small gaps of 4–12px, working-region insets generally 17–30px. There is no universal four-pixel grid or generic card gutter in the code.
 
@@ -313,6 +327,8 @@ Controls and metadata use Lucide line icons rendered as SVG, not Unicode glyph s
 Compact and task-specific. Reader source actions use `button-small` and `button-small-selected`, carrying their label and check/link icon. Icon actions use a transparent default, `button-icon-hover`, and a minimum 32px target; selected-source removal and provider-settings controls reduce the target to 24px in their compact rows. These are observed dimensions, not a new universal accessibility target.
 
 The send control uses `button-send-disabled`, a one-pixel state border and a not-allowed cursor. It is disabled because AI is unconnected; no enabled primary-send variant exists to document. No speculative enabled, hover or active state should be inherited from this placeholder.
+
+This disabled send control belongs to the retained source-AI library. The workspace's separate **Gửi tin nhắn** button is enabled only with a freshly bound agent, non-empty text and no pending or uncertain send. Its enabled fill is incumbent amber with dark ink; disabled uses the existing muted green. Instruction receipts state acceptance explicitly and never present it as task completion. Checklist state is app-local and its footer distinguishes it from external ticket statuses.
 
 ### Chips and filters
 
@@ -363,3 +379,35 @@ Library, reader and selected-source empty states explain the next useful action 
 - **Don't** treat the superseded light concept sketch as color authority.
 
 Documentation evidence: [App.tsx](src/App.tsx), [styles.css](src/styles.css), all five existing desktop/mobile/offline captures in [.impeccable/review](.impeccable/review/), and the scoped [ship verdict](.impeccable/review/verdict-pass.md). The review accepted Arial for working UI; it is not promoted into an expressive display rule. Decorative brand microcopy is not canonized as a reusable eyebrow component. This documentation does not add a new UI audit or claim fresh browser validation.
+
+### Native Codex chat extension — 10 November 2026
+
+The chat connection line sits above the independent conversation scroller. Public messages use fine separators, a small author label and the incumbent sans prose; agent replies render safe Markdown and horizontally scrolling code. Public commentary carries a progress label. The bottom composer remains visible with agent selection, draft, character count, Ctrl+Enter hint and amber send. No new palette, raster artwork, display font or panel topology is introduced.
+
+A bordered tonal activity row carries a Lucide spinner, the native thinking/working/responding label, elapsed time and an explicit source description. Reduced motion removes spin; text and elapsed state remain. Private reasoning is never rendered. Completed, interrupted, missing reply and disconnected states have distinct text; retry reconnects the read stream and never resubmits a prompt. A native session change requires explicit reselection.
+
+Evidence: synthetic desktop/mobile thinking and answer captures `codex-*.png` in `.impeccable/review/` and actual WebKit smoke at `.runtime/desktop-smoke/native-window.png`. Incumbent Arial and type/color detector advisories are preserved; this ordinary extension does not repair unrelated design-system drift. The retained library source-AI remains unconnected independently of the working native agent chat.
+
+### Pane resizing and field focus — 10 November 2026
+
+User refinement reference: `https://capture.avada.io/i/Zmug4QPQxAnS`. The task field owns a continuous amber focus border/outline around its complete rounded frame; its inner input suppresses the separate focus outline. Other controls retain visible keyboard focus.
+
+A 9px separator with a centered grip sits between checklist and chat. Its thin rule carries the former pane boundary. Hover, keyboard focus and dragging emphasize the grip in incumbent amber. Pointer capture retains the gesture outside the grip; release or loss of capture restores text selection. The chat stays mounted while resizing. Keyboard arrows adjust 1 percentage point (Shift: 10); Home/End choose the available limits; Enter or double-click resets to equal preference.
+
+Ratios are clamped to keep 280px for checklist and 320px for chat where space permits, with an overall 25–75 percent range. Below 600px of combined pane space the divider is inactive and the default is equal; mobile hides it and retains tabs. ResizeObserver adapts bounds as the window changes. Ratio is window state, not a persisted preference or an agent command. No new tokens or visual world are introduced.
+
+### Checklist delete action — 10 November 2026
+
+The task row ends with a quiet Lucide Trash2 button immediately before the existing task-to-chat arrow, matching reference `https://capture.avada.io/i/k0YZwFY8LdiF`. It remains visible without hovering, has an explicit task-specific accessible name and tooltip, and uses the incumbent warm error colors on hover/focus. The desktop target is 32px and mobile is 40px; long task text wraps alongside the actions. Pending task updates disable deletion.
+
+Deletion waits for the server result before removing a row; failure retains it with an error explaining that the trash button retries deletion. Its separate Tải lại checklist control only refreshes the list and clears the error; it never claims to retry deletion. Success updates counts and announces completion. Keyboard focus goes to the neighboring delete action, or the add-task field when no visible row remains. This is an explicit per-task user action, not a bulk clear or agent command. Existing palette, panel topology, resizing and native chat remain unchanged.
+
+### Session identity and native composer controls — 10 November 2026
+
+References: `s1l4IFt4gGmF` adds Edit to the agent context menu; `y7qaXtU3zxZq` pins context above the composer and permission/model/Fast below the textarea. The five-region board and incumbent green/amber Arial system remain.
+
+An agent chip has a distinct pencil action at its trailing edge; right-click or Shift+F10 opens a one-item Edit menu. A compact anchored rename editor owns a label, text field, Save/Cancel, Escape/outside dismissal, saving and inline error. It avoids a nested button and preserves native selection/context. Names are explicit display metadata, never routing identity.
+
+The fixed context strip sits between the conversation scroller and composer, carrying native used/total tokens in mono and a restrained native progress element. Unknown/reset samples are literal text; disconnection labels the retained last sample. Compact permission/model/speed selects form the left side of the composer footer while Send stays at the right. At narrow widths controls wrap while the character count/shortcut moves to the next row. All controls keep labels, task-specific accessible names and amber focus.
+
+Observed current settings remain separate from pending requests. Native busy/disconnected or unsupported states disable changes; accepted-but-unconfirmed requests display progress and recovery, never a fabricated applied state. Permission prompts remain under the native client's approval mechanism; the app does not answer them. No palette/type tokens or decorative raster assets were added.

@@ -3,17 +3,20 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createReader, ReaderError } from './brain-reader.mjs';
+import {createWorkspaceApi} from './workspace-api.mjs';
 const appRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-export function createApp({root='/home/avada/avada-brain',fixture=false,uiPort=5191}={}) {
+export function createApp({root='/home/avada/avada-brain',fixture=false,uiPort=5191,workspaceRoot=path.resolve(appRoot,'../..'),workspaceStateFile,orca=null,worktreeId=null}={}) {
  const reader=createReader(root);
- return http.createServer(async(req,res)=>{
+ const workspace=createWorkspaceApi({root:workspaceRoot,stateFile:workspaceStateFile,orca,fixture,worktreeId});
+ const server=http.createServer(async(req,res)=>{
   const send=(status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(data));};
   const allowed=[`127.0.0.1:${req.socket.localPort}`,`localhost:${req.socket.localPort}`,`127.0.0.1:${uiPort}`,`localhost:${uiPort}`];
   if(!allowed.includes(req.headers.host||''))return send(403,{error:{code:'HOST_DENIED',message:'Host không được phép.'}});
   if(req.headers.origin&&!allowed.some(h=>req.headers.origin===`http://${h}`))return send(403,{error:{code:'ORIGIN_DENIED',message:'Origin không được phép.'}});
-  if(req.method!=='GET')return send(405,{error:{code:'READ_ONLY',message:'Ứng dụng chỉ đọc; không có endpoint ghi hoặc gọi AI.'}});
   try {
    const url=new URL(req.url,'http://localhost');
+   if(await workspace(req,url,send,res))return;
+   if(req.method!=='GET')return send(405,{error:{code:'READ_ONLY',message:'Kho ghi chú chỉ đọc; không có endpoint sửa note hoặc gọi AI.'}});
    if(url.pathname==='/api/health')return send(200,{ok:true,readOnly:true,dataset:fixture?'fixture':'local',providerConfigured:false});
    if(url.pathname==='/api/provider')return send(200,{configured:false,code:'PROVIDER_NOT_CONFIGURED',message:'Provider, model và quyền truy cập chưa được chọn. Chưa gửi ghi chú ra ngoài máy.',requirements:['Chọn provider có API chat không dùng action tools.','Cấu hình credential chỉ ở server, không gửi qua hội thoại.','Xác minh kết nối bằng một lượt thử được duyệt.']});
    if(url.pathname==='/api/notes'||url.pathname==='/api/search') {
@@ -27,6 +30,7 @@ export function createApp({root='/home/avada/avada-brain',fixture=false,uiPort=5
    res.writeHead(200,{'Content-Type':mime+'; charset=utf-8','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"});res.end(file);
   }catch(e){if(e instanceof ReaderError)return send(e.status,{error:{code:e.code,message:e.message}});return send(503,{error:{code:'READ_FAILED',message:'Chưa đọc được nguồn. Kiểm tra thư mục brain rồi thử lại.'}});}
  });
+ const close=server.close.bind(server);server.close=(...args)=>{workspace.close();return close(...args);};return server;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
  const port=Number(process.env.PORT||5190);const server=createApp({root:process.env.BRAIN_ROOT||'/home/avada/avada-brain',fixture:process.env.BRAIN_FIXTURE==='1',uiPort:Number(process.env.UI_PORT||5191)});
