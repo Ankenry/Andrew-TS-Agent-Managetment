@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bug ticket"
+  short_description: "Check bug, dùng MCP theo phạm vi ảnh hưởng"
+  default_prompt: "Dùng $check-ticket-bug: gửi một câu Check ticket tới TS Elite 2, dùng MCP Playwright nếu lỗi ảnh hưởng storefront/theme/layout, trả mã lỗi ngoài storefront hoặc block storefront không hiển thị; lỗi chỉ trong app không dùng MCP. Rút gọn ít nhất 30% theo format báo cáo, giữ đúng ý và code cần dùng, thêm quan sát browser riêng và không hỏi thêm."

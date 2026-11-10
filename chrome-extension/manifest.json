@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "TS Management",
+  "version": "1.4.9",
+  "description": "TS Management for Avada Helpdesk with AI ticket and issue review.",
+  "permissions": ["activeTab", "alarms", "nativeMessaging", "power", "scripting", "storage", "tabs"],
+  "host_permissions": ["https://helpdesk.avada.net/*", "https://ts2.avada.net/*", "http://127.0.0.1:39541/*", "http://127.0.0.1:39542/*", "http://127.0.0.1:39543/*", "http://127.0.0.1:5077/*", "http://127.0.0.1:5088/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://helpdesk.avada.net/*"],
+      "js": ["automatic-history.js", "analytics-view.js", "speech-player.js", "news-view.js", "han-auto-view.js", "widget.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/bigmouse2-rounded-128.png"],
+      "matches": ["https://helpdesk.avada.net/*"]
+    }
+  ],
+  "icons": {
+    "16": "icons/bigmouse2-rounded-16.png",
+    "32": "icons/bigmouse2-rounded-32.png",
+    "48": "icons/bigmouse2-rounded-48.png",
+    "128": "icons/bigmouse2-rounded-128.png"
+  },
+  "action": {
+    "default_title": "TS Management",
+    "default_icon": {
+      "16": "icons/bigmouse2-rounded-16.png",
+      "32": "icons/bigmouse2-rounded-32.png",
+      "48": "icons/bigmouse2-rounded-48.png",
+      "128": "icons/bigmouse2-rounded-128.png"
+    }
+  }
+}

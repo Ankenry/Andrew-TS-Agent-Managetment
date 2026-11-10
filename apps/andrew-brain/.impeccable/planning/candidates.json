@@ -1,0 +1,69 @@
+{
+  "status": "pre-roll, unselected",
+  "surfaceMode": "operate",
+  "candidates": [
+    {
+      "rank": 1,
+      "name": "Sổ bàn giao ca",
+      "family": "document/editorial",
+      "thesis": "Đọc một diễn biến theo ngày, giữ đoạn nguồn đang theo dõi và hỏi tiếp từ chính đoạn đó.",
+      "appearance": "Trắng, mực navy, nhãn ngày amber; sans UI, ngày rõ; dấu lề nguồn thay card KPI.",
+      "firstViewport": "Nhật ký theo ngày dẫn vào một note; lựa chọn nguồn nằm sát đoạn đọc; trợ lý mở thành vùng phụ khi cần.",
+      "risk": "Không để daily lấn át ghi chú tra cứu dài."
+    },
+    {
+      "rank": 2,
+      "name": "Chỉ mục từ điển kỹ thuật",
+      "family": "document/editorial",
+      "thesis": "Tìm từ khóa rồi mở đúng mục và đoạn dẫn, không phải duyệt dashboard.",
+      "appearance": "Trắng lạnh, cobalt, charcoal; sans workhorse, marker mục rõ.",
+      "firstViewport": "Ô tìm kiếm và danh mục chủ đề; danh sách excerpt; mục được mở thành trang đọc cùng trích dẫn chọn.",
+      "risk": "Không tự gán taxonomy công ty từ nội dung thiếu."
+    },
+    {
+      "rank": 3,
+      "name": "Hồ sơ quyết định",
+      "family": "document/editorial",
+      "thesis": "Đặt câu hỏi, lý do đã ghi và bằng chứng liên quan cạnh nhau.",
+      "appearance": "Ghi rất nhạt, forest, mực đen; nhãn trạng thái bằng chữ, dòng quy chiếu gọn.",
+      "firstViewport": "Vấn đề đang đọc và lý do, mục nguồn theo hàng; trợ lý hỏi phần còn thiếu.",
+      "risk": "Không ép mọi note thành một quyết định đã được xác nhận."
+    },
+    {
+      "rank": 4,
+      "name": "Tuyến tra cứu theo vấn đề",
+      "family": "information graphics",
+      "thesis": "Theo một đường đọc qua các wikilink thật để quay lại nguồn gốc câu trả lời.",
+      "appearance": "Trắng, xanh biển, teal; chữ UI, đường nối nhỏ có nhãn, không mạng não trang trí.",
+      "firstViewport": "Một tuyến nguồn và breadcrumb; tài liệu chính rộng, đoạn dẫn mở tại chỗ.",
+      "risk": "Quan hệ phải đến từ dữ liệu thật, không tự bịa graph."
+    },
+    {
+      "rank": 5,
+      "name": "Ma trận tình huống–nguồn",
+      "family": "information graphics",
+      "thesis": "Đối chiếu các nguồn trước khi tổng hợp một câu trả lời.",
+      "appearance": "Trắng, graphite, amber cho vùng chọn; bảng dễ quét, số chỉ khi có dữ liệu.",
+      "firstViewport": "Danh mục nguồn theo loại; chọn nguồn để đọc chéo và đưa vào câu hỏi.",
+      "risk": "Mobile phải thành list, không ép bảng rộng; không bịa giá trị cho ô trống."
+    },
+    {
+      "rank": 6,
+      "name": "Hệ chỉ dẫn kho tri thức",
+      "family": "classification/wayfinding",
+      "thesis": "Mọi đường đi đều cho biết đang ở đâu và quay về note gốc thế nào.",
+      "appearance": "Ghi sáng, plum/blue/green theo nhóm; sans humanist, nhãn và tab có nghĩa cùng màu.",
+      "firstViewport": "Nhóm tài liệu ngắn gọn, trang đọc rộng, mục lục và nguồn đang chọn rõ vị trí.",
+      "risk": "Không biến phân loại thành card-grid chung chung hoặc chỉ dựa màu."
+    },
+    {
+      "rank": 7,
+      "name": "Nhịp học theo mốc",
+      "family": "information graphics",
+      "thesis": "Xem điều đã ghi trước và sau, nối câu hỏi với thời điểm biết được điều đó.",
+      "appearance": "Sáng hơi xanh, indigo, mint; thứ bậc ngày và chú thích nhẹ; không streak/percent giả.",
+      "firstViewport": "Các mốc note dẫn tới nội dung và nguồn được chọn, trợ lý nằm cạnh mốc cần làm rõ.",
+      "risk": "Không biến app thành habit tracker khi user chưa chọn."
+    }
+  ]
+}

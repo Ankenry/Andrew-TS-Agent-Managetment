@@ -1,0 +1,22 @@
+[Unit]
+Description=Andrew Brain local web and read-only notes API
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/home/avada/Andrew Tools CS-TS/Andrew TS Tools/apps/andrew-brain
+ExecStartPre=/usr/bin/test -r "/home/avada/Andrew Tools CS-TS/Andrew TS Tools/apps/andrew-brain/dist/index.html"
+ExecStart=/usr/bin/node "/home/avada/Andrew Tools CS-TS/Andrew TS Tools/apps/andrew-brain/server/index.mjs"
+Environment=NODE_ENV=production
+Environment=PORT=5191
+Environment=UI_PORT=5191
+Environment=BRAIN_ROOT=/home/avada/avada-brain
+Environment=BRAIN_FIXTURE=0
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+UMask=0077
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171a23" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Hachimi Trace">
+  <meta name="format-detection" content="telephone=no">
+  <title>Nguồn dữ liệu · Hachimi Trace</title>
+  <link rel="icon" type="image/png" href="/logo-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/logo-256.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="viewer-body">
+  <header class="topbar viewer-top">
+    <div class="brand">
+      <img class="logo" src="/logo-128.png" alt="" width="40" height="40">
+      <div>
+        <h1 id="vTitle">Nguồn dữ liệu</h1>
+        <p class="sub" id="vSub">Đang tải…</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn" id="vSession" href="/" hidden>← Mở phiên trace</a>
+      <a class="btn" id="vTicket" target="_blank" rel="noopener" hidden>Helpdesk ↗</a>
+      <a class="btn primary" id="vLink" target="_blank" rel="noopener noreferrer" hidden>Mở liên kết gốc ↗</a>
+      <button class="btn" id="vCopy" hidden>Sao chép đường dẫn</button>
+    </div>
+  </header>
+
+  <main class="viewer">
+    <aside class="viewer-side">
+      <!-- <details> so a phone can fold the cards away; on a wide screen they stay open (see style.css). -->
+      <details class="card" id="vMetaCard" open>
+        <summary><h3>Nguồn</h3></summary>
+        <dl class="kv" id="vMeta"></dl>
+      </details>
+      <details class="card" id="vEventCard" open hidden>
+        <summary><h3>Mốc timeline</h3></summary>
+        <dl class="kv" id="vEvent"></dl>
+      </details>
+      <details class="card" id="vExcerptCard" open hidden>
+        <summary><h3>Đoạn AI đã dùng</h3></summary>
+        <blockquote class="excerpt" id="vExcerpt"></blockquote>
+        <button class="link" id="vJump">Nhảy tới đoạn này ↓</button>
+      </details>
+      <details class="card" id="vOutline" open hidden>
+        <summary><h3>Mục lục</h3></summary>
+        <ul class="outline" id="vOutlineList"></ul>
+      </details>
+    </aside>
+    <section class="viewer-main">
+      <div class="viewer-note" id="vNote" hidden></div>
+      <article class="doc" id="vDoc"></article>
+    </section>
+  </main>
+  <div class="toast" id="toast" hidden></div>
+  <script src="/source.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "note": "Nguồn tin của mục NEWS (scripts/news-feed.mjs). Sửa file này để thêm/bớt nguồn, không cần sửa code. group: claude | models | tech. type: html-anthropic | changelog | hn | rss. keywords (tùy chọn): chỉ giữ tin có một trong các từ này trong tiêu đề/mô tả.",
+  "windowHours": 48,
+  "maxItems": 15,
+  "perGroup": 5,
+  "sources": [
+    { "id": "anthropic-news", "label": "Anthropic", "group": "claude", "type": "html-anthropic", "url": "https://www.anthropic.com/news", "enabled": true, "max": 3, "windowHours": 336 },
+    { "id": "claude-code-changelog", "label": "Claude Code changelog", "group": "claude", "type": "changelog", "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md", "enabled": true, "max": 2 },
+    { "id": "claude-docs-release-notes", "label": "Claude docs release notes", "group": "claude", "type": "rss", "url": "https://docs.claude.com/en/release-notes/overview", "enabled": false, "max": 3, "disabledReason": "Trang render phía client, không có RSS; bật lại khi có feed." },
+    { "id": "hacker-news", "label": "Hacker News", "group": "tech", "type": "hn", "url": "https://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=200&numericFilters=points>50", "enabled": true, "max": 8,
+      "keywords": ["ai", "llm", "model", "gpt", "openai", "anthropic", "claude", "gemini", "llama", "mistral", "deepseek", "qwen", "open-weight", "open weight", "agent", "transformer", "neural", "inference", "gpu", "nvidia", "chip", "robot", "quantum", "apple", "google", "microsoft", "meta", "linux", "rust", "browser", "chrome", "security"] },
+    { "id": "theverge-ai", "label": "The Verge AI", "group": "models", "type": "rss", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "enabled": true, "max": 6 },
+    { "id": "techcrunch-ai", "label": "TechCrunch AI", "group": "models", "type": "rss", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "enabled": true, "max": 6 },
+    { "id": "arstechnica", "label": "Ars Technica", "group": "tech", "type": "rss", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "enabled": true, "max": 6 }
+  ]
+}

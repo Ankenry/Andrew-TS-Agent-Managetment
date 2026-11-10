@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrew's Doing Tickets</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">AVADA HELPDESK</p>
+          <h1>Andrew's tickets</h1>
+          <p class="subtitle">Your pending, doing, waiting-customer, dev-fix and feature queue</p>
+        </div>
+        <div class="header-actions">
+          <button id="widget-button" class="icon-button" type="button" title="Show or hide widget on this tab" aria-label="Show or hide widget">▣</button>
+          <button id="settings-button" class="icon-button" type="button" title="Settings" aria-label="Settings">⚙</button>
+        </div>
+      </header>
+
+      <section id="tickets-view">
+        <div class="summary-row">
+          <span id="total-count" class="count-pill">Loading…</span>
+          <button id="refresh-button" class="refresh-button" type="button">Refresh</button>
+        </div>
+        <p id="last-updated" class="last-updated"></p>
+        <p id="status-message" class="status-message" aria-live="polite"></p>
+        <section id="category-list" class="category-list" aria-label="Andrew's ticket categories"></section>
+      </section>
+
+      <section id="settings-view" class="settings-view" hidden>
+        <button id="back-button" class="back-button" type="button">← Back to tickets</button>
+        <h2>Connect Helpdesk</h2>
+        <p class="settings-copy">The saved API key is used automatically whenever you open the extension. It stays in this Chrome profile and is never read from this project's `.env_my` file.</p>
+        <p id="api-key-status" class="api-key-status"></p>
+        <details id="api-key-details" class="api-key-details">
+          <summary>Set or replace API key</summary>
+          <label for="api-key">Avada Helpdesk API key</label>
+          <input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="avd_…" />
+        </details>
+        <label for="widget-display">Widget display on the current tab</label>
+        <select id="widget-display">
+          <option value="panel">Open widget panel</option>
+          <option value="bubble">Chat bubble (click to open)</option>
+        </select>
+        <label for="widget-position">Chat bubble position</label>
+        <select id="widget-position">
+          <option value="bottom-left">Bottom left</option>
+          <option value="bottom-right">Bottom right</option>
+        </select>
+        <p id="settings-error" class="form-error" aria-live="polite"></p>
+        <button id="save-button" class="save-button" type="button">Save settings</button>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

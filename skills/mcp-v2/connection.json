@@ -1,0 +1,16 @@
+{
+  "transport": "streamable-http",
+  "url": "https://ts2.avada.net/api/v1/agent/mcp",
+  "authHeader": "Authorization",
+  "authPrefix": "Bearer ",
+  "readTools": {
+    "ts_get_ticket": { "scope": "ticket", "kind": "observation" },
+    "ts_list_apps": { "scope": "catalog", "kind": "document" },
+    "ts_app_playbook": { "scope": "app", "appArgument": "app", "kind": "document" },
+    "ts_read_tools": { "scope": "app", "appArgument": "app", "kind": "document" },
+    "ts_app_read": { "scope": "app", "appArgument": "app", "kind": "observation" },
+    "ts_kb_search": { "scope": "app", "appArgument": "app", "kind": "document" },
+    "ts_knowledge_list": { "scope": "app", "appArgument": "app", "kind": "document" },
+    "ts_knowledge_read": { "scope": "knowledge", "kind": "document" }
+  }
+}

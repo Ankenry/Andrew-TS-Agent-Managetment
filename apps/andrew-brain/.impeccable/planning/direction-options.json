@@ -1,0 +1,231 @@
+{
+  "title": "Andrew Brain — chọn hướng giao diện",
+  "question": "Ba hướng cho thư viện ghi chú, tìm kiếm và trợ lý dựa nguồn. Bản phác thảo dùng dữ liệu minh họa; AI chưa kết nối. Mở rộng bản xem rồi khóa hướng phù hợp.",
+  "options": [
+    {
+      "id": "sources",
+      "kind": "assigned",
+      "label": "Nguồn cạnh câu hỏi",
+      "thesis": "Đối chiếu ghi chú rồi đưa đúng nguồn vào cuộc trao đổi.",
+      "palette": [
+        "#243329",
+        "#F3F5EF",
+        "#E6B84B",
+        "#FFFDF8"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Thư viện trái, bảng nguồn và đoạn đọc ở giữa, trợ lý theo nguồn bên phải.",
+      "risk": "Thông tin dày hơn; mobile chuyển list, đọc và trợ lý theo tab.",
+      "html": ".impeccable/mocks/decision/sources.html",
+      "comp": ".impeccable/mocks/decision/sources.png",
+      "kicker": "THE ROLL",
+      "raised": [
+        {
+          "from": "Bản ghi phơi sáng",
+          "raise": "Nguồn đã chọn, đã thay đổi và chưa sẵn sàng có trạng thái khác nhau."
+        },
+        {
+          "from": "Ký pháp chuyển động",
+          "raise": "Đoạn đọc và nguồn trong câu hỏi luôn có điểm nhấn tương ứng."
+        },
+        {
+          "from": "Mẫu chữ trên lưới",
+          "raise": "Cột loại, ngày và lựa chọn giữ nhịp căn hàng nhất quán."
+        },
+        {
+          "from": "Chứng cứ cạnh lời nói",
+          "raise": "Mọi câu trả lời có đường về nguồn; chưa có AI thì không giả kết quả."
+        },
+        {
+          "from": "Bảng thay đổi chuyến",
+          "raise": "Nguồn sắp xếp lại vẫn giữ danh tính và focus."
+        }
+      ]
+    },
+    {
+      "id": "journal",
+      "kind": "pick",
+      "label": "Tiếp mạch ghi chú",
+      "thesis": "Mở lại đoạn đang đọc và nối câu hỏi với nhịp ghi chép theo ngày.",
+      "palette": [
+        "#183451",
+        "#ECF1F6",
+        "#D19B52",
+        "#FFFFFF"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Điều hướng ngang, danh sách theo ngày, trang đọc rộng và trợ lý bên cạnh.",
+      "risk": "Quen thuộc nhất với app ghi chú; dễ dùng nhưng ít khác biệt hơn.",
+      "html": ".impeccable/mocks/decision/journal.html",
+      "comp": ".impeccable/mocks/decision/journal.png",
+      "kicker": "IMPECCABLE’S PICK"
+    },
+    {
+      "id": "manual",
+      "kind": "challenger",
+      "label": "Thư viện có thẻ",
+      "thesis": "Nhóm tri thức có màu và nhãn riêng; trang đọc luôn là trung tâm.",
+      "palette": [
+        "#F5CE3B",
+        "#F4F4EC",
+        "#1B302A",
+        "#176F70"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Rail phân nhóm, trang đọc chính rộng, trợ lý theo nguồn bên phải.",
+      "risk": "Không để tab màu biến app thành mô phỏng cuốn sách.",
+      "catalogId": "rw-manual-acetate-tab-board",
+      "verdict": "competitive",
+      "case": "Gần việc tra cứu và học; product clarity ngang ma trận, audience identification nhỉnh hơn.",
+      "html": ".impeccable/mocks/decision/manual.html",
+      "comp": ".impeccable/mocks/decision/manual.png",
+      "board": ".impeccable/mocks/decision/references/rw-manual-acetate-tab-board.webp",
+      "hero": ".impeccable/mocks/decision/references/rw-manual-acetate-tab-board-hero.webp"
+    },
+    {
+      "id": "exposure",
+      "kind": "challenger",
+      "label": "Bản ghi phơi sáng",
+      "thesis": "Phân biệt các nguồn theo độ đậm.",
+      "palette": [
+        "#222222",
+        "#EEEEEE",
+        "#B12979"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Nguồn và câu hỏi là vùng công việc riêng, không lớp kính ảnh.",
+      "risk": "Hình thức gốc dễ che nhiệm vụ đọc và chọn nguồn.",
+      "catalogId": "operate-b-exposure-record-zone-sheets",
+      "verdict": "declined",
+      "case": "Không gần công việc TS; các ký hiệu phơi sáng làm trạng thái khó đọc.",
+      "kept": "Giữ kỷ luật trạng thái, không lấy hatch/kính mờ."
+    },
+    {
+      "id": "score",
+      "kind": "challenger",
+      "label": "Ký pháp chuyển động",
+      "thesis": "Đồng bộ điểm nhấn của nguồn đang đọc.",
+      "palette": [
+        "#FFFFFF",
+        "#161616",
+        "#DDDDDD"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Điều hướng web bình thường, không staff hay chiều đọc ngược.",
+      "risk": "Hình thức gốc dễ che nhiệm vụ đọc và chọn nguồn.",
+      "catalogId": "notation-diagram-systems-labanotation",
+      "verdict": "declined",
+      "case": "Ký pháp không có cơ sở quen thuộc; không làm nhiệm vụ rõ hơn.",
+      "kept": "Giữ sự tương ứng giữa đoạn và nguồn chọn."
+    },
+    {
+      "id": "grid",
+      "kind": "challenger",
+      "label": "Mẫu chữ trên lưới",
+      "thesis": "Đặt chữ và dữ liệu vào một nhịp căn thẳng.",
+      "palette": [
+        "#F5F5F1",
+        "#163FB1",
+        "#171717"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Trang đọc và danh sách, không poster chữ khổng lồ.",
+      "risk": "Hình thức gốc dễ che nhiệm vụ đọc và chọn nguồn.",
+      "catalogId": "crouwel-grid-specimen",
+      "verdict": "declined",
+      "case": "Khó gần nghề hơn và không tăng rõ ràng so ma trận.",
+      "kept": "Giữ căn hàng chính xác, không grid trang trí."
+    },
+    {
+      "id": "proof",
+      "kind": "challenger",
+      "label": "Chứng cứ cạnh lời nói",
+      "thesis": "Nhận định đi cùng nguồn hỗ trợ.",
+      "palette": [
+        "#F7F7F7",
+        "#141414",
+        "#3663D5"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Nguồn và câu hỏi cạnh nhau, không section marketing.",
+      "risk": "Hình thức gốc dễ che nhiệm vụ đọc và chọn nguồn.",
+      "catalogId": "digital-design-canon-monochrome-product-marketing",
+      "verdict": "declined",
+      "case": "Bỏ bố cục marketing thì còn neutral UI quen thuộc, không thắng cả hai trục.",
+      "kept": "Giữ lời nói có nguồn, không mang campaign vào app."
+    },
+    {
+      "id": "boarding",
+      "kind": "challenger",
+      "label": "Bảng thay đổi chuyến",
+      "thesis": "Nguồn cập nhật vẫn giữ danh tính dòng.",
+      "palette": [
+        "#F5F6F3",
+        "#1A2025",
+        "#B67218"
+      ],
+      "materials": [
+        "Trang đọc rõ ràng",
+        "Điều khiển web quen thuộc"
+      ],
+      "viewport": "Danh sách note chuẩn, không chuyến bay hay giờ khởi hành giả.",
+      "risk": "Hình thức gốc dễ che nhiệm vụ đọc và chọn nguồn.",
+      "catalogId": "vernacular-ephemera-boarding-pass-and-gate-board",
+      "verdict": "declined",
+      "case": "Ẩn dụ du lịch không giúp hiểu brain; thứ tự giờ không phù hợp mọi note.",
+      "kept": "Giữ danh tính và focus khi sắp xếp lại."
+    }
+  ],
+  "canon": true,
+  "canonCard": {
+    "id": "canon",
+    "kind": "canon",
+    "label": "Cách bố trí quen thuộc",
+    "thesis": "Thư viện ghi chú tiêu chuẩn với tìm kiếm, trang đọc và trợ lý.",
+    "palette": [
+      "#FFFFFF",
+      "#263244",
+      "#DAE5F4"
+    ],
+    "materials": [
+      "Trang đọc rõ ràng",
+      "Điều khiển web quen thuộc"
+    ],
+    "viewport": "Sidebar, danh sách và nội dung theo cấu trúc phổ biến.",
+    "risk": "Chọn sự quen thuộc, ít nhận diện riêng.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "steer": true,
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  }
+}

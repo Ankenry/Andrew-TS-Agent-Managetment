@@ -1,0 +1,7 @@
+{
+  "checkExit": 0,
+  "applyExit": 0,
+  "allCandidateBytesMatch": true,
+  "files": 18,
+  "scope": "new copies of original source files, no candidate mutation"
+}

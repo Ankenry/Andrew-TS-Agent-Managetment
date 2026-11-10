@@ -1,0 +1,132 @@
+{
+  "BUILD-INSTRUCTIONS.md": {
+    "sha256": "9303868bf1cd999699ca0f427bcd2ad45e5df2e89d9dac9b45646497c3f615f9",
+    "bytes": 8076,
+    "mode": "0o664"
+  },
+  "LICENSE": {
+    "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+    "bytes": 10926,
+    "mode": "0o664"
+  },
+  "PROFILE-DELTA.txt": {
+    "sha256": "cd9fd2e03d427a32a5d63055906af19ffa529f7c1cef79a10c1e9567711c81dc",
+    "bytes": 2042,
+    "mode": "0o664"
+  },
+  "approved-lock.patch": {
+    "sha256": "53d21bbe793170d8097921ed6e5aa1a5df633ad46ebdc4f9657f35e0fc462a18",
+    "bytes": 29685,
+    "mode": "0o664"
+  },
+  "baseline-manifest.json": {
+    "sha256": "9c75a96313b7d1897f323a206f1835920ffc1beb936df776ec7fb4fe559b1718",
+    "bytes": 8526,
+    "mode": "0o664"
+  },
+  "build-env.template.json": {
+    "sha256": "fed34cabe9e5c9ac21a16123458fd90f50ab14c0f7a921e93fb66c5a0552a285",
+    "bytes": 2409,
+    "mode": "0o664"
+  },
+  "bwrap-digest.json": {
+    "sha256": "0b4e13a49623c348a38f403c27ebb332bda0124924dae1d40f6cd7ab45740705",
+    "bytes": 180,
+    "mode": "0o664"
+  },
+  "candidate-manifest.json": {
+    "sha256": "b25eab8a956029a5c6852095b0ef835cfb186b454157fb957f182c319f871e3c",
+    "bytes": 3555,
+    "mode": "0o664"
+  },
+  "final-validation.json": {
+    "sha256": "9c1ef6f7279f190c6a65305d4952678b3114bc926f83f77e702acd95f7306dc5",
+    "bytes": 762,
+    "mode": "0o664"
+  },
+  "flow.md": {
+    "sha256": "3727d60382bbbcbea7dfbdbe5aaefee79eaf288bc4b91389339ab270557c2712",
+    "bytes": 7618,
+    "mode": "0o664"
+  },
+  "guard-tests.log": {
+    "sha256": "0c0e7dae71c7e248a000ff2df5bce5218a27a61eb07960ff34a9db46c517809b",
+    "bytes": 105,
+    "mode": "0o664"
+  },
+  "isolated-test-inputs.json": {
+    "sha256": "81086d3f43dd3501f809f4db0967e3be4164fa822183d12ef7977032622256fd",
+    "bytes": 1013,
+    "mode": "0o664"
+  },
+  "isolated-tests.log": {
+    "sha256": "03ff8eca7f6e042e321f3b2c759464d5de9f888cca88e4b9cb87cb59c0947cc3",
+    "bytes": 803,
+    "mode": "0o664"
+  },
+  "low-memory-profile.toml": {
+    "sha256": "ab559d99312296b968c88d33a30c16ddf25bdd32d6b61ede9e1544b5492b4515",
+    "bytes": 193,
+    "mode": "0o664"
+  },
+  "native-libs-manifest.json": {
+    "sha256": "bdcf517f569ca029ff09ad4d3fc13ac2185d9baa4594dd66eedf6b2fc01cda41",
+    "bytes": 458,
+    "mode": "0o664"
+  },
+  "native-packages.json": {
+    "sha256": "169462e6e853401f7713e9797cb6c2c3d7b8ec60ce80423c1befe993206dbb20",
+    "bytes": 10433,
+    "mode": "0o664"
+  },
+  "patch-apply-verification.json": {
+    "sha256": "a5551c1e2e57031302cf03457dcc03bdfa8a26de654c28c565796cde316af605",
+    "bytes": 160,
+    "mode": "0o664"
+  },
+  "release-deps-download.json": {
+    "sha256": "6c54477d532707dcb1c81d96eee3c402ccdcf29390b66b6930eba89db33dec36",
+    "bytes": 1011,
+    "mode": "0o664"
+  },
+  "source-manifest.json": {
+    "sha256": "af2a6c7e220daf690ceff71e1f7502debb790f1898b33740def038bba29a7e63",
+    "bytes": 3787,
+    "mode": "0o600"
+  },
+  "source.patch": {
+    "sha256": "bc0c2d5c571bfd3c7d26d364987a32339fabe8e31eb92cd89f066753f8a3e73d",
+    "bytes": 76223,
+    "mode": "0o664"
+  },
+  "task-build-guard.py": {
+    "sha256": "856d696a0e556db729de040f2bfdd41b109773c4e20b8b729b53c8dbb303b6c7",
+    "bytes": 5902,
+    "mode": "0o664"
+  },
+  "task-runner.patch": {
+    "sha256": "32dcb98f85678504f8089c1284936740f8125b0eceebf849b5d8532011102eac",
+    "bytes": 3181,
+    "mode": "0o664"
+  },
+  "test-task-build-guard.py": {
+    "sha256": "c07e0e2014496e7be439f9ed2dc9ca24b779b8377ab1ef6109ba92cec7b606c9",
+    "bytes": 2899,
+    "mode": "0o664"
+  },
+  "tool-download-manifest.json": {
+    "sha256": "8c7dcf4df6d60002389d1d1892b05486867647ae3aad4686eae2681bbbaded97",
+    "bytes": 1271,
+    "mode": "0o664"
+  },
+  "tui-context.patch": {
+    "sha256": "b88d695f965eec05c910f483233594031f875529b7d83fbc10070a0e47604d30",
+    "bytes": 46538,
+    "mode": "0o664"
+  },
+  "v8-download.json": {
+    "sha256": "7f697af9c2c4b702aa4ba273226227d4420246b2c0b031232fda720c18ed8cbb",
+    "bytes": 387,
+    "mode": "0o664"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "analysis": "hancal",
+  "hancalTimeoutMs": 600000,
+  "pollIntervalMs": 300000,
+  "queueIntervalMs": 10000,
+  "eliteTimeoutMs": 190000,
+  "classificationTimeoutMs": 90000,
+  "branchTimeoutMs": 300000,
+  "demoTimeoutMs": 120000,
+  "questionMode": "review-and-comment",
+  "maxAttempts": 3,
+  "botCommand": {
+    "enabled": true,
+    "keyword": "@han",
+    "maxInstructionChars": 2000,
+    "pollIntervalMs": null,
+    "replyTimeoutMs": 120000,
+    "replyMaxChars": 1200,
+    "chatTemplates": true,
+    "keywordSinceAt": "2026-10-14T16:25:44.000Z"
+  }
+}

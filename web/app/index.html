@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#604893" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#11121a" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TS Management" />
+    <meta name="description" content="TS Management for Avada Helpdesk: tickets, chat bot, notifications." />
+    <title>TS Management</title>
+    <link rel="icon" href="/icons/bigmouse2-rounded-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/icons/bigmouse2-rounded-128.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app" class="app" aria-label="TS Management">
+      <header id="header" class="head"></header>
+      <main id="screen" class="screen" aria-live="polite"></main>
+      <nav id="nav" class="nav" aria-label="Main"></nav>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="pin-dialog" class="pin-dialog">
+      <form method="dialog" id="pin-form">
+        <h3>Nhập mã truy cập</h3>
+        <p>Web này được bảo vệ bằng mã truy cập (TS_WEB_PIN).</p>
+        <input id="pin-input" type="password" autocomplete="current-password" placeholder="Mã truy cập" required />
+        <p id="pin-error" class="settings-status error"></p>
+        <button class="primary" type="submit">Vào web</button>
+      </form>
+    </dialog>
+    <script src="/analytics-view.js" defer></script>
+    <script src="/speech-player.js" defer></script>
+    <script src="/news-view.js" defer></script>
+    <script src="/dfu-accessibility.js" defer></script>
+    <script src="/han-auto-view.js" defer></script>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

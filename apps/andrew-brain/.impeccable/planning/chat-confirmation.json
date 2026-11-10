@@ -1,0 +1,12 @@
+{
+  "selectedCardId": "sources",
+  "userAnswer": "1",
+  "confirmationSource": "conversation handoff from Hanlead quoting Đại tá",
+  "browserAnswerClaimed": false,
+  "constraints": [
+    "DARK default",
+    "developer-oriented",
+    "Operate/code-led"
+  ],
+  "seedReference": "seed:a1627c4f8ab555b5"
+}

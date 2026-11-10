@@ -1,0 +1,14 @@
+{
+  "productionModules": {
+    "token_usage.rs": "8038551ab97758fb0eafd2aae093fb37a933482921de131a5bdd93d69cbca902",
+    "bottom_pane/chat_composer/context_progress.rs": "9cb50550e0bffbdea3a5c28e6c6af3f19d5bcf82bc8bee1cdd941149c21a8cdc",
+    "status/helpers.rs": "739837bd3730427601454e06481c6e222c5cd01da60242fe6d72088d026fc8fc"
+  },
+  "formatterFragmentSha256": "2d08bbcfde7767877281cd37a87c2549ec200e5fe95cd8ffee3eef2687192f87",
+  "externCached": {
+    "serde": "/tmp/hanbui-codex-context-ui-20261103/target/x86_64-unknown-linux-musl/release/deps/libserde-6033d828ae5a27b9.rlib",
+    "codex_protocol": "/tmp/hanbui-codex-context-ui-20261103/target/x86_64-unknown-linux-musl/release/deps/libcodex_protocol-e80d2838c86ec160.rlib",
+    "unicode_width": "/tmp/hanbui-codex-context-ui-20261103/target/x86_64-unknown-linux-musl/release/deps/libunicode_width-df5e917e6ea4632c.rlib"
+  },
+  "scope": "Direct rustc only, no Cargo or dependency compilation; production helper/state/line tests, not full TUI integration"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "https://git.avada.net/avada-public/avada-brain",
+  "commit": "007cf0cd6ffb8913f031b880620ecc0cedb02c2c",
+  "files": {
+    "60-guides/obsidian-setup.md": "7331eaef513f1151d58164295a5093e01b8ea325bbf67d215903e14d141f24f7",
+    "60-guides/sync-setup.md": "c7decfa0647066bf9578095c6c6d5d74031af446e0b6ff3b23976b317f1ca82f"
+  }
+}

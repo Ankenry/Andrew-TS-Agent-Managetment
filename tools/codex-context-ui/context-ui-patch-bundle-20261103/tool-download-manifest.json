@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://static.rust-lang.org/dist/2026-04-16/rustc-1.95.0-x86_64-unknown-linux-gnu.tar.xz",
+    "sha256": "8426a3d170a5879f5682f5fbdd024a1779b3951e7baba685af2d6dc32a6dfc15",
+    "kind": "rust"
+  },
+  {
+    "url": "https://static.rust-lang.org/dist/2026-04-16/cargo-1.95.0-x86_64-unknown-linux-gnu.tar.xz",
+    "sha256": "e74edd2cf7d0f1f1383b4f00eb90c843750bc489e2ccf7214e6476678a907425",
+    "kind": "rust"
+  },
+  {
+    "url": "https://static.rust-lang.org/dist/2026-04-16/rust-std-1.95.0-x86_64-unknown-linux-gnu.tar.xz",
+    "sha256": "047ea7098803d3500fa1072e9cee5392697e21525559e4458128a2bf874aa382",
+    "kind": "rust"
+  },
+  {
+    "url": "https://static.rust-lang.org/dist/2026-04-16/rust-std-1.95.0-x86_64-unknown-linux-musl.tar.xz",
+    "sha256": "aee540abf132920f791ef781489851a078d69dff493fb628d49c1d573f92bb3a",
+    "kind": "rust"
+  },
+  {
+    "url": "https://static.rust-lang.org/dist/2026-04-16/rustfmt-1.95.0-x86_64-unknown-linux-gnu.tar.xz",
+    "sha256": "f1b2a7301513ffdd95ebf22ebbdd932e4d17fc806f748d93924740d0297b1396",
+    "kind": "rust"
+  },
+  {
+    "url": "https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz",
+    "sha256": "473ec26806133cf4d1918caf1a410f8403a13d979726a9045b421b685031a982",
+    "kind": "zig"
+  }
+]

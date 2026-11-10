@@ -1,0 +1,12 @@
+[
+  {
+    "name": "librusty_v8_ptrcomp_sandbox_release_x86_64-unknown-linux-musl.a.gz",
+    "sha256": "2f2679773a12576dc6b89b0f7d70e8190e5aea8a57f8f6364efaffdd1497d0e7",
+    "bytes": 30406203
+  },
+  {
+    "name": "src_binding_ptrcomp_sandbox_release_x86_64-unknown-linux-musl.rs",
+    "sha256": "3e4d5fecdbe0f98a6017e69d7ca82519a77fb032c5eb5e4cdbecdd3e2ec519d5",
+    "bytes": 40045
+  }
+]

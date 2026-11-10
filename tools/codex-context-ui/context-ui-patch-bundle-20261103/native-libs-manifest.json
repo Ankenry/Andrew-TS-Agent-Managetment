@@ -1,0 +1,14 @@
+{
+  "toolchain/libcap-2.75/lib/libcap.a": {
+    "bytes": 56500,
+    "sha256": "eddf0a4ca3ccdf6f515d35e5fedb2f7497ab69e67aeedf140f3529751552ffad"
+  },
+  "toolchain/openssl-3.6.4/lib/libssl.a": {
+    "bytes": 2147680,
+    "sha256": "5ead652b026a2268007ee59e45c6d233de2716af339888bc62cc3a3083fce6ac"
+  },
+  "toolchain/openssl-3.6.4/lib/libcrypto.a": {
+    "bytes": 12387436,
+    "sha256": "6f72126f7ef71a6854529f568ca3e201a22a75a611d8fd5d5bc00b9bb1bf0f32"
+  }
+}

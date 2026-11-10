@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "slots": ["10:00", "14:00", "18:00", "22:00"],
+  "timeZone": "Asia/Ho_Chi_Minh",
+  "commentPolicy": "on-change-or-daily",
+  "concurrency": 2,
+  "assessTimeoutMs": 180000,
+  "runTimeoutMs": 1800000,
+  "telegramSummary": true
+}

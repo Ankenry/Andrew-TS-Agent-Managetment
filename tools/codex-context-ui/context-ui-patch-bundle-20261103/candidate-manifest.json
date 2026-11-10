@@ -1,0 +1,84 @@
+{
+  "createdAt": "2026-11-03T17:53:41.787763+07:00",
+  "origin": "https://github.com/openai/codex.git",
+  "tag": "rust-v0.166.0",
+  "commit": "6ff1e1ca3b30fc8b914720681fcf5fe62e95f856",
+  "originalLockSha256": "22bd51f50864ce40f6686f3350c0547fdd50a8213240f54435ed394f68bf08e6",
+  "approvedLockSha256": "360ea1e0ec391255ffc153a73548be524aa5d50c3476f247631cec184c21d4cb",
+  "candidateFiles": {
+    "codex-rs/Cargo.lock": {
+      "sha256": "360ea1e0ec391255ffc153a73548be524aa5d50c3476f247631cec184c21d4cb",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer.rs": {
+      "sha256": "757042b7f531354b5690993439cfb78dd94dac31e9b3afc911f5a4904440071e",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs": {
+      "sha256": "8d7aec763ccb4790a887fa8ce3198179737d515d5c9b40e5c1a346687c45346a",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs": {
+      "sha256": "9e959e94412ab23e19c0420f751625b4b8ddc1896566ce63b27ce18dd139db7a",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs": {
+      "sha256": "b576ead1911f259a27e9e0f98b391021e7b6cd5953b728bbd5053581d5a5a14d",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs": {
+      "sha256": "0e586560709b39a39a97a66e0379f794878a604cf372e2cfdf7c633467197a3f",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/mod.rs": {
+      "sha256": "a791fb2af588838ee85d94366e5569d7f15a1f76189917375167883451cea76c",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget.rs": {
+      "sha256": "9d7c50de6374ea62264e7ea0f6977da13b88c510ed91e38a8c033c13cd758868",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/compaction.rs": {
+      "sha256": "e11b940ee7d5e99fac5b78dfc927d1a5d57dda6fbcdf36b874871c2dbd6f3e02",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/constructor.rs": {
+      "sha256": "6c82b4d70c7f23772d37164027142a253afea792953203a3ed9bf370c294fabf",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/protocol.rs": {
+      "sha256": "fb0b30b5efd6da3159494d11c6d424715f834e487bb4da31e0a6ece9155e9052",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/session_flow.rs": {
+      "sha256": "8eda5960d526544f8b5d5f750afe98083dabba3f3e95932de52dcc5f3acd6e8d",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/settings.rs": {
+      "sha256": "1a5f072fccf4f488f801c4c7a4ad124a38d8388e08651d71659cf308c704bb8e",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/tests.rs": {
+      "sha256": "bc63302fa6e04f2a42c4a36343f7d56ac6d43660e03590be181f16470c90ef4c",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/token_usage.rs": {
+      "sha256": "8038551ab97758fb0eafd2aae093fb37a933482921de131a5bdd93d69cbca902",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs": {
+      "sha256": "9cb50550e0bffbdea3a5c28e6c6af3f19d5bcf82bc8bee1cdd941149c21a8cdc",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs": {
+      "sha256": "3a7f32a7c1a132b3fc43337cebfae8059dcba5724af97b1c7ff67a930fde1b16",
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/tests/context_progress.rs": {
+      "sha256": "b80edc9568f1e7e72530d5401806e9b3855ea694579d348a94e9ff7ea13d69a2",
+      "mode": "0o664"
+    }
+  },
+  "status": "candidate source only; full smoke/integration/activation NOT passed",
+  "binaryIncluded": false
+}

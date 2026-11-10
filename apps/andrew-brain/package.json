@@ -1,0 +1,32 @@
+{
+  "name": "andrew-brain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5191 --strictPort",
+    "api": "node server/index.mjs",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --test tests/reader.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "yaml": "2.9.1",
+    "lucide-react": "1.69.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.6",
+    "@vitejs/plugin-react": "6.2.1",
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@playwright/test": "1.64.1"
+  }
+}

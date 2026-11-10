@@ -1,0 +1,23 @@
+{
+  "enabled": false,
+  "profilePath": "knowledge-base/feedback/andrew-comment-style.md",
+  "rulesSection": "## 6.",
+  "examplesSection": "## 5.",
+  "maxRulesChars": 3000,
+  "maxExamples": 4,
+  "maxExampleChars": 220,
+  "sentencesMin": 3,
+  "sentencesMax": 8,
+  "noBullets": true,
+  "noBold": true,
+  "noHeadings": true,
+  "noTables": true,
+  "noEmoji": true,
+  "selfReference": "TS",
+  "forbidPersonalPronouns": true,
+  "forbidMentions": true,
+  "forbidGreetingClosing": true,
+  "maxSentenceChars": 240,
+  "maxBodyChars": 1600,
+  "_note": "enabled:false từ 09/10/2026 theo lệnh Đại tá \"lấy lại rule comment ticket cũ\"; bật lại bằng enabled:true (code và hồ sơ knowledge-base/feedback/andrew-comment-style.md giữ nguyên)."
+}

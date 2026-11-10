@@ -1,0 +1,47 @@
+# Khóa / cấu hình bí mật
+.env*
+
+# Bản sao mã nguồn app công ty và corpus nội bộ
+apps_doc/
+knowledge-base/
+TS Elite/
+
+# Dữ liệu chạy: ticket khách, log, state, screenshot
+runtime/
+runtime/ts-web/
+runtime/**/*.png
+*.log
+
+# Database local (compose, schema, cấu hình pgadmin)
+db/
+
+# Tài liệu / dữ liệu nội bộ, không công khai
+report_accessibility_scan/
+API Avada Ticket/
+bsk-avada-kit/
+PROFILE.md
+access-network.txt
+storefront-access.png
+
+# Công cụ / phiên agent
+node_modules/
+.claude/
+.codex/
+.agents/
+
+# Build / test outputs có thể tái tạo
+dist/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+
+# Bản clone công cụ bên ngoài, toolchain và bằng chứng build local
+/tools/impeccable/
+/tools/codex-context-ui/*
+!/tools/codex-context-ui/context-ui-patch-bundle-*/
+
+# Báo cáo xuất từ dữ liệu vận hành
+/docs/reports/

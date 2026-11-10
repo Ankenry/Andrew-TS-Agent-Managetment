@@ -1,0 +1,2642 @@
+diff --git a/codex-rs/Cargo.lock b/codex-rs/Cargo.lock
+index 1d27abb..a34786d 100644
+--- a/codex-rs/Cargo.lock
++++ b/codex-rs/Cargo.lock
+@@ -287,7 +287,7 @@ checksum = "2a4385e2e34eb35d6b3efe798b9eb88096925d87726c0798709bf56d9ed84af3"
+ 
+ [[package]]
+ name = "app_test_support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -1888,7 +1888,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-core",
+@@ -1900,7 +1900,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-graph-store"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-state",
+@@ -1915,7 +1915,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-identity"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -1935,7 +1935,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-message-board-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -1958,7 +1958,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-message-board-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-extension-api",
+  "codex-message-board",
+@@ -1972,7 +1972,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-agent-roles"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-config",
+  "codex-file-system",
+@@ -1985,7 +1985,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-analytics"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-app-server-protocol",
+  "codex-git-utils",
+@@ -2008,7 +2008,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-ansi-escape"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "ansi-to-tui",
+  "pretty_assertions",
+@@ -2019,7 +2019,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-api"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "assert_matches",
+@@ -2057,7 +2057,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "app_test_support",
+@@ -2174,7 +2174,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-app-server",
+  "codex-app-server-protocol",
+@@ -2202,7 +2202,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server-daemon"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "blake3",
+@@ -2232,7 +2232,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server-protocol"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-app-server-protocol-noop-macros",
+@@ -2266,11 +2266,11 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server-protocol-noop-macros"
+-version = "0.0.0"
++version = "0.166.0"
+ 
+ [[package]]
+ name = "codex-app-server-test-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -2292,7 +2292,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-app-server-transport"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "axum",
+  "base64 0.22.1",
+@@ -2335,7 +2335,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-apply-patch"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "assert_cmd",
+@@ -2355,7 +2355,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-arg0"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-apply-patch",
+@@ -2378,7 +2378,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-async-utils"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "rand 0.9.3",
+@@ -2388,7 +2388,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-attachment-store"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "serde",
+@@ -2398,7 +2398,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-aws-auth"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "aws-config",
+  "aws-credential-types",
+@@ -2424,7 +2424,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-backend-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-api",
+@@ -2444,7 +2444,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-backend-openapi-models"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "serde",
+  "serde_json",
+@@ -2453,7 +2453,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-build-info"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-install-context",
+  "pretty_assertions",
+@@ -2466,7 +2466,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-bwrap"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "cc",
+  "libc",
+@@ -2475,7 +2475,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-chatgpt"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -2497,7 +2497,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cli"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "app_test_support",
+@@ -2601,7 +2601,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-http-client",
+  "eventsource-stream",
+@@ -2615,7 +2615,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cloud-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "async-stream",
+@@ -2639,7 +2639,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cloud-config"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "chrono",
+@@ -2667,7 +2667,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cloud-tasks"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -2700,7 +2700,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cloud-tasks-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -2715,7 +2715,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-cloud-tasks-mock-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "chrono",
+  "codex-cloud-tasks-client",
+@@ -2724,7 +2724,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-code-mode"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-code-mode-protocol",
+  "codex-http-client",
+@@ -2748,7 +2748,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-code-mode-host"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "axum",
+@@ -2779,7 +2779,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-code-mode-protocol"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "glob",
+@@ -2797,7 +2797,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-code-mode-runtime"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-code-mode-protocol",
+@@ -2816,11 +2816,11 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-collaboration-mode-templates"
+-version = "0.0.0"
++version = "0.166.0"
+ 
+ [[package]]
+ name = "codex-config"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -2874,7 +2874,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-config-schema"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -2883,7 +2883,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-connectors"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "arc-swap",
+@@ -2905,7 +2905,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-connectors-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-connectors",
+  "codex-core-plugins",
+@@ -2919,7 +2919,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-context-fragments"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-protocol-test-support",
+@@ -2930,7 +2930,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-core"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "arc-swap",
+@@ -3080,7 +3080,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-core-api"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-analytics",
+  "codex-app-server-protocol",
+@@ -3103,7 +3103,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-core-plugin-common"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-absolute-path",
+  "semver",
+@@ -3114,7 +3114,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-core-plugins"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -3171,7 +3171,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-diagnostics"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "libc",
+  "pretty_assertions",
+@@ -3179,7 +3179,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-direct-tool-timing"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-critical-path",
+  "pretty_assertions",
+@@ -3190,7 +3190,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-exec"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "assert_cmd",
+@@ -3243,7 +3243,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-exec-server"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "arc-swap",
+@@ -3316,7 +3316,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-exec-server-cli"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "assert_matches",
+@@ -3356,7 +3356,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-exec-server-protocol"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-file-system",
+@@ -3374,7 +3374,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-exec-server-test-support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-exec-server",
+@@ -3389,7 +3389,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-execpolicy"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -3407,7 +3407,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-experimental-api-macros"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "proc-macro2",
+  "quote",
+@@ -3416,7 +3416,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-extension-api"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-api",
+  "codex-config",
+@@ -3439,7 +3439,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-extension-items"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-absolute-path",
+  "pretty_assertions",
+@@ -3451,7 +3451,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-external-agent-migration"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "chrono",
+  "codex-analytics",
+@@ -3482,7 +3482,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-features"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-network-proxy",
+  "codex-protocol",
+@@ -3496,7 +3496,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-feedback"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "bytes",
+@@ -3524,7 +3524,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-file-search"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -3540,7 +3540,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-file-system"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "bytes",
+  "codex-protocol",
+@@ -3554,7 +3554,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-file-watcher"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "notify",
+  "pretty_assertions",
+@@ -3565,7 +3565,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-git-attribution"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-backend-client",
+  "codex-extension-api",
+@@ -3578,7 +3578,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-git-utils"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -3606,7 +3606,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-goal-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -3631,7 +3631,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-guardian-context"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-context-fragments",
+  "codex-history",
+@@ -3645,7 +3645,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-guardian-reviewer"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-analytics",
+@@ -3681,7 +3681,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-guardian-v2"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-analytics",
+@@ -3720,7 +3720,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-guardian-v3"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-message-board",
+  "codex-protocol",
+@@ -3729,7 +3729,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-history"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-protocol",
+@@ -3741,7 +3741,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-history-notes-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-analytics",
+  "codex-client",
+@@ -3767,7 +3767,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-home"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-extension-api",
+  "codex-utils-absolute-path",
+@@ -3779,7 +3779,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-hooks"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "async-channel",
+@@ -3808,7 +3808,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-http-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "bytes",
+  "codex-utils-cargo-bin",
+@@ -3848,7 +3848,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-image-generation-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-api",
+@@ -3880,7 +3880,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-install-context"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-absolute-path",
+  "codex-utils-home-dir",
+@@ -3893,7 +3893,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-keyring-store"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "keyring",
+  "pretty_assertions",
+@@ -3904,7 +3904,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-linux-sandbox"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "clap",
+  "codex-core",
+@@ -3933,7 +3933,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-lmstudio"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-core",
+  "codex-http-client",
+@@ -3947,7 +3947,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-login"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -3993,7 +3993,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-mcp"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "arc-swap",
+@@ -4037,7 +4037,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-mcp-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "axum",
+@@ -4070,7 +4070,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-memories-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-core",
+  "codex-extension-api",
+@@ -4092,7 +4092,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-memories-read"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-shell-command",
+@@ -4102,7 +4102,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-memories-write"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -4139,7 +4139,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-mermaid"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "insta",
+  "pretty_assertions",
+@@ -4148,7 +4148,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-message-board"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "caseless",
+@@ -4171,7 +4171,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-message-history"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-config",
+  "memchr",
+@@ -4185,7 +4185,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-model-provider"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "chrono",
+@@ -4224,7 +4224,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-model-provider-info"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-client",
+  "codex-http-client",
+@@ -4242,7 +4242,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-models-manager"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "chrono",
+  "codex-http-client",
+@@ -4261,7 +4261,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-multi-env-copy-file"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-config",
+@@ -4287,7 +4287,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-mxc-sandbox"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-network-proxy",
+@@ -4308,7 +4308,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-network-proxy"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "aws-credential-types",
+@@ -4359,7 +4359,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-ollama"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "assert_matches",
+  "async-stream",
+@@ -4379,7 +4379,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-otel"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "bytes",
+  "chrono",
+@@ -4418,7 +4418,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-otel-trace-websocket"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "axum",
+@@ -4429,7 +4429,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-plugin"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-config",
+  "codex-core-plugin-common",
+@@ -4444,7 +4444,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-plugin-host"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-cargo-bin",
+  "codex-utils-process",
+@@ -4461,7 +4461,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-process-hardening"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "libc",
+  "pretty_assertions",
+@@ -4469,7 +4469,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-prompts"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-collaboration-mode-templates",
+@@ -4487,7 +4487,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-protocol"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chardetng",
+@@ -4533,14 +4533,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-protocol-test-support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+ ]
+ 
+ [[package]]
+ name = "codex-queue-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-core",
+@@ -4561,7 +4561,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-realtime-webrtc"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-build-info",
+@@ -4580,7 +4580,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-response-debug-context"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-api",
+@@ -4591,7 +4591,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-responses-api-proxy"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "bytes",
+@@ -4615,7 +4615,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-rmcp-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "axum",
+@@ -4666,7 +4666,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-rollout"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -4699,7 +4699,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-rollout-trace"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-code-mode",
+@@ -4716,7 +4716,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-runtime-agent-instance"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-agent-identity",
+@@ -4742,7 +4742,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-sandboxing"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-mxc-sandbox",
+@@ -4770,7 +4770,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-secrets"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "age",
+  "anyhow",
+@@ -4791,7 +4791,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-shell-command"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -4814,7 +4814,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-skills"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-shell-command",
+@@ -4831,7 +4831,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-skills-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "assert_matches",
+  "blake3",
+@@ -4871,7 +4871,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-state"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "chrono",
+@@ -4900,7 +4900,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-stdio-to-uds"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-uds",
+@@ -4912,7 +4912,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-tcp-tunnel"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "bytes",
+@@ -4933,7 +4933,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-terminal-detection"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "tracing",
+@@ -4941,7 +4941,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-test-binary-support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-arg0",
+  "tempfile",
+@@ -4949,7 +4949,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-thread-manager-sample"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "clap",
+@@ -4960,7 +4960,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-thread-store"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "chrono",
+  "codex-app-server-protocol",
+@@ -4991,7 +4991,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-tools"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "bitflags 2.13.1",
+  "codex-attachment-store",
+@@ -5017,7 +5017,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-tui"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "app_test_support",
+@@ -5145,7 +5145,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-uds"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "async-io",
+  "libc",
+@@ -5159,7 +5159,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-user-verification"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "block2",
+@@ -5180,7 +5180,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-absolute-path"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "dirs",
+  "dunce",
+@@ -5194,14 +5194,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-approval-presets"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+ ]
+ 
+ [[package]]
+ name = "codex-utils-audio"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-protocol",
+@@ -5215,7 +5215,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-cache"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "lru",
+  "sha1 0.10.6",
+@@ -5224,7 +5224,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-cargo-bin"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "assert_cmd",
+  "runfiles",
+@@ -5233,7 +5233,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-cli"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "clap",
+  "codex-protocol",
+@@ -5245,22 +5245,22 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-critical-path"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+ ]
+ 
+ [[package]]
+ name = "codex-utils-elapsed"
+-version = "0.0.0"
++version = "0.166.0"
+ 
+ [[package]]
+ name = "codex-utils-fuzzy-match"
+-version = "0.0.0"
++version = "0.166.0"
+ 
+ [[package]]
+ name = "codex-utils-git-discovery"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-git-utils",
+  "codex-utils-absolute-path",
+@@ -5273,14 +5273,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-head-tail-buffer"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+ ]
+ 
+ [[package]]
+ name = "codex-utils-home-dir"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-absolute-path",
+  "dirs",
+@@ -5290,7 +5290,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-image"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-utils-cache",
+@@ -5304,7 +5304,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-json-to-toml"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "serde_json",
+@@ -5313,7 +5313,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-oss"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-core",
+  "codex-lmstudio",
+@@ -5323,7 +5323,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-output-truncation"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-utils-string",
+@@ -5333,7 +5333,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-path"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-utils-absolute-path",
+  "dunce",
+@@ -5344,7 +5344,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-path-uri"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "base64 0.22.1",
+  "codex-utils-absolute-path",
+@@ -5360,7 +5360,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-plugins"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-exec-server",
+  "codex-exec-server-protocol",
+@@ -5374,7 +5374,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-process"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "tokio",
+@@ -5382,7 +5382,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-pty"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-utils-cargo-bin",
+@@ -5401,7 +5401,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-readiness"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "assert_matches",
+  "thiserror 2.0.18",
+@@ -5411,7 +5411,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-redacted-string"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "schemars 0.8.22",
+  "serde",
+@@ -5419,14 +5419,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-rustls-provider"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "rustls",
+ ]
+ 
+ [[package]]
+ name = "codex-utils-sandbox-summary"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-protocol",
+  "codex-utils-absolute-path",
+@@ -5436,7 +5436,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-sleep-inhibitor"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "core-foundation 0.9.4",
+  "libc",
+@@ -5446,14 +5446,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-stream-parser"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+ ]
+ 
+ [[package]]
+ name = "codex-utils-string"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "regex-lite",
+@@ -5463,14 +5463,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-utils-template"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+ ]
+ 
+ [[package]]
+ name = "codex-v8-poc"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "pretty_assertions",
+  "v8",
+@@ -5478,7 +5478,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-voice-host"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-install-context",
+@@ -5505,7 +5505,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-web-search-extension"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-api",
+  "codex-core",
+@@ -5527,7 +5527,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-websocket-auth"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -5546,7 +5546,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-websocket-client"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-http-client",
+  "codex-utils-rustls-provider",
+@@ -5562,7 +5562,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-windows-sandbox"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "base64 0.22.1",
+@@ -5592,7 +5592,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-windows-sandbox-service"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-cloud-config",
+@@ -5610,14 +5610,14 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-windows-sandbox-test-support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "dirs",
+ ]
+ 
+ [[package]]
+ name = "codex-workload-identity"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "codex-http-client",
+  "pretty_assertions",
+@@ -5632,7 +5632,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "codex-worktree"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "codex-git-utils",
+@@ -5885,7 +5885,7 @@ dependencies = [
+ 
+ [[package]]
+ name = "core_test_support"
+-version = "0.0.0"
++version = "0.166.0"
+ dependencies = [
+  "anyhow",
+  "assert_cmd",
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer.rs b/codex-rs/tui/src/bottom_pane/chat_composer.rs
+index aa50df3..6e1f75b 100644
+--- a/codex-rs/tui/src/bottom_pane/chat_composer.rs
++++ b/codex-rs/tui/src/bottom_pane/chat_composer.rs
+@@ -1,4 +1,9 @@
+ //! The chat composer is the bottom-pane text input state machine.
++//! The main ChatWidget supplies one atomic runtime context sample. Its optional one-row bar is
++//! immediately above the input, below above-composer popups. Measurement, painting and cursor use
++//! the same reserved rectangle; short panes hide the bar before clipping the minimum input.
++//! Generic embedded editors do not enable it. Missing or invalidated metadata is explicitly unknown.
++//! This presentation consumes existing notifications only; it never polls, reads history or calls AI.
+ //! Rich registers retain original payloads across draft clears and composer replacement;
+ //! only the live register transfers, not undo or repeat history. Copies receive fresh IDs and labels
+ //! before ordinary attachment pruning, including after each semantic repeat action.
+@@ -394,6 +399,7 @@ mod agents_navigation;
+ mod attachment_state;
+ mod completion_target;
+ mod composer_layout;
++mod context_progress;
+ mod draft_state;
+ mod footer_state;
+ mod history_search;
+@@ -633,6 +639,7 @@ pub(crate) struct ChatComposer {
+     effort_tier: Option<EffortTier>,
+     effort_animation_style: Option<IgnitionStyle>,
+     effort_ignition: Option<EffortIgnition>,
++    pub(super) context_progress: Option<crate::token_usage::ContextProgressSnapshot>,
+     voice_strip: Option<VoiceStrip>,
+     effort_status_line_transition: Option<EffortStatusLineTransition>,
+     effort_observed: bool,
+@@ -813,6 +820,7 @@ impl ChatComposer {
+             effort_tier: None,
+             effort_animation_style: None,
+             effort_ignition: None,
++            context_progress: None,
+             voice_strip: None,
+             effort_status_line_transition: None,
+             effort_observed: false,
+@@ -4598,6 +4606,7 @@ impl ChatComposer {
+     ) {
+         let ComposerLayout {
+             status,
++            context_progress,
+             composer: composer_rect,
+             remote_images: remote_images_rect,
+             textarea: textarea_rect,
+@@ -4605,6 +4614,19 @@ impl ChatComposer {
+             footer: footer_rect,
+         } = self.layout_with_options(area, options);
+         self.render_status_surface(status, buf, options);
++        if let Some(snapshot) = self.context_progress
++            && context_progress.height > 0
++        {
++            let text = context_progress::line(
++                snapshot,
++                context_progress.width,
++                crate::status::format_tokens_compact,
++            );
++            ratatui::text::Line::from(text)
++                .style(crate::style::secondary_text_style())
++                .render(context_progress, buf);
++        }
++        let overlay_top = context_progress.y;
+         if self.popups.active.is_above_composer()
+             && options.command_popup_placement != CommandPopupPlacement::Hidden
+         {
+@@ -4613,7 +4635,7 @@ impl ChatComposer {
+                     .popups
+                     .active
+                     .required_height(composer_rect.width, /*footer_total_height*/ 0)
+-                    .min(composer_rect.y.saturating_sub(buf.area.y));
++                    .min(overlay_top.saturating_sub(buf.area.y));
+                 // Command and unified mention menus can render in a single row.
+                 let height = if matches!(
+                     self.popups.active,
+@@ -4626,7 +4648,7 @@ impl ChatComposer {
+                 };
+                 Rect::new(
+                     composer_rect.x,
+-                    composer_rect.y - height,
++                    overlay_top - height,
+                     composer_rect.width,
+                     height,
+                 )
+@@ -12838,3 +12860,7 @@ mod tests {
+         insta::assert_snapshot!("shutdown_in_progress", terminal.backend());
+     }
+ }
++
++#[cfg(test)]
++#[path = "chat_composer/context_progress_tests.rs"]
++mod context_progress_tests;
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs b/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs
+index 949edcf..9d762fb 100644
+--- a/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs
+@@ -73,11 +73,12 @@ impl ChatComposer {
+             .voice_strip
+             .as_ref()
+             .map_or(0, |strip| strip.desired_height(area.width) + 1);
++        let progress_rows = u16::from(self.context_progress.is_some() && area.width > 0);
+         let shortcuts_above = self.shortcuts_above_composer(options);
+-        let (composer_rect, popup_rect, mut footer_rect) = if shortcuts_above {
++        let (mut composer_rect, popup_rect, mut footer_rect) = if shortcuts_above {
+             let [shortcuts, composer, footer] = Layout::vertical([
+                 Constraint::Max(footer_height(&self.hint_footer_props(options), area.width)),
+-                Constraint::Min(3 + voice_rows),
++                Constraint::Min(3 + voice_rows + progress_rows),
+                 Constraint::Length(footer_hint_height),
+             ])
+             .areas(area);
+@@ -85,7 +86,7 @@ impl ChatComposer {
+         } else if self.popups.active.is_above_composer() {
+             // Preserve the draft first, then its footer, and use remaining space for suggestions.
+             let [mut composer, mut popup, footer] = Layout::vertical([
+-                Constraint::Min(3 + voice_rows),
++                Constraint::Min(3 + voice_rows + progress_rows),
+                 Constraint::Max(popup_height.saturating_sub(footer_hint_height)),
+                 Constraint::Length(footer_hint_height),
+             ])
+@@ -95,12 +96,19 @@ impl ChatComposer {
+             (composer, popup, footer)
+         } else {
+             let [composer, popup] = Layout::vertical([
+-                Constraint::Min(3 + voice_rows),
++                Constraint::Min(3 + voice_rows + progress_rows),
+                 Constraint::Max(popup_height),
+             ])
+             .areas(area);
+             (composer, popup, popup)
+         };
++        let progress_height = progress_rows * u16::from(composer_rect.height >= 4 + voice_rows);
++        let context_progress = Rect {
++            height: progress_height,
++            ..composer_rect
++        };
++        composer_rect.y = composer_rect.y.saturating_add(progress_height);
++        composer_rect.height = composer_rect.height.saturating_sub(progress_height);
+         footer_rect.y = footer_rect.y.saturating_add(status.height);
+         // Keep the draft visible when clipped.
+         let voice_rows = voice_rows * u16::from(composer_rect.height >= voice_rows + 3);
+@@ -129,6 +137,7 @@ impl ChatComposer {
+         textarea_rect.height = textarea_rect.height.saturating_sub(consumed);
+         ComposerLayout {
+             status,
++            context_progress,
+             composer: composer_rect,
+             remote_images: remote_images_rect,
+             textarea: textarea_rect,
+@@ -187,6 +196,7 @@ impl ChatComposer {
+             + remote_images_height
+             + remote_images_separator
+             + self.status_surface_height(options)
++            + u16::from(self.context_progress.is_some() && width > 0)
+             + if self.shortcuts_above_composer(options) {
+                 footer_height(&self.hint_footer_props(options), width)
+             } else {
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs b/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs
+index bcc92a3..a209b93 100644
+--- a/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs
+@@ -41,6 +41,7 @@ use std::time::Duration;
+ /// Resolved rectangles shared by painting and cursor placement, without retained layout state.
+ pub(super) struct ComposerLayout {
+     pub(super) status: Rect,
++    pub(super) context_progress: Rect,
+     pub(super) composer: Rect,
+     pub(super) remote_images: Rect,
+     pub(super) textarea: Rect,
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs b/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs
+index 897f662..515128d 100644
+--- a/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs
+@@ -173,6 +173,7 @@ fn mention_menu_reserves_height_above_composer_and_owns_cursor_over_interactive_
+     let mut buffer = Buffer::empty(area);
+     composer.render_with_options(area, &mut buffer, /*mask_char*/ None, options);
+     let ComposerLayout {
++        context_progress: _,
+         composer: surface,
+         textarea,
+         popup,
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs b/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs
+index 03e761f..ebb2365 100644
+--- a/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs
+@@ -216,6 +216,7 @@ fn shortcut_help_keeps_bottom_anchored_composer_status_and_cursor_stable() {
+             .min(available_height);
+         let area = Rect::new(/*x*/ 3, 80 - height, width, height);
+         let ComposerLayout {
++            context_progress: _,
+             composer: surface,
+             footer,
+             status,
+@@ -250,6 +251,7 @@ fn shortcut_help_keeps_input_and_close_hint_visible_when_height_is_tiny() {
+             }
+             if height >= 4 {
+                 let ComposerLayout {
++                    context_progress: _,
+                     composer: surface,
+                     footer,
+                     ..
+@@ -384,6 +386,7 @@ fn slash_popup_preserves_footer_and_selection_style() {
+         let mut buf = Buffer::empty(area);
+         composer.render(area, &mut buf);
+         let ComposerLayout {
++            context_progress: _,
+             composer: surface,
+             textarea,
+             popup,
+diff --git a/codex-rs/tui/src/bottom_pane/mod.rs b/codex-rs/tui/src/bottom_pane/mod.rs
+index 5e4dee0..ab27bed 100644
+--- a/codex-rs/tui/src/bottom_pane/mod.rs
++++ b/codex-rs/tui/src/bottom_pane/mod.rs
+@@ -1465,6 +1465,14 @@ impl BottomPane {
+         }
+     }
+ 
++    pub(crate) fn set_context_progress(
++        &mut self,
++        snapshot: crate::token_usage::ContextProgressSnapshot,
++    ) {
++        self.composer.context_progress = Some(snapshot);
++        self.request_redraw();
++    }
++
+     pub(crate) fn set_context_window(&mut self, percent: Option<i64>, used_tokens: Option<i64>) {
+         if self.context_window_percent == percent && self.context_window_used_tokens == used_tokens
+         {
+diff --git a/codex-rs/tui/src/chatwidget.rs b/codex-rs/tui/src/chatwidget.rs
+index 68868be..920ee3f 100644
+--- a/codex-rs/tui/src/chatwidget.rs
++++ b/codex-rs/tui/src/chatwidget.rs
+@@ -75,6 +75,7 @@ use crate::terminal_title::SetTerminalTitleResult;
+ use crate::terminal_title::clear_terminal_title;
+ use crate::terminal_title::set_terminal_title;
+ use crate::text_formatting::proper_join;
++use crate::token_usage::ContextProgressState;
+ use crate::token_usage::TokenUsage;
+ use crate::token_usage::TokenUsageInfo;
+ use crate::version::CODEX_CLI_VERSION;
+@@ -568,6 +569,7 @@ pub(crate) struct ChatWidget {
+     pub(crate) windows_sandbox_host: crate::app::WindowsSandboxHost,
+     #[cfg(any(target_os = "windows", test))]
+     pub(crate) windows_sandbox_elevated_setup_complete: bool,
++    context_progress: ContextProgressState,
+     token_info: Option<TokenUsageInfo>,
+     token_usage_pending: bool,
+     // Status and polling use account usage reads; response streams may identify meters differently.
+@@ -1131,10 +1133,23 @@ impl ChatWidget {
+         self.config.memories.generate_memories = generate_memories;
+     }
+ 
++    fn publish_context_progress(&mut self) {
++        self.bottom_pane
++            .set_context_progress(self.context_progress.snapshot);
++    }
++
++    fn sync_context_progress_model(&mut self) {
++        let mode = self.effective_collaboration_mode();
++        self.context_progress.sync_model(mode.model());
++        self.publish_context_progress();
++    }
++
+     pub(crate) fn set_token_info(&mut self, info: Option<TokenUsageInfo>) {
+         match info {
+             Some(info) => self.apply_token_info(info),
+             None => {
++                self.context_progress.invalidate();
++                self.publish_context_progress();
+                 self.token_usage_pending = true;
+                 self.bottom_pane
+                     .set_context_window_pending(/*pending*/ true);
+@@ -1303,6 +1318,8 @@ impl ChatWidget {
+         if !from_replay && !self.bottom_pane.is_task_running() {
+             self.bottom_pane.set_task_running(/*running*/ true);
+         }
++        self.context_progress.begin_review();
++        self.publish_context_progress();
+         self.review.is_review_mode = true;
+         if !from_replay {
+             self.bottom_pane.ensure_status_indicator();
+@@ -1318,6 +1335,8 @@ impl ChatWidget {
+         self.flush_active_cell();
+         self.review.is_review_mode = false;
+         self.restore_pre_review_token_info();
++        self.context_progress.end_review();
++        self.publish_context_progress();
+         self.add_to_history(history_cell::new_review_status_line(
+             "<< Code review finished >>".to_string(),
+         ));
+@@ -2077,6 +2096,8 @@ impl ChatWidget {
+     }
+ 
+     pub(crate) fn clear_token_usage(&mut self) {
++        self.context_progress.invalidate();
++        self.publish_context_progress();
+         self.token_info = None;
+     }
+ }
+diff --git a/codex-rs/tui/src/chatwidget/compaction.rs b/codex-rs/tui/src/chatwidget/compaction.rs
+index e05180a..bf042e9 100644
+--- a/codex-rs/tui/src/chatwidget/compaction.rs
++++ b/codex-rs/tui/src/chatwidget/compaction.rs
+@@ -22,6 +22,9 @@ impl ChatWidget {
+         {
+             return;
+         }
++        self.context_progress
++            .compact_started(self.turn_lifecycle.last_turn_id.as_deref());
++        self.publish_context_progress();
+         self.flush_answer_stream_with_separator();
+         let now = Instant::now();
+         let started_at = now.checked_sub(elapsed).unwrap_or(now);
+diff --git a/codex-rs/tui/src/chatwidget/constructor.rs b/codex-rs/tui/src/chatwidget/constructor.rs
+index 7b2d08c..b868ad7 100644
+--- a/codex-rs/tui/src/chatwidget/constructor.rs
++++ b/codex-rs/tui/src/chatwidget/constructor.rs
+@@ -148,6 +148,7 @@ impl ChatWidget {
+             windows_sandbox_host: crate::app::WindowsSandboxHost::Unknown,
+             #[cfg(any(target_os = "windows", test))]
+             windows_sandbox_elevated_setup_complete: false,
++            context_progress: ContextProgressState::default(),
+             token_info: None,
+             token_usage_pending: false,
+             rate_limit_snapshots_by_limit_id: BTreeMap::new(),
+@@ -336,6 +337,7 @@ impl ChatWidget {
+             .bottom_pane
+             .set_token_activity_command_enabled(widget.has_codex_backend_auth);
+         widget.refresh_status_surfaces();
++        widget.sync_context_progress_model();
+ 
+         widget
+     }
+diff --git a/codex-rs/tui/src/chatwidget/protocol.rs b/codex-rs/tui/src/chatwidget/protocol.rs
+index be7da50..0e7eb4f 100644
+--- a/codex-rs/tui/src/chatwidget/protocol.rs
++++ b/codex-rs/tui/src/chatwidget/protocol.rs
+@@ -15,6 +15,15 @@ impl ChatWidget {
+             return;
+         }
+ 
++        // A token sample must not mutate parent status or resume state before ownership is checked.
++        if let ServerNotification::ThreadTokenUsageUpdated(notification) = &notification
++            && self
++                .thread_id
++                .is_some_and(|id| id.to_string() != notification.thread_id)
++        {
++            return;
++        }
++
+         if replay_kind != Some(ReplayKind::ResumeInitialMessages)
+             && !self.recover_resumed_reasoning(&notification)
+         {
+@@ -59,9 +68,15 @@ impl ChatWidget {
+                 }
+             }
+             ServerNotification::ThreadTokenUsageUpdated(notification) => {
+-                self.set_token_info(Some(token_usage_info_from_app_server(
+-                    notification.token_usage,
+-                )));
++                let info = token_usage_info_from_app_server(notification.token_usage);
++                self.context_progress.receive(
++                    &notification.thread_id,
++                    &notification.turn_id,
++                    &info,
++                    from_replay,
++                );
++                self.publish_context_progress();
++                self.set_token_info(Some(info));
+             }
+             ServerNotification::ThreadNameUpdated(notification) => {
+                 match ThreadId::from_string(&notification.thread_id) {
+@@ -87,6 +102,11 @@ impl ChatWidget {
+                 self.on_thread_settings_updated(notification);
+             }
+             ServerNotification::TurnStarted(notification) => {
++                self.context_progress.turn_started(
++                    &notification.thread_id,
++                    &notification.turn.id,
++                    from_replay,
++                );
+                 if self
+                     .bottom_pane
+                     .dismiss_view_by_id(safety_recourse::VIEW_ID)
+@@ -413,7 +433,13 @@ impl ChatWidget {
+             | ServerNotification::AccountLoginCompleted(_)
+             | ServerNotification::ProjectChanged(_)
+             | ServerNotification::ThreadProjectUpdated(_) => {}
+-            ServerNotification::ContextCompacted(_) => {}
++            ServerNotification::ContextCompacted(notification) => {
++                if !from_replay {
++                    self.context_progress
++                        .legacy_compacted(&notification.thread_id, &notification.turn_id);
++                    self.publish_context_progress();
++                }
++            }
+         }
+         // Tool and hook activity can recreate a hidden row with its default
+         // heading. Restore the selected status before that row is rendered.
+diff --git a/codex-rs/tui/src/chatwidget/session_flow.rs b/codex-rs/tui/src/chatwidget/session_flow.rs
+index a1ff412..3bd88b0 100644
+--- a/codex-rs/tui/src/chatwidget/session_flow.rs
++++ b/codex-rs/tui/src/chatwidget/session_flow.rs
+@@ -93,6 +93,9 @@ impl ChatWidget {
+         let connector_scope_changed = previous_thread_id != Some(session.thread_id)
+             || self.config.cwd.as_path() != session.cwd.as_path();
+         self.thread_id = Some(session.thread_id);
++        self.context_progress
++            .bind(Some(session.thread_id.to_string()));
++        self.publish_context_progress();
+         self.daybreak_enabled = self.config.features.enabled(Feature::CliDaybreak)
+             && session.daybreak_enabled
+             && !matches!(display, SessionConfiguredDisplay::SideConversation);
+@@ -206,6 +209,7 @@ impl ChatWidget {
+                 self.update_collaboration_mode_indicator();
+             }
+         }
++        self.sync_context_progress_model();
+         let effort = self.effective_reasoning_effort();
+         self.bottom_pane
+             .set_active_reasoning_effort_baseline(effort.as_ref());
+diff --git a/codex-rs/tui/src/chatwidget/settings.rs b/codex-rs/tui/src/chatwidget/settings.rs
+index 432fa65..58f1ba2 100644
+--- a/codex-rs/tui/src/chatwidget/settings.rs
++++ b/codex-rs/tui/src/chatwidget/settings.rs
+@@ -493,6 +493,7 @@ impl ChatWidget {
+     /// header/title (`refresh_model_display`) but forget the footer status line
+     /// (`refresh_status_line`).
+     pub(super) fn refresh_model_dependent_surfaces(&mut self) {
++        self.sync_context_progress_model();
+         self.sync_backend_banner_view();
+         self.refresh_model_display();
+         self.refresh_status_line();
+diff --git a/codex-rs/tui/src/chatwidget/tests.rs b/codex-rs/tui/src/chatwidget/tests.rs
+index 42f292b..8e86dac 100644
+--- a/codex-rs/tui/src/chatwidget/tests.rs
++++ b/codex-rs/tui/src/chatwidget/tests.rs
+@@ -335,3 +335,5 @@ mod security_setup_tests;
+ 
+ #[path = "tests/quick_dials_tests.rs"]
+ mod quick_dials_tests;
++
++mod context_progress;
+diff --git a/codex-rs/tui/src/token_usage.rs b/codex-rs/tui/src/token_usage.rs
+index ac9a20b..9440547 100644
+--- a/codex-rs/tui/src/token_usage.rs
++++ b/codex-rs/tui/src/token_usage.rs
+@@ -87,3 +87,264 @@ impl fmt::Display for TokenUsage {
+         )
+     }
+ }
++
++/// One presentation sample. Capacity is runtime metadata, never a config estimate.
++/// Unknown is distinct from a measured zero. The native /status helper owns the percentage.
++#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
++pub(crate) enum ContextProgressSnapshot {
++    #[default]
++    Unknown,
++    Known {
++        used: i64,
++        window: i64,
++        remaining: i64,
++    },
++}
++
++impl ContextProgressSnapshot {
++    pub(crate) fn from_info(info: &TokenUsageInfo) -> Self {
++        let Some(window) = info.model_context_window.filter(|window| *window > 0) else {
++            return Self::Unknown;
++        };
++        let used = info.last_token_usage.tokens_in_context_window();
++        if used < 0 {
++            return Self::Unknown;
++        }
++        Self::Known {
++            used,
++            window,
++            remaining: info
++                .last_token_usage
++                .percent_of_context_window_remaining(window),
++        }
++    }
++}
++
++/// Metadata-only lifecycle gate for the composer. No conversation, file watcher or backend call.
++/// Token notifications carry a thread/turn but no model ID: after a model change we conservatively
++/// wait for a distinct live turn and its sample. Replayed samples cannot establish live capacity.
++#[derive(Debug, Default)]
++pub(crate) struct ContextProgressState {
++    pub(crate) snapshot: ContextProgressSnapshot,
++    thread: Option<String>,
++    model: Option<String>,
++    turn: Option<String>,
++    waiting_for_turn: bool,
++    epoch: u64,
++    review: Option<(u64, ContextProgressSnapshot)>,
++    compaction_turn: Option<String>,
++}
++
++impl ContextProgressState {
++    pub(crate) fn bind(&mut self, thread: Option<String>) {
++        self.thread = thread;
++        self.turn = None;
++        self.waiting_for_turn = false;
++        self.compaction_turn = None;
++        self.review = None;
++        self.invalidate();
++    }
++
++    pub(crate) fn sync_model(&mut self, model: &str) {
++        if self.model.as_deref().is_some_and(|old| old != model) {
++            self.invalidate();
++            self.waiting_for_turn = true;
++        }
++        self.model = Some(model.to_owned());
++    }
++
++    pub(crate) fn invalidate(&mut self) {
++        self.epoch = self.epoch.wrapping_add(1);
++        self.snapshot = ContextProgressSnapshot::Unknown;
++    }
++
++    pub(crate) fn turn_started(&mut self, thread: &str, turn: &str, replay: bool) {
++        if replay || self.thread.as_deref() != Some(thread) {
++            return;
++        }
++        if self.turn.as_deref() != Some(turn) {
++            self.waiting_for_turn = false;
++            self.turn = Some(turn.to_owned());
++        }
++    }
++
++    pub(crate) fn receive(
++        &mut self,
++        thread: &str,
++        turn: &str,
++        info: &TokenUsageInfo,
++        replay: bool,
++    ) {
++        if replay
++            || self.thread.as_deref() != Some(thread)
++            || self.waiting_for_turn
++            || self.review.is_some()
++            || self.turn.as_deref().is_some_and(|current| current != turn)
++        {
++            return;
++        }
++        self.turn = Some(turn.to_owned());
++        self.snapshot = ContextProgressSnapshot::from_info(info);
++    }
++
++    pub(crate) fn compact_started(&mut self, turn: Option<&str>) {
++        self.compaction_turn = turn.map(str::to_owned);
++        self.invalidate();
++    }
++
++    /// Old servers can emit only this completion event. Ignore a duplicate/late completion of a
++    /// modern compaction, so a fresh post-compaction token sample is not erased.
++    pub(crate) fn legacy_compacted(&mut self, thread: &str, turn: &str) {
++        if self.thread.as_deref() == Some(thread)
++            && !self.turn.as_deref().is_some_and(|current| current != turn)
++            && self.compaction_turn.as_deref() != Some(turn)
++        {
++            self.compact_started(Some(turn));
++        }
++    }
++
++    pub(crate) fn begin_review(&mut self) {
++        if self.review.is_none() {
++            self.review = Some((self.epoch, self.snapshot));
++            self.snapshot = ContextProgressSnapshot::Unknown;
++        }
++    }
++
++    pub(crate) fn end_review(&mut self) {
++        if let Some((epoch, snapshot)) = self.review.take() {
++            self.snapshot = if epoch == self.epoch && !self.waiting_for_turn {
++                snapshot
++            } else {
++                ContextProgressSnapshot::Unknown
++            };
++        }
++    }
++}
++
++#[cfg(test)]
++mod context_progress_tests {
++    use super::*;
++    fn info(used: i64, window: Option<i64>) -> TokenUsageInfo {
++        TokenUsageInfo {
++            total_token_usage: TokenUsage {
++                total_tokens: 9_999_999,
++                ..Default::default()
++            },
++            last_token_usage: TokenUsage {
++                total_tokens: used,
++                ..Default::default()
++            },
++            model_context_window: window,
++        }
++    }
++    fn state() -> ContextProgressState {
++        let mut state = ContextProgressState::default();
++        state.bind(Some("thread-a".to_owned()));
++        state.sync_model("model-a");
++        state
++    }
++    #[test]
++    fn context_progress_matches_native_status_last_not_cumulative() {
++        for (used, window) in [
++            (0, 828_400),
++            (191_000, 828_400),
++            (12_000, 12_000),
++            (10, 100),
++            (900_000, 828_400),
++            (i64::MAX, i64::MAX),
++        ] {
++            let info = info(used, Some(window));
++            assert_eq!(
++                ContextProgressSnapshot::from_info(&info),
++                ContextProgressSnapshot::Known {
++                    used,
++                    window,
++                    remaining: info
++                        .last_token_usage
++                        .percent_of_context_window_remaining(window),
++                }
++            );
++        }
++        assert_eq!(
++            ContextProgressSnapshot::from_info(&info(191_000, Some(828_400))),
++            ContextProgressSnapshot::Known {
++                used: 191_000,
++                window: 828_400,
++                remaining: 78
++            }
++        );
++        for info in [
++            info(-1, Some(100)),
++            info(0, None),
++            info(0, Some(0)),
++            info(0, Some(-1)),
++        ] {
++            assert_eq!(
++                ContextProgressSnapshot::from_info(&info),
++                ContextProgressSnapshot::Unknown
++            );
++        }
++    }
++    #[test]
++    fn context_progress_thread_replay_model_and_turn_gate() {
++        let mut s = state();
++        let i = info(20_000, Some(100_000));
++        s.receive("thread-b", "turn-1", &i, false);
++        s.receive("thread-a", "turn-1", &i, true);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.receive("thread-a", "turn-1", &i, false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        s.sync_model("model-b");
++        s.turn_started("thread-a", "turn-1", false);
++        s.receive("thread-a", "turn-1", &i, false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.turn_started("thread-a", "turn-2", false);
++        s.receive("thread-a", "turn-1", &i, false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.receive("thread-a", "turn-2", &i, false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        s.bind(Some("thread-b".to_owned()));
++        s.receive("thread-a", "turn-2", &i, false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++    }
++    #[test]
++    fn context_progress_compact_late_completion_and_review_epochs() {
++        let mut s = state();
++        let i = info(20_000, Some(100_000));
++        s.receive("thread-a", "turn-1", &i, false);
++        s.begin_review();
++        s.receive("thread-a", "turn-1", &info(99_999, Some(100_000)), false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.end_review();
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        s.compact_started(Some("turn-1"));
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.receive("thread-a", "turn-1", &i, false);
++        s.legacy_compacted("thread-a", "turn-1");
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        // Two modern compactions in one turn both invalidate; completion does not.
++        s.compact_started(Some("turn-1"));
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.receive("thread-a", "turn-1", &i, false);
++        s.begin_review();
++        s.sync_model("model-b");
++        s.end_review();
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++    }
++    #[test]
++    fn context_progress_invalid_sample_replaces_prior_and_legacy_is_idempotent() {
++        let mut s = state();
++        let i = info(20_000, Some(100_000));
++        s.receive("thread-a", "turn-1", &i, false);
++        s.receive("thread-a", "turn-1", &info(0, None), false);
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++        s.legacy_compacted("thread-a", "turn-1");
++        s.receive("thread-a", "turn-1", &i, false);
++        s.legacy_compacted("thread-a", "turn-1");
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        s.legacy_compacted("thread-a", "older-turn");
++        assert_eq!(s.snapshot, ContextProgressSnapshot::from_info(&i));
++        s.invalidate();
++        assert_eq!(s.snapshot, ContextProgressSnapshot::Unknown);
++    }
++}
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs b/codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs
+new file mode 100644
+--- /dev/null
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs
+@@ -0,0 +1,116 @@
++//! Width-aware text for the native above-composer row. Painting/theme and geometry remain owned
++//! by ChatComposer. The formatter is the existing /status formatter; no second token formula.
++use crate::token_usage::ContextProgressSnapshot;
++use unicode_width::UnicodeWidthStr;
++
++pub(super) fn line(
++    snapshot: ContextProgressSnapshot,
++    width: u16,
++    format_tokens: impl Fn(i64) -> String,
++) -> String {
++    let width = usize::from(width);
++    if width == 0 {
++        return String::new();
++    }
++    let ContextProgressSnapshot::Known {
++        used,
++        window,
++        remaining,
++    } = snapshot
++    else {
++        return ["Context: unknown", "Ctx ?", "?"]
++            .into_iter()
++            .find(|text| text.width() <= width)
++            .unwrap_or("")
++            .to_owned();
++    };
++    let used = format_tokens(used);
++    let window = format_tokens(window);
++    let labels = [
++        format!("Context: {used}/{window} • {remaining}% left"),
++        format!("{used}/{window} {remaining}%"),
++        format!("Ctx {remaining}%"),
++        format!("{remaining}%"),
++    ];
++    // Prefer a complete used/usable label and at least two bar cells. Very narrow panes may omit
++    // the bar or the counts, never truncate a number into a different measurement.
++    let label = labels
++        .iter()
++        .find(|label| label.width() + 5 <= width)
++        .or_else(|| labels.iter().find(|label| label.width() <= width));
++    let Some(label) = label else {
++        return "?".to_owned();
++    };
++    let spare = width.saturating_sub(label.width());
++    if spare < 5 {
++        return label.clone();
++    }
++    let cells = spare - 3; // one space plus brackets
++    let filled = (cells * remaining.clamp(0, 100) as usize + 50) / 100;
++    format!(
++        "{label} [{}{}]",
++        "#".repeat(filled),
++        "-".repeat(cells - filled)
++    )
++}
++
++#[cfg(test)]
++mod tests {
++    use super::*;
++
++    #[test]
++    fn context_progress_widths_unknown_and_measured_zero_are_distinct() {
++        for width in 0..=120 {
++            for sample in [
++                ContextProgressSnapshot::Unknown,
++                ContextProgressSnapshot::Known {
++                    used: 0,
++                    window: 100,
++                    remaining: 100,
++                },
++                ContextProgressSnapshot::Known {
++                    used: 200,
++                    window: 100,
++                    remaining: 0,
++                },
++            ] {
++                let text = line(sample, width, |n| n.to_string());
++                assert!(text.width() <= usize::from(width), "{width}: {text}");
++                assert!(!text.contains('\n'));
++            }
++        }
++        assert_eq!(
++            line(ContextProgressSnapshot::Unknown, 40, |n| n.to_string()),
++            "Context: unknown"
++        );
++        let zero = line(
++            ContextProgressSnapshot::Known {
++                used: 0,
++                window: 100,
++                remaining: 100,
++            },
++            40,
++            |n| n.to_string(),
++        );
++        assert!(zero.contains("0/100"));
++        assert!(zero.contains("100%"));
++        assert!(!zero.contains('-'));
++    }
++
++    #[test]
++    fn context_progress_text_and_bar_use_one_sample_and_unicode_cell_width() {
++        let s = ContextProgressSnapshot::Known {
++            used: 25,
++            window: 100,
++            remaining: 75,
++        };
++        let text = line(s, 40, |n| n.to_string());
++        assert!(text.contains("25/100 • 75% left"));
++        let bar = text.split('[').nth(1).unwrap().trim_end_matches(']');
++        assert_eq!(bar.matches('#').count(), (bar.len() * 75 + 50) / 100);
++        for width in [20, 40, 80, 120] {
++            let text = line(s, width, |n| format!("界{n}"));
++            assert!(text.width() <= usize::from(width));
++        }
++    }
++}
+diff --git a/codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs b/codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs
+new file mode 100644
+--- /dev/null
++++ b/codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs
+@@ -0,0 +1,148 @@
++//! Full composer integration suite. Requires codex-tui's test binary; the standalone text harness
++//! deliberately does not claim these tests or the VT100 backend ran.
++use super::*;
++use crate::token_usage::ContextProgressSnapshot;
++use tokio::sync::mpsc::unbounded_channel;
++
++fn composer() -> ChatComposer {
++    let (tx, _) = unbounded_channel();
++    let mut c = ChatComposer::new(
++        true,
++        AppEventSender::new(tx),
++        false,
++        "Ask Codex".into(),
++        true,
++    );
++    c.context_progress = Some(ContextProgressSnapshot::Known {
++        used: 191_000,
++        window: 828_400,
++        remaining: 78,
++    });
++    c
++}
++
++#[test]
++fn context_progress_layout_cursor_matrix() {
++    for width in [20, 40, 80, 120] {
++        for height in [1, 2, 3, 6, 24] {
++            for draft in ["hello", "Tiếng Việt 界 👋\nsecond\nthird"] {
++                let mut c = composer();
++                c.set_text_content(draft.into(), vec![], vec![]);
++                let options = ComposerRenderOptions::default();
++                let area = Rect::new(0, 0, width, height);
++                let layout = c.layout_with_options(area, options);
++                let mut buffer = Buffer::empty(area);
++                c.render_with_options(area, &mut buffer, None, options);
++                assert!(layout.context_progress.height <= 1);
++                assert_eq!(layout.context_progress.bottom(), layout.composer.y);
++                if height <= 3 {
++                    assert_eq!(layout.context_progress.height, 0);
++                }
++                if let Some((x, y)) = c.cursor_pos_with_options(area, options) {
++                    assert!(x < area.right() && y < area.bottom());
++                    assert!(y >= layout.context_progress.bottom());
++                }
++                let with = c.desired_height_with_options(width, options);
++                c.context_progress = None;
++                assert_eq!(with, c.desired_height_with_options(width, options) + 1);
++            }
++        }
++    }
++}
++
++#[test]
++fn context_progress_popups_voice_images_and_theme() {
++    use crate::bottom_pane::voice_strip::{VoiceStripPhase, VoiceStripState};
++    for (fg, bg) in [
++        ((20, 20, 20), (245, 245, 245)),
++        ((235, 235, 235), (20, 20, 20)),
++    ] {
++        crate::terminal_palette::with_test_default_colors(
++            crate::terminal_probe::DefaultColors { fg, bg },
++            || {
++                for placement in [
++                    CommandPopupPlacement::AboveComposer,
++                    CommandPopupPlacement::Overlay,
++                    CommandPopupPlacement::Hidden,
++                ] {
++                    for voice in [false, true] {
++                        let mut c = composer();
++                        c.handle_key_event(KeyEvent::new(KeyCode::Char('/'), KeyModifiers::NONE));
++                        assert!(c.popups.active.is_above_composer());
++                        c.set_remote_image_urls(vec!["https://example.invalid/image.png".into()]);
++                        if voice {
++                            c.set_voice_strip(
++                                Some(VoiceStripState {
++                                    mute_hint: None,
++                                    phase: VoiceStripPhase::Active,
++                                    microphone_live: true,
++                                    microphone_muted: false,
++                                    microphone_history: vec![0, 100, 255],
++                                    speaker_history: vec![255, 100, 0],
++                                    activity: "listening",
++                                    animations: false,
++                                    progress: true,
++                                }),
++                                FrameRequester::test_dummy(),
++                            );
++                        }
++                        let options = c.resolve_render_options(ComposerRenderOptions {
++                            command_popup_placement: placement,
++                            ..Default::default()
++                        });
++                        let area = Rect::new(0, 10, 80, c.desired_height_with_options(80, options));
++                        let l = c.layout_with_options(area, options);
++                        assert_eq!(l.context_progress.height, 1);
++                        assert_eq!(l.context_progress.bottom(), l.composer.y);
++                        if placement == CommandPopupPlacement::AboveComposer {
++                            assert!(l.popup.bottom() <= l.context_progress.y);
++                        }
++                        let mut buf = Buffer::empty(Rect::new(0, 0, 80, area.bottom()));
++                        c.render_with_options(area, &mut buf, None, options);
++                        let row: String = (0..80)
++                            .map(|x| buf[(x, l.context_progress.y)].symbol())
++                            .collect();
++                        assert!(
++                            row.contains("191K/828K"),
++                            "popup must not overwrite context: {row}"
++                        );
++                        assert!(l.textarea.y >= l.composer.y);
++                        assert!(l.remote_images.y >= l.composer.y);
++                    }
++                }
++            },
++        );
++    }
++}
++
++#[test]
++fn context_progress_vt100_resize_matrix() {
++    for (width, height) in [(80, 24), (20, 6), (40, 3), (120, 24)] {
++        let mut c = composer();
++        c.set_text_content("Tiếng Việt 界\nsecond line".into(), vec![], vec![]);
++        let mut terminal =
++            ratatui::Terminal::new(crate::test_backend::VT100Backend::new(width, height)).unwrap();
++        terminal
++            .draw(|frame| {
++                let area = frame.area();
++                c.render_with_options(
++                    area,
++                    frame.buffer_mut(),
++                    None,
++                    ComposerRenderOptions::default(),
++                );
++                if let Some((x, y)) =
++                    c.cursor_pos_with_options(area, ComposerRenderOptions::default())
++                {
++                    frame.set_cursor_position((x, y));
++                }
++            })
++            .unwrap();
++        let screen = terminal.backend().to_string();
++        if height >= 6 {
++            assert!(screen.contains("191K/828K"), "{screen}");
++        } else {
++            assert!(!screen.contains("Context:"));
++        }
++    }
++}
+diff --git a/codex-rs/tui/src/chatwidget/tests/context_progress.rs b/codex-rs/tui/src/chatwidget/tests/context_progress.rs
+new file mode 100644
+--- /dev/null
++++ b/codex-rs/tui/src/chatwidget/tests/context_progress.rs
+@@ -0,0 +1,141 @@
++//! Native notification/lifecycle integration tests; not part of the lightweight standalone harness.
++use super::*;
++use crate::token_usage::ContextProgressSnapshot;
++use codex_app_server_protocol::{
++    ThreadTokenUsage, ThreadTokenUsageUpdatedNotification, TokenUsageBreakdown,
++};
++
++fn token(thread: &str, turn: &str, used: i64) -> ServerNotification {
++    let last = TokenUsageBreakdown {
++        total_tokens: used,
++        input_tokens: used,
++        cached_input_tokens: 0,
++        cache_write_input_tokens: 0,
++        output_tokens: 0,
++        reasoning_output_tokens: 0,
++    };
++    let total = TokenUsageBreakdown {
++        total_tokens: 9_000_000,
++        ..last.clone()
++    };
++    ServerNotification::ThreadTokenUsageUpdated(ThreadTokenUsageUpdatedNotification {
++        thread_id: thread.into(),
++        turn_id: turn.into(),
++        token_usage: ThreadTokenUsage {
++            total,
++            last,
++            model_context_window: Some(828_400),
++        },
++    })
++}
++fn bind(chat: &mut ChatWidget) -> String {
++    let id = ThreadId::new();
++    chat.thread_id = Some(id);
++    chat.context_progress.bind(Some(id.to_string()));
++    chat.sync_context_progress_model();
++    id.to_string()
++}
++
++#[tokio::test]
++async fn context_progress_native_notifications_wrong_thread_resume_and_model() {
++    let (mut chat, _rx, _ops) = make_chatwidget_manual(None).await;
++    let id = bind(&mut chat);
++    chat.handle_server_notification(
++        token(&id, "one", 191_000),
++        Some(ReplayKind::ResumeInitialMessages),
++    );
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    chat.handle_server_notification(token(&id, "one", 191_000), None);
++    let expected = ContextProgressSnapshot::Known {
++        used: 191_000,
++        window: 828_400,
++        remaining: 78,
++    };
++    assert_eq!(chat.context_progress.snapshot, expected);
++    let native_before = chat.token_info.clone();
++    chat.handle_server_notification(token(&ThreadId::new().to_string(), "one", 99), None);
++    assert_eq!(chat.context_progress.snapshot, expected);
++    assert_eq!(chat.token_info, native_before);
++    chat.set_model("context-test-other-model");
++    chat.handle_server_notification(token(&id, "one", 20_000), None);
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    handle_turn_started(&mut chat, "two");
++    chat.handle_server_notification(token(&id, "one", 20_000), None);
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    chat.handle_server_notification(token(&id, "two", 191_000), None);
++    assert_eq!(chat.context_progress.snapshot, expected);
++    chat.clear_token_usage();
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    let new_id = bind(&mut chat);
++    assert_ne!(id, new_id);
++    chat.handle_server_notification(token(&id, "two", 191_000), None);
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++}
++
++#[tokio::test]
++async fn context_progress_native_compaction_review_and_late_completion() {
++    let (mut chat, _rx, _ops) = make_chatwidget_manual(None).await;
++    let id = bind(&mut chat);
++    handle_turn_started(&mut chat, "one");
++    chat.handle_server_notification(token(&id, "one", 191_000), None);
++    let before = chat.context_progress.snapshot;
++    chat.handle_server_notification(
++        ServerNotification::ItemStarted(ItemStartedNotification::new(
++            id.clone(),
++            "one".into(),
++            AppServerThreadItemPayload::ContextCompaction {
++                id: "compact".into(),
++            },
++            0,
++        )),
++        None,
++    );
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    chat.handle_server_notification(token(&id, "one", 191_000), None);
++    chat.handle_server_notification(
++        ServerNotification::ItemCompleted(ItemCompletedNotification::new(
++            id.clone(),
++            "one".into(),
++            AppServerThreadItemPayload::ContextCompaction {
++                id: "compact".into(),
++            },
++            None,
++            0,
++        )),
++        None,
++    );
++    assert_eq!(chat.context_progress.snapshot, before);
++    chat.enter_review_mode_with_hint("fixture".into(), false);
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++    chat.handle_server_notification(token(&id, "one", 700_000), None);
++    chat.exit_review_mode_after_item();
++    assert_eq!(chat.context_progress.snapshot, before);
++    chat.enter_review_mode_with_hint("fixture".into(), false);
++    chat.set_model("context-test-other-model");
++    chat.exit_review_mode_after_item();
++    assert_eq!(
++        chat.context_progress.snapshot,
++        ContextProgressSnapshot::Unknown
++    );
++}

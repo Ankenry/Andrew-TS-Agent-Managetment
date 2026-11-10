@@ -1,0 +1,945 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T10:26:59.840636+00:00",
+  "title": "Design System: Andrew Brain",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.00337 175.83)",
+          "oklch(26.43% 0.00618 175.83)",
+          "oklch(37.86% 0.00899 175.83)",
+          "oklch(49.29% 0.01124 175.83)",
+          "oklch(60.71% 0.01124 175.83)",
+          "oklch(72.14% 0.00956 175.83)",
+          "oklch(83.57% 0.00618 175.83)",
+          "oklch(95.00% 0.00202 175.83)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail",
+        "tonalRamp": [
+          "oklch(15.00% 0.00709 167.39)",
+          "oklch(26.43% 0.01300 167.39)",
+          "oklch(37.86% 0.01891 167.39)",
+          "oklch(49.29% 0.02364 167.39)",
+          "oklch(60.71% 0.02364 167.39)",
+          "oklch(72.14% 0.02009 167.39)",
+          "oklch(83.57% 0.01300 167.39)",
+          "oklch(95.00% 0.00425 167.39)"
+        ]
+      },
+      "reader": {
+        "role": "neutral",
+        "displayName": "Reader",
+        "tonalRamp": [
+          "oklch(15.00% 0.00559 158.10)",
+          "oklch(26.43% 0.01024 158.10)",
+          "oklch(37.86% 0.01490 158.10)",
+          "oklch(49.29% 0.01863 158.10)",
+          "oklch(60.71% 0.01863 158.10)",
+          "oklch(72.14% 0.01583 158.10)",
+          "oklch(83.57% 0.01024 158.10)",
+          "oklch(95.00% 0.00335 158.10)"
+        ]
+      },
+      "assistant": {
+        "role": "neutral",
+        "displayName": "Assistant",
+        "tonalRamp": [
+          "oklch(15.00% 0.00742 154.12)",
+          "oklch(26.43% 0.01360 154.12)",
+          "oklch(37.86% 0.01978 154.12)",
+          "oklch(49.29% 0.02472 154.12)",
+          "oklch(60.71% 0.02472 154.12)",
+          "oklch(72.14% 0.02101 154.12)",
+          "oklch(83.57% 0.01360 154.12)",
+          "oklch(95.00% 0.00445 154.12)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.00831 158.89)",
+          "oklch(26.43% 0.01524 158.89)",
+          "oklch(37.86% 0.02216 158.89)",
+          "oklch(49.29% 0.02771 158.89)",
+          "oklch(60.71% 0.02771 158.89)",
+          "oklch(72.14% 0.02355 158.89)",
+          "oklch(83.57% 0.01524 158.89)",
+          "oklch(95.00% 0.00499 158.89)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.00757 155.00)",
+          "oklch(26.43% 0.01388 155.00)",
+          "oklch(37.86% 0.02019 155.00)",
+          "oklch(49.29% 0.02524 155.00)",
+          "oklch(60.71% 0.02524 155.00)",
+          "oklch(72.14% 0.02145 155.00)",
+          "oklch(83.57% 0.01388 155.00)",
+          "oklch(95.00% 0.00454 155.00)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00255 145.51)",
+          "oklch(26.43% 0.00468 145.51)",
+          "oklch(37.86% 0.00680 145.51)",
+          "oklch(49.29% 0.00850 145.51)",
+          "oklch(60.71% 0.00850 145.51)",
+          "oklch(72.14% 0.00723 145.51)",
+          "oklch(83.57% 0.00468 145.51)",
+          "oklch(95.00% 0.00153 145.51)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.03661 83.99)",
+          "oklch(26.43% 0.06712 83.99)",
+          "oklch(37.86% 0.09763 83.99)",
+          "oklch(49.29% 0.12204 83.99)",
+          "oklch(60.71% 0.12204 83.99)",
+          "oklch(72.14% 0.10373 83.99)",
+          "oklch(83.57% 0.06712 83.99)",
+          "oklch(95.00% 0.02197 83.99)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(15.00% 0.03293 85.27)",
+          "oklch(26.43% 0.06037 85.27)",
+          "oklch(37.86% 0.08781 85.27)",
+          "oklch(49.29% 0.10976 85.27)",
+          "oklch(60.71% 0.10976 85.27)",
+          "oklch(72.14% 0.09329 85.27)",
+          "oklch(83.57% 0.06037 85.27)",
+          "oklch(95.00% 0.01976 85.27)"
+        ]
+      },
+      "nav-text": {
+        "role": "neutral",
+        "displayName": "Nav Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00666 154.05)",
+          "oklch(26.43% 0.01221 154.05)",
+          "oklch(37.86% 0.01776 154.05)",
+          "oklch(49.29% 0.02220 154.05)",
+          "oklch(60.71% 0.02220 154.05)",
+          "oklch(72.14% 0.01887 154.05)",
+          "oklch(83.57% 0.01221 154.05)",
+          "oklch(95.00% 0.00400 154.05)"
+        ]
+      },
+      "nav-hover": {
+        "role": "neutral",
+        "displayName": "Nav Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.01008 160.71)",
+          "oklch(26.43% 0.01847 160.71)",
+          "oklch(37.86% 0.02687 160.71)",
+          "oklch(49.29% 0.03359 160.71)",
+          "oklch(60.71% 0.03359 160.71)",
+          "oklch(72.14% 0.02855 160.71)",
+          "oklch(83.57% 0.01847 160.71)",
+          "oklch(95.00% 0.00605 160.71)"
+        ]
+      },
+      "nav-active": {
+        "role": "primary",
+        "displayName": "Nav Active",
+        "tonalRamp": [
+          "oklch(15.00% 0.01140 140.63)",
+          "oklch(26.43% 0.02090 140.63)",
+          "oklch(37.86% 0.03040 140.63)",
+          "oklch(49.29% 0.03800 140.63)",
+          "oklch(60.71% 0.03800 140.63)",
+          "oklch(72.14% 0.03230 140.63)",
+          "oklch(83.57% 0.02090 140.63)",
+          "oklch(95.00% 0.00684 140.63)"
+        ]
+      },
+      "nav-active-text": {
+        "role": "primary",
+        "displayName": "Nav Active Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.02953 83.01)",
+          "oklch(26.43% 0.05414 83.01)",
+          "oklch(37.86% 0.07875 83.01)",
+          "oklch(49.29% 0.09843 83.01)",
+          "oklch(60.71% 0.09843 83.01)",
+          "oklch(72.14% 0.08367 83.01)",
+          "oklch(83.57% 0.05414 83.01)",
+          "oklch(95.00% 0.01772 83.01)"
+        ]
+      },
+      "icon-text": {
+        "role": "neutral",
+        "displayName": "Icon Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00694 155.82)",
+          "oklch(26.43% 0.01272 155.82)",
+          "oklch(37.86% 0.01850 155.82)",
+          "oklch(49.29% 0.02313 155.82)",
+          "oklch(60.71% 0.02313 155.82)",
+          "oklch(72.14% 0.01966 155.82)",
+          "oklch(83.57% 0.01272 155.82)",
+          "oklch(95.00% 0.00416 155.82)"
+        ]
+      },
+      "icon-hover": {
+        "role": "neutral",
+        "displayName": "Icon Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.00881 156.09)",
+          "oklch(26.43% 0.01616 156.09)",
+          "oklch(37.86% 0.02350 156.09)",
+          "oklch(49.29% 0.02938 156.09)",
+          "oklch(60.71% 0.02938 156.09)",
+          "oklch(72.14% 0.02497 156.09)",
+          "oklch(83.57% 0.01616 156.09)",
+          "oklch(95.00% 0.00529 156.09)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "search": {
+        "role": "neutral",
+        "displayName": "Search",
+        "tonalRamp": [
+          "oklch(15.00% 0.00641 158.82)",
+          "oklch(26.43% 0.01175 158.82)",
+          "oklch(37.86% 0.01709 158.82)",
+          "oklch(49.29% 0.02136 158.82)",
+          "oklch(60.71% 0.02136 158.82)",
+          "oklch(72.14% 0.01816 158.82)",
+          "oklch(83.57% 0.01175 158.82)",
+          "oklch(95.00% 0.00384 158.82)"
+        ]
+      },
+      "search-line": {
+        "role": "neutral",
+        "displayName": "Search Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.00981 153.01)",
+          "oklch(26.43% 0.01799 153.01)",
+          "oklch(37.86% 0.02617 153.01)",
+          "oklch(49.29% 0.03272 153.01)",
+          "oklch(60.71% 0.03272 153.01)",
+          "oklch(72.14% 0.02781 153.01)",
+          "oklch(83.57% 0.01799 153.01)",
+          "oklch(95.00% 0.00589 153.01)"
+        ]
+      },
+      "search-muted": {
+        "role": "neutral",
+        "displayName": "Search Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.00884 155.13)",
+          "oklch(26.43% 0.01621 155.13)",
+          "oklch(37.86% 0.02358 155.13)",
+          "oklch(49.29% 0.02948 155.13)",
+          "oklch(60.71% 0.02948 155.13)",
+          "oklch(72.14% 0.02506 155.13)",
+          "oklch(83.57% 0.01621 155.13)",
+          "oklch(95.00% 0.00531 155.13)"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder",
+        "tonalRamp": [
+          "oklch(15.00% 0.00759 154.99)",
+          "oklch(26.43% 0.01392 154.99)",
+          "oklch(37.86% 0.02025 154.99)",
+          "oklch(49.29% 0.02531 154.99)",
+          "oklch(60.71% 0.02531 154.99)",
+          "oklch(72.14% 0.02152 154.99)",
+          "oklch(83.57% 0.01392 154.99)",
+          "oklch(95.00% 0.00456 154.99)"
+        ]
+      },
+      "filter-text": {
+        "role": "neutral",
+        "displayName": "Filter Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00671 154.03)",
+          "oklch(26.43% 0.01230 154.03)",
+          "oklch(37.86% 0.01789 154.03)",
+          "oklch(49.29% 0.02236 154.03)",
+          "oklch(60.71% 0.02236 154.03)",
+          "oklch(72.14% 0.01901 154.03)",
+          "oklch(83.57% 0.01230 154.03)",
+          "oklch(95.00% 0.00402 154.03)"
+        ]
+      },
+      "filter-hover": {
+        "role": "neutral",
+        "displayName": "Filter Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.00829 156.99)",
+          "oklch(26.43% 0.01520 156.99)",
+          "oklch(37.86% 0.02211 156.99)",
+          "oklch(49.29% 0.02763 156.99)",
+          "oklch(60.71% 0.02763 156.99)",
+          "oklch(72.14% 0.02349 156.99)",
+          "oklch(83.57% 0.01520 156.99)",
+          "oklch(95.00% 0.00497 156.99)"
+        ]
+      },
+      "filter-active": {
+        "role": "primary",
+        "displayName": "Filter Active",
+        "tonalRamp": [
+          "oklch(15.00% 0.01359 133.36)",
+          "oklch(26.43% 0.02491 133.36)",
+          "oklch(37.86% 0.03623 133.36)",
+          "oklch(49.29% 0.04529 133.36)",
+          "oklch(60.71% 0.04529 133.36)",
+          "oklch(72.14% 0.03850 133.36)",
+          "oklch(83.57% 0.02491 133.36)",
+          "oklch(95.00% 0.00815 133.36)"
+        ]
+      },
+      "filter-active-text": {
+        "role": "primary",
+        "displayName": "Filter Active Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.03160 83.45)",
+          "oklch(26.43% 0.05793 83.45)",
+          "oklch(37.86% 0.08426 83.45)",
+          "oklch(49.29% 0.10533 83.45)",
+          "oklch(60.71% 0.10533 83.45)",
+          "oklch(72.14% 0.08953 83.45)",
+          "oklch(83.57% 0.05793 83.45)",
+          "oklch(95.00% 0.01896 83.45)"
+        ]
+      },
+      "row-reading": {
+        "role": "neutral",
+        "displayName": "Row Reading",
+        "tonalRamp": [
+          "oklch(15.00% 0.00878 154.23)",
+          "oklch(26.43% 0.01609 154.23)",
+          "oklch(37.86% 0.02340 154.23)",
+          "oklch(49.29% 0.02925 154.23)",
+          "oklch(60.71% 0.02925 154.23)",
+          "oklch(72.14% 0.02487 154.23)",
+          "oklch(83.57% 0.01609 154.23)",
+          "oklch(95.00% 0.00527 154.23)"
+        ]
+      },
+      "row-selected": {
+        "role": "primary",
+        "displayName": "Row Selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.01050 114.98)",
+          "oklch(26.43% 0.01924 114.98)",
+          "oklch(37.86% 0.02799 114.98)",
+          "oklch(49.29% 0.03499 114.98)",
+          "oklch(60.71% 0.03499 114.98)",
+          "oklch(72.14% 0.02974 114.98)",
+          "oklch(83.57% 0.01924 114.98)",
+          "oklch(95.00% 0.00630 114.98)"
+        ]
+      },
+      "row-selected-reading": {
+        "role": "primary",
+        "displayName": "Row Selected Reading",
+        "tonalRamp": [
+          "oklch(15.00% 0.01209 112.19)",
+          "oklch(26.43% 0.02216 112.19)",
+          "oklch(37.86% 0.03223 112.19)",
+          "oklch(49.29% 0.04029 112.19)",
+          "oklch(60.71% 0.04029 112.19)",
+          "oklch(72.14% 0.03424 112.19)",
+          "oklch(83.57% 0.02216 112.19)",
+          "oklch(95.00% 0.00725 112.19)"
+        ]
+      },
+      "row-hover": {
+        "role": "neutral",
+        "displayName": "Row Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.00762 156.09)",
+          "oklch(26.43% 0.01396 156.09)",
+          "oklch(37.86% 0.02031 156.09)",
+          "oklch(49.29% 0.02539 156.09)",
+          "oklch(60.71% 0.02539 156.09)",
+          "oklch(72.14% 0.02158 156.09)",
+          "oklch(83.57% 0.01396 156.09)",
+          "oklch(95.00% 0.00457 156.09)"
+        ]
+      },
+      "button": {
+        "role": "neutral",
+        "displayName": "Button",
+        "tonalRamp": [
+          "oklch(15.00% 0.00894 155.88)",
+          "oklch(26.43% 0.01639 155.88)",
+          "oklch(37.86% 0.02385 155.88)",
+          "oklch(49.29% 0.02981 155.88)",
+          "oklch(60.71% 0.02981 155.88)",
+          "oklch(72.14% 0.02534 155.88)",
+          "oklch(83.57% 0.01639 155.88)",
+          "oklch(95.00% 0.00537 155.88)"
+        ]
+      },
+      "button-text": {
+        "role": "neutral",
+        "displayName": "Button Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00736 151.15)",
+          "oklch(26.43% 0.01349 151.15)",
+          "oklch(37.86% 0.01962 151.15)",
+          "oklch(49.29% 0.02452 151.15)",
+          "oklch(60.71% 0.02452 151.15)",
+          "oklch(72.14% 0.02084 151.15)",
+          "oklch(83.57% 0.01349 151.15)",
+          "oklch(95.00% 0.00441 151.15)"
+        ]
+      },
+      "button-selected": {
+        "role": "primary",
+        "displayName": "Button Selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.01281 97.17)",
+          "oklch(26.43% 0.02348 97.17)",
+          "oklch(37.86% 0.03415 97.17)",
+          "oklch(49.29% 0.04268 97.17)",
+          "oklch(60.71% 0.04268 97.17)",
+          "oklch(72.14% 0.03628 97.17)",
+          "oklch(83.57% 0.02348 97.17)",
+          "oklch(95.00% 0.00768 97.17)"
+        ]
+      },
+      "button-selected-text": {
+        "role": "primary",
+        "displayName": "Button Selected Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.02940 83.63)",
+          "oklch(26.43% 0.05390 83.63)",
+          "oklch(37.86% 0.07841 83.63)",
+          "oklch(49.29% 0.09801 83.63)",
+          "oklch(60.71% 0.09801 83.63)",
+          "oklch(72.14% 0.08331 83.63)",
+          "oklch(83.57% 0.05390 83.63)",
+          "oklch(95.00% 0.01764 83.63)"
+        ]
+      },
+      "reader-text": {
+        "role": "neutral",
+        "displayName": "Reader Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00405 152.58)",
+          "oklch(26.43% 0.00743 152.58)",
+          "oklch(37.86% 0.01081 152.58)",
+          "oklch(49.29% 0.01351 152.58)",
+          "oklch(60.71% 0.01351 152.58)",
+          "oklch(72.14% 0.01148 152.58)",
+          "oklch(83.57% 0.00743 152.58)",
+          "oklch(95.00% 0.00243 152.58)"
+        ]
+      },
+      "code": {
+        "role": "neutral",
+        "displayName": "Code",
+        "tonalRamp": [
+          "oklch(15.00% 0.00536 155.31)",
+          "oklch(26.43% 0.00982 155.31)",
+          "oklch(37.86% 0.01429 155.31)",
+          "oklch(49.29% 0.01786 155.31)",
+          "oklch(60.71% 0.01786 155.31)",
+          "oklch(72.14% 0.01518 155.31)",
+          "oklch(83.57% 0.00982 155.31)",
+          "oklch(95.00% 0.00322 155.31)"
+        ]
+      },
+      "code-line": {
+        "role": "neutral",
+        "displayName": "Code Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.00910 155.60)",
+          "oklch(26.43% 0.01668 155.60)",
+          "oklch(37.86% 0.02426 155.60)",
+          "oklch(49.29% 0.03032 155.60)",
+          "oklch(60.71% 0.03032 155.60)",
+          "oklch(72.14% 0.02577 155.60)",
+          "oklch(83.57% 0.01668 155.60)",
+          "oklch(95.00% 0.00546 155.60)"
+        ]
+      },
+      "code-text": {
+        "role": "neutral",
+        "displayName": "Code Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01095 142.72)",
+          "oklch(26.43% 0.02008 142.72)",
+          "oklch(37.86% 0.02921 142.72)",
+          "oklch(49.29% 0.03651 142.72)",
+          "oklch(60.71% 0.03651 142.72)",
+          "oklch(72.14% 0.03104 142.72)",
+          "oklch(83.57% 0.02008 142.72)",
+          "oklch(95.00% 0.00657 142.72)"
+        ]
+      },
+      "composer": {
+        "role": "neutral",
+        "displayName": "Composer",
+        "tonalRamp": [
+          "oklch(15.00% 0.00736 151.74)",
+          "oklch(26.43% 0.01350 151.74)",
+          "oklch(37.86% 0.01963 151.74)",
+          "oklch(49.29% 0.02454 151.74)",
+          "oklch(60.71% 0.02454 151.74)",
+          "oklch(72.14% 0.02086 151.74)",
+          "oklch(83.57% 0.01350 151.74)",
+          "oklch(95.00% 0.00442 151.74)"
+        ]
+      },
+      "composer-line": {
+        "role": "neutral",
+        "displayName": "Composer Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.01303 141.42)",
+          "oklch(26.43% 0.02389 141.42)",
+          "oklch(37.86% 0.03475 141.42)",
+          "oklch(49.29% 0.04344 141.42)",
+          "oklch(60.71% 0.04344 141.42)",
+          "oklch(72.14% 0.03692 141.42)",
+          "oklch(83.57% 0.02389 141.42)",
+          "oklch(95.00% 0.00782 141.42)"
+        ]
+      },
+      "composer-text": {
+        "role": "neutral",
+        "displayName": "Composer Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00459 145.45)",
+          "oklch(26.43% 0.00842 145.45)",
+          "oklch(37.86% 0.01224 145.45)",
+          "oklch(49.29% 0.01530 145.45)",
+          "oklch(60.71% 0.01530 145.45)",
+          "oklch(72.14% 0.01301 145.45)",
+          "oklch(83.57% 0.00842 145.45)",
+          "oklch(95.00% 0.00275 145.45)"
+        ]
+      },
+      "composer-placeholder": {
+        "role": "neutral",
+        "displayName": "Composer Placeholder",
+        "tonalRamp": [
+          "oklch(15.00% 0.00941 151.39)",
+          "oklch(26.43% 0.01726 151.39)",
+          "oklch(37.86% 0.02511 151.39)",
+          "oklch(49.29% 0.03138 151.39)",
+          "oklch(60.71% 0.03138 151.39)",
+          "oklch(72.14% 0.02668 151.39)",
+          "oklch(83.57% 0.01726 151.39)",
+          "oklch(95.00% 0.00565 151.39)"
+        ]
+      },
+      "disabled-send": {
+        "role": "neutral",
+        "displayName": "Disabled Send",
+        "tonalRamp": [
+          "oklch(15.00% 0.01299 139.95)",
+          "oklch(26.43% 0.02382 139.95)",
+          "oklch(37.86% 0.03464 139.95)",
+          "oklch(49.29% 0.04330 139.95)",
+          "oklch(60.71% 0.04330 139.95)",
+          "oklch(72.14% 0.03681 139.95)",
+          "oklch(83.57% 0.02382 139.95)",
+          "oklch(95.00% 0.00779 139.95)"
+        ]
+      },
+      "disabled-send-text": {
+        "role": "neutral",
+        "displayName": "Disabled Send Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01111 129.74)",
+          "oklch(26.43% 0.02036 129.74)",
+          "oklch(37.86% 0.02962 129.74)",
+          "oklch(49.29% 0.03703 129.74)",
+          "oklch(60.71% 0.03703 129.74)",
+          "oklch(72.14% 0.03147 129.74)",
+          "oklch(83.57% 0.02036 129.74)",
+          "oklch(95.00% 0.00666 129.74)"
+        ]
+      },
+      "disabled-send-line": {
+        "role": "neutral",
+        "displayName": "Disabled Send Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.01421 135.36)",
+          "oklch(26.43% 0.02606 135.36)",
+          "oklch(37.86% 0.03790 135.36)",
+          "oklch(49.29% 0.04738 135.36)",
+          "oklch(60.71% 0.04738 135.36)",
+          "oklch(72.14% 0.04027 135.36)",
+          "oklch(83.57% 0.02606 135.36)",
+          "oklch(95.00% 0.00853 135.36)"
+        ]
+      },
+      "source-line": {
+        "role": "neutral",
+        "displayName": "Source Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.01126 151.72)",
+          "oklch(26.43% 0.02065 151.72)",
+          "oklch(37.86% 0.03003 151.72)",
+          "oklch(49.29% 0.03754 151.72)",
+          "oklch(60.71% 0.03754 151.72)",
+          "oklch(72.14% 0.03191 151.72)",
+          "oklch(83.57% 0.02065 151.72)",
+          "oklch(95.00% 0.00676 151.72)"
+        ]
+      },
+      "source-text": {
+        "role": "neutral",
+        "displayName": "Source Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00357 145.48)",
+          "oklch(26.43% 0.00655 145.48)",
+          "oklch(37.86% 0.00953 145.48)",
+          "oklch(49.29% 0.01191 145.48)",
+          "oklch(60.71% 0.01191 145.48)",
+          "oklch(72.14% 0.01012 145.48)",
+          "oklch(83.57% 0.00655 145.48)",
+          "oklch(95.00% 0.00214 145.48)"
+        ]
+      },
+      "source-meta": {
+        "role": "neutral",
+        "displayName": "Source Meta",
+        "tonalRamp": [
+          "oklch(15.00% 0.00960 152.74)",
+          "oklch(26.43% 0.01760 152.74)",
+          "oklch(37.86% 0.02560 152.74)",
+          "oklch(49.29% 0.03201 152.74)",
+          "oklch(60.71% 0.03201 152.74)",
+          "oklch(72.14% 0.02720 152.74)",
+          "oklch(83.57% 0.01760 152.74)",
+          "oklch(95.00% 0.00576 152.74)"
+        ]
+      },
+      "stale-text": {
+        "role": "neutral",
+        "displayName": "Stale Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.03328 77.14)",
+          "oklch(26.43% 0.06102 77.14)",
+          "oklch(37.86% 0.08875 77.14)",
+          "oklch(49.29% 0.11094 77.14)",
+          "oklch(60.71% 0.11094 77.14)",
+          "oklch(72.14% 0.09430 77.14)",
+          "oklch(83.57% 0.06102 77.14)",
+          "oklch(95.00% 0.01997 77.14)"
+        ]
+      },
+      "provider": {
+        "role": "neutral",
+        "displayName": "Provider",
+        "tonalRamp": [
+          "oklch(15.00% 0.00878 90.89)",
+          "oklch(26.43% 0.01609 90.89)",
+          "oklch(37.86% 0.02340 90.89)",
+          "oklch(49.29% 0.02925 90.89)",
+          "oklch(60.71% 0.02925 90.89)",
+          "oklch(72.14% 0.02486 90.89)",
+          "oklch(83.57% 0.01609 90.89)",
+          "oklch(95.00% 0.00527 90.89)"
+        ]
+      },
+      "provider-text": {
+        "role": "neutral",
+        "displayName": "Provider Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.02392 84.66)",
+          "oklch(26.43% 0.04384 84.66)",
+          "oklch(37.86% 0.06377 84.66)",
+          "oklch(49.29% 0.07972 84.66)",
+          "oklch(60.71% 0.07972 84.66)",
+          "oklch(72.14% 0.06776 84.66)",
+          "oklch(83.57% 0.04384 84.66)",
+          "oklch(95.00% 0.01435 84.66)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "tonalRamp": [
+          "oklch(15.00% 0.00756 42.82)",
+          "oklch(26.43% 0.01385 42.82)",
+          "oklch(37.86% 0.02015 42.82)",
+          "oklch(49.29% 0.02519 42.82)",
+          "oklch(60.71% 0.02519 42.82)",
+          "oklch(72.14% 0.02141 42.82)",
+          "oklch(83.57% 0.01385 42.82)",
+          "oklch(95.00% 0.00453 42.82)"
+        ]
+      },
+      "error-line": {
+        "role": "neutral",
+        "displayName": "Error Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.01754 42.69)",
+          "oklch(26.43% 0.03215 42.69)",
+          "oklch(37.86% 0.04677 42.69)",
+          "oklch(49.29% 0.05846 42.69)",
+          "oklch(60.71% 0.05846 42.69)",
+          "oklch(72.14% 0.04969 42.69)",
+          "oklch(83.57% 0.03215 42.69)",
+          "oklch(95.00% 0.01052 42.69)"
+        ]
+      },
+      "error-text": {
+        "role": "neutral",
+        "displayName": "Error Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01518 46.20)",
+          "oklch(26.43% 0.02783 46.20)",
+          "oklch(37.86% 0.04048 46.20)",
+          "oklch(49.29% 0.05060 46.20)",
+          "oklch(60.71% 0.05060 46.20)",
+          "oklch(72.14% 0.04301 46.20)",
+          "oklch(83.57% 0.02783 46.20)",
+          "oklch(95.00% 0.00911 46.20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Library heading; no expressive display face."
+      },
+      "document-title": {
+        "displayName": "Document Title",
+        "purpose": "Observed document title role; see DESIGN.md Typography."
+      },
+      "document-section": {
+        "displayName": "Document Section",
+        "purpose": "Observed document section role; see DESIGN.md Typography."
+      },
+      "panel-title": {
+        "displayName": "Panel Title",
+        "purpose": "Observed panel title role; see DESIGN.md Typography."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Markdown reading at a maximum 72ch measure."
+      },
+      "ui": {
+        "displayName": "Ui",
+        "purpose": "Observed ui role; see DESIGN.md Typography."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Observed label role; see DESIGN.md Typography."
+      },
+      "compact-action": {
+        "displayName": "Compact Action",
+        "purpose": "Observed compact action role; see DESIGN.md Typography."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Source provenance and revision metadata."
+      },
+      "metadata-count": {
+        "displayName": "Metadata Count",
+        "purpose": "Observed metadata count role; see DESIGN.md Typography."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Code in the note reader."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "drawer-transform",
+        "value": "transform .18s ease-out",
+        "purpose": "Mobile navigation drawer open and close."
+      },
+      {
+        "name": "refresh-spin",
+        "value": "spin 1.4s linear infinite",
+        "purpose": "Loading refresh icon; keyframe ends at rotate(360deg)."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto !important",
+        "purpose": "Applied to all elements and pseudo-elements under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "700px"
+      },
+      {
+        "name": "compact-desktop-min",
+        "value": "701px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "wide-min",
+        "value": "1700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Reader source action",
+      "kind": "button",
+      "refersTo": "button-small",
+      "description": "Compact source action; transparent behavior remains native to a button.",
+      "html": "<button class=\"ds-source-action\">Chọn làm nguồn</button>",
+      "css": ".ds-source-action{font-family:Arial,Helvetica,sans-serif;display:inline-flex;align-items:center;gap:5px;border:0;border-radius:5px;padding:7px 9px;font-size:10px;cursor:pointer;white-space:nowrap;background:#24352a;color:#d0e0d3}.ds-source-action:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Selected reader action",
+      "kind": "button",
+      "refersTo": "button-small-selected",
+      "description": "Selected source uses a check and explicit label.",
+      "html": "<button class=\"ds-source-selected\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Đã chọn nguồn</button>",
+      "css": ".ds-source-selected{font-family:Arial,Helvetica,sans-serif;display:inline-flex;align-items:center;gap:5px;border:0;border-radius:5px;padding:7px 9px;font-size:10px;cursor:pointer;white-space:nowrap;background:#494328;color:#f2ce87}.ds-source-selected:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Icon action",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Neutral icon control with hover and keyboard focus.",
+      "html": "<button class=\"ds-icon\" aria-label=\"Bỏ nguồn\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></button>",
+      "css": ".ds-icon{display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;border:0;border-radius:5px;background:transparent;color:#b9c9be;cursor:pointer}.ds-icon:hover{background:#2a3b30;color:#fff}.ds-icon:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Search border changes on focus within; Ctrl K hint is desktop-only in the app.",
+      "html": "<div class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.34-4.34\"/></svg><input aria-label=\"Tìm ghi chú\" placeholder=\"Tìm trong tiêu đề, nội dung, tags…\"/></div>",
+      "css": ".ds-search{display:flex;align-items:center;gap:10px;border:1px solid #45584a;border-radius:7px;padding:0 12px;background:#19251e;color:#a8bcae;min-height:43px}.ds-search:focus-within{border-color:var(--accent,#e3b75a)}.ds-search input{font-family:Arial,Helvetica,sans-serif;flex:1;min-width:0;border:0;background:transparent;color:var(--text,#e9eee9);font-size:13px;padding:12px 0;outline:none;caret-color:var(--accent,#e3b75a)}.ds-search input::placeholder{color:#a5b6aa}"
+    },
+    {
+      "name": "Category filters",
+      "kind": "chip",
+      "refersTo": "filter-active",
+      "description": "Pressed state is explicit and visually distinct.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Loại nguồn\"><button class=\"ds-filter\" aria-pressed=\"true\">Tất cả</button><button class=\"ds-filter\" aria-pressed=\"false\">Ghi chú cá nhân</button></div>",
+      "css": ".ds-filters{display:flex;gap:4px}.ds-filter{font-family:Arial,Helvetica,sans-serif;border:0;background:transparent;color:#b8c7bc;font-size:11px;padding:7px 9px;border-radius:5px;white-space:nowrap;cursor:pointer}.ds-filter:hover{background:#26362c}.ds-filter[aria-pressed=true]{background:#38472e;color:#f2cb7e}.ds-filter:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Library navigation",
+      "kind": "nav",
+      "refersTo": "nav-item-active",
+      "description": "Active library item with a monospaced source count.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Nhóm ghi chú\"><button class=\"ds-nav-item ds-active\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v16\"/><path d=\"M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z\"/></svg>Thư viện<span class=\"ds-nav-count\">35</span></button><button class=\"ds-nav-item\">Ghi chú</button></nav>",
+      "css": ".ds-nav{background:var(--rail,#14231d);padding:14px;display:flex;flex-direction:column;gap:4px}.ds-nav-item{font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;gap:10px;border:0;background:none;color:#c0cfc4;padding:11px 12px;border-radius:6px;text-align:left;font-size:13px;min-height:40px;cursor:pointer}.ds-nav-item:hover{background:#20352a;color:#fff}.ds-nav-item.ds-active{background:#344431;color:#f3ce87}.ds-nav-item:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}.ds-nav-count{margin-left:auto;font-size:11px;font-family:var(--mono,ui-monospace,SFMono-Regular,Consolas,monospace);}"
+    },
+    {
+      "name": "Reader code container",
+      "kind": "card",
+      "refersTo": "code-block",
+      "description": "Focusable bordered code container with horizontal overflow.",
+      "html": "<pre class=\"ds-code\" tabindex=\"0\"><code>const evidence = {\n  source: \"ghi-chu-duoc-chon\",\n  verified: false,\n};</code></pre>",
+      "css": ".ds-code{overflow:auto;white-space:pre;max-width:100%;border:1px solid #3a4c40;background:#101913;border-radius:7px;padding:17px;margin:20px 0;tab-size:2}.ds-code code{font-family:var(--mono,ui-monospace,SFMono-Regular,Consolas,monospace);font-size:12px;line-height:1.75;background:none;padding:0;color:#cfe3cd;overflow-wrap:normal}.ds-code:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Question field",
+      "kind": "input",
+      "refersTo": "question-field",
+      "description": "Draft-only question input; no AI submission is implied.",
+      "html": "<textarea class=\"ds-question\" aria-label=\"Câu hỏi của bạn\" maxlength=\"4000\" placeholder=\"Điều gì cần làm rõ từ những nguồn này?\"></textarea>",
+      "css": ".ds-question{font-family:Arial,Helvetica,sans-serif;width:100%;height:100px;resize:vertical;min-height:80px;max-height:220px;border:1px solid #52664f;background:#111d14;border-radius:7px;padding:12px;color:#e6efe6;font-size:12px;line-height:1.65;caret-color:var(--accent,#e3b75a)}.ds-question::placeholder{color:#a9bdad}.ds-question:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    },
+    {
+      "name": "Unconnected send control",
+      "kind": "button",
+      "refersTo": "button-send-disabled",
+      "description": "Only the shipped disabled state; there is no enabled-send design.",
+      "html": "<button class=\"ds-send\" disabled aria-describedby=\"ds-send-reason\">Chưa thể gửi</button><p class=\"ds-send-reason\" id=\"ds-send-reason\">Cần chọn provider và xác minh kết nối. Không có câu trả lời AI giả.</p>",
+      "css": ".ds-send{font-family:Arial,Helvetica,sans-serif;width:100%;display:flex;justify-content:center;align-items:center;gap:8px;background:#344630;color:#becbb2;border:1px solid #53654a;border-radius:6px;padding:11px;font-size:12px;cursor:not-allowed}.ds-send-reason{font-family:Arial,Helvetica,sans-serif;color:#b4c8b8;font-size:10px;line-height:1.65;margin:10px 0 0}"
+    },
+    {
+      "name": "Chosen-source row",
+      "kind": "custom",
+      "refersTo": "chosen-source",
+      "description": "Source title and revision stay visible together; example content is synthetic.",
+      "html": "<div class=\"ds-chosen\"><div><button class=\"ds-chosen-title\">Ghi chú minh họa</button><small class=\"ds-chosen-meta\">Ví dụ mẫu · 019906da</small></div><button class=\"ds-remove\" aria-label=\"Bỏ nguồn Ghi chú minh họa\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></button></div>",
+      "css": ".ds-chosen{font-family:Arial,Helvetica,sans-serif;display:flex;gap:8px;border-bottom:1px solid #374c3c;padding:13px 0;align-items:flex-start;background:#19261d;color:#c3d8c8}.ds-chosen>div{min-width:0;flex:1}.ds-chosen-title{font-family:Arial,Helvetica,sans-serif;background:none;border:0;color:#e7eee7;font-size:11px;line-height:1.5;text-align:left;padding:0;cursor:pointer}.ds-chosen-meta{display:block;font-family:var(--mono,ui-monospace,SFMono-Regular,Consolas,monospace);font-size:9px;line-height:1.65;color:#adc2b2;margin-top:5px;overflow-wrap:anywhere}.ds-remove{display:inline-flex;align-items:center;justify-content:center;min-width:24px;min-height:24px;border:0;border-radius:5px;background:transparent;color:#b9c9be;cursor:pointer}.ds-remove:hover{background:#2a3b30;color:#fff}.ds-chosen-title:focus-visible,.ds-remove:focus-visible{outline:2px solid var(--focus,#f1cb79);outline-offset:3px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Nguồn cạnh câu hỏi",
+    "overview": "“Nguồn cạnh câu hỏi” is the confirmed direction for this personal web workspace. Its dark default combines green-charcoal task panels, warm amber selection and readable working text. Familiar table, reading and form controls express the developer-oriented brief without a simulated terminal or decorative neon.\n\nThe reusable identity is selected-source continuity: a note stays recognizable in the library, reader and question context through its title, checked state and revision metadata. Reading remains useful while AI is unconnected. The source body and assistant area retain separate visual roles; no generated answer or connected-provider treatment is implied by a draft field.",
+    "keyCharacteristics": [
+      "Dark green-charcoal panels separated by fine rules.",
+      "Compact working controls with a calmer, longer-line-height reader.",
+      "Amber selection paired with checkboxes, labels and source counts.",
+      "Sans UI and prose; monospace paths, revisions, counts and code.",
+      "Truthful read-only, unconnected, empty, stale and recovery states."
+    ],
+    "rules": [
+      {
+        "name": "The Selection Continuity Rule",
+        "body": "Use amber with explicit checked or selected labels across the source table, reader action and question-source count; color alone is not the source identity.",
+        "section": "colors"
+      },
+      {
+        "name": "The Metadata Separation Rule",
+        "body": "Keep paths, hashes, counts and code in monospace; keep reading prose and working controls in the sans stack.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Panel Rule",
+        "body": "Separate working regions through dark surface tones and thin borders, without adding drop shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do carry the selected note title, revision and selection state between library, reader and assistant.",
+      "Do keep dark as the default, and use the existing green-charcoal surfaces with restrained amber states.",
+      "Do keep a visible focus indicator, a labeled control and a concrete destination for a source handoff.",
+      "Do preserve selected sources and the question draft while changing the mobile task tab.",
+      "Do distinguish actual note content, labeled illustration data, unconnected AI and stale source revisions.",
+      "Do let the note reader and code blocks scroll independently inside the available viewport."
+    ],
+    "donts": [
+      "Don't turn the developer brief into a fake terminal, decorative neon or fabricated metrics.",
+      "Don't present the disabled send control as an available AI action or invent a provider/model choice.",
+      "Don't use source-category or revision metadata as a decorative heading pattern on unrelated surfaces.",
+      "Don't apply monospace to all prose or treat Arial as a distinctive brand display face.",
+      "Don't replace the current tonal depth with decorative shadows or floating cards.",
+      "Don't treat the superseded light concept sketch as color authority."
+    ]
+  }
+}

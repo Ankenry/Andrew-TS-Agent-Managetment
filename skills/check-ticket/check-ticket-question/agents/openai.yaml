@@ -1,0 +1,4 @@
+interface:
+  display_name: "Question ticket"
+  short_description: "Trả lời câu hỏi sản phẩm từ kết quả TS Elite 2"
+  default_prompt: "Dùng $check-ticket-question để kiểm tra ticket theo luồng đã thống nhất."

@@ -1,0 +1,21 @@
+# INACTIVE REVIEW CANDIDATE. This file is not loaded by Codex.
+# Do not use an alternate config path to bypass the protected .codex directory.
+# Do not apply globally or change permissions to activate it.
+#
+# Observed 2026-10-16 in Hanbui session 01a1417d-933d-73d2-a2ee-a6b01bddeb08:
+# Codex 0.162.1; model gpt-6-astra only.
+# Installed catalog: context_window=272000; effective_context_window_percent=95.
+# Session token_count confirms model_context_window=258400 (272000 * 0.95).
+# Strictly above half: floor(258400 / 2) + 1 = 129201 tokens.
+# This fixed limit does not track model/window changes: revalidate before use.
+# No model_context_window override and no model selection are made here.
+#
+# Native compaction timing and post-compaction usage have not been tested live.
+# Existing sessions have not been reconfigured; activation requires separate
+# permission and verification in the intended terminal/session.
+model_auto_compact_token_limit = 129201
+model_auto_compact_token_limit_scope = "total"
+
+[tui]
+# Native footer is numeric. The graphical bar is the separate preview script.
+status_line = ["model-with-reasoning", "context-used", "context-window-size"]

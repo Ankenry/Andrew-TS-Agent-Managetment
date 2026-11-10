@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feature follow"
+  short_description: "Theo dõi tiến độ feature request và soạn mail nháp báo khách"
+  default_prompt: "Dùng $feature-follow để cập nhật tiến độ các ticket Feature Request."

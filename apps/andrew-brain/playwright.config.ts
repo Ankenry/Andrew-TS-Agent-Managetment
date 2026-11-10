@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests',testMatch:'browser.spec.ts',workers:1,fullyParallel:false,reporter:'list',use:{browserName:'chromium',launchOptions:{executablePath:'/usr/bin/google-chrome',args:['--disable-background-networking','--disable-component-update']},trace:'off'},projects:[{name:'desktop',use:{viewport:{width:1440,height:900}}},{name:'mobile',use:{viewport:{width:390,height:844},isMobile:true,hasTouch:true}}]});

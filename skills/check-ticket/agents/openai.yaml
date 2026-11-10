@@ -1,0 +1,4 @@
+interface:
+  display_name: "Check ticket"
+  short_description: "Phân loại và điều phối kiểm tra ticket Avada"
+  default_prompt: "Dùng $check-ticket để kiểm tra ticket theo luồng đã thống nhất."

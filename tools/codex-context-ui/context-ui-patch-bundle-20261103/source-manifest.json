@@ -1,0 +1,107 @@
+{
+  "observedAt": "2026-11-03T15:23:33.806021+07:00",
+  "origin": "https://github.com/openai/codex.git",
+  "tag": "rust-v0.166.0",
+  "tagObject": "593389380740f7b4762771573c447ccfdc59742f",
+  "commit": "6ff1e1ca3b30fc8b914720681fcf5fe62e95f856",
+  "sourceVersion": "0.166.0",
+  "license": "Apache-2.0",
+  "installedBinaryContainsCommit": false,
+  "installedTokenNotificationSchemaEqual": true,
+  "pristine": true,
+  "v8": [
+    {
+      "name": "v8",
+      "version": "152.2.0",
+      "source": "git+https://github.com/seanh-oai/rusty_v8.git?rev=350c5a859a9b3c84ab8701b3ad51e3b7699b30c0#350c5a859a9b3c84ab8701b3ad51e3b7699b30c0"
+    }
+  ],
+  "sourceFiles": {
+    "LICENSE": {
+      "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc",
+      "bytes": 10926,
+      "mode": "0o664"
+    },
+    "codex-rs/Cargo.toml": {
+      "sha256": "4f9c16fb73cc8487e40dcbfca545f69e7595e6806e1a59b81ea8045b15364e49",
+      "bytes": 21926,
+      "mode": "0o664"
+    },
+    "codex-rs/Cargo.lock": {
+      "sha256": "22bd51f50864ce40f6686f3350c0547fdd50a8213240f54435ed394f68bf08e6",
+      "bytes": 409262,
+      "mode": "0o664"
+    },
+    "codex-rs/rust-toolchain.toml": {
+      "sha256": "570656042681cfd8795403a455baf9a33035331a07db0645e866bbcea89a3d64",
+      "bytes": 78,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/token_usage.rs": {
+      "sha256": "ad4ce706d82377b20dd8433c22325e97f02098b7e2b0de86315292099466d625",
+      "bytes": 2808,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/status/card.rs": {
+      "sha256": "29fe05de9391f45203329447aabf91a57f13abfa0a3b87c8e02bcb96507351ed",
+      "bytes": 38685,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget.rs": {
+      "sha256": "915fc19f502aa3f0952163e43a35b969197b3782a4ec070fbb0ed7f753e8ff96",
+      "bytes": 89030,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/protocol.rs": {
+      "sha256": "f2215080c2c9967ab6d45d3c5dbbdf13a260c7bf77295d679e6f26090e15f3d1",
+      "bytes": 33170,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/chatwidget/session_flow.rs": {
+      "sha256": "ae99739b757a0c1b339e1b61ae2a1f3e0cbc4aa097bea4ff26ae64cd6c931f6b",
+      "bytes": 18217,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/mod.rs": {
+      "sha256": "103af4622f60433cdb6a3535111ebffdaac2b83e252e3425c1751dbc618a8cd5",
+      "bytes": 161864,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer.rs": {
+      "sha256": "84943d7e21680a5f0300a4336ef459d5a5f84801f7299201fb5f2c875947e75d",
+      "bytes": 507995,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs": {
+      "sha256": "0d481f30e9aaeec083e0b9dbce4b8e0883a012c1fa918e2a49dbeb1cc03e2f07",
+      "bytes": 7993,
+      "mode": "0o664"
+    },
+    "codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs": {
+      "sha256": "95891d56d2c51f4014a1119438873cc65cc06852a1871ddd2765e9225bbc37d7",
+      "bytes": 17177,
+      "mode": "0o664"
+    },
+    ".github/workflows/rust-release.yml": {
+      "sha256": "a7e3fbbd6f787b4b91fdf819c97549eb74daf9ccdf961a80fc2ec42b3dce2477",
+      "bytes": 89554,
+      "mode": "0o664"
+    },
+    ".github/scripts/install-musl-build-tools.sh": {
+      "sha256": "ba729818732a5dd8c1aefce157871afa084016ae37566034f3d09899dc7fa46f",
+      "bytes": 9309,
+      "mode": "0o664"
+    },
+    ".github/scripts/install-musl-openssl.sh": {
+      "sha256": "d55f9f295726ffd4408d194ea536a4e083ccf5e2a94f29d68281b163d9df9610",
+      "bytes": 2257,
+      "mode": "0o664"
+    },
+    ".github/actions/setup-rusty-v8/action.yml": {
+      "sha256": "aacc9a6b06873589c53de8162e28ee0966d02f258baf121be539d0f7ebb523d9",
+      "bytes": 2900,
+      "mode": "0o664"
+    }
+  },
+  "buildSmoke": "not run: missing Rust and native toolchain"
+}

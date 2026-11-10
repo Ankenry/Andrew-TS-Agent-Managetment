@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feature request ticket"
+  short_description: "Đánh giá yêu cầu tính năng và hướng xử lý"
+  default_prompt: "Dùng $check-ticket-feature-request để kiểm tra ticket theo luồng đã thống nhất."

@@ -1,0 +1,8 @@
+# Task-only custom release. Never loaded by the installed CLI or pristine source.
+[profile.release]
+lto = false
+codegen-units = 64
+debug = 0
+
+[profile.release.package.codex-core]
+opt-level = 1

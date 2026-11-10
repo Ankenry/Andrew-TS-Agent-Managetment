@@ -1,0 +1,244 @@
+{
+  "at": "2026-11-03T17:46:19.868517+07:00",
+  "commit": "6ff1e1ca3b30fc8b914720681fcf5fe62e95f856",
+  "files": [
+    {
+      "path": "source/codex-rs/tui/src/token_usage.rs",
+      "exists": true,
+      "sha256": "ad4ce706d82377b20dd8433c22325e97f02098b7e2b0de86315292099466d625",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget.rs",
+      "exists": true,
+      "sha256": "915fc19f502aa3f0952163e43a35b969197b3782a4ec070fbb0ed7f753e8ff96",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/constructor.rs",
+      "exists": true,
+      "sha256": "ead1dd927d0a8614b0ab8d06810ac133134f8f60c43adae1a20828a54a0ab90e",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/protocol.rs",
+      "exists": true,
+      "sha256": "f2215080c2c9967ab6d45d3c5dbbdf13a260c7bf77295d679e6f26090e15f3d1",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/compaction.rs",
+      "exists": true,
+      "sha256": "553fef38ed49960688f0c00af390cde1360f9005d7b00d063491ec942a3334be",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/settings.rs",
+      "exists": true,
+      "sha256": "290e7779af68170626c3ed88358c3ecc77d924a3ea4dcb25566d0198d611519b",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/session_flow.rs",
+      "exists": true,
+      "sha256": "ae99739b757a0c1b339e1b61ae2a1f3e0cbc4aa097bea4ff26ae64cd6c931f6b",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/tests.rs",
+      "exists": true,
+      "sha256": "b56a6bfd8f19ad067c3e2dbb322c7a65d7e58a753e87630868b1cf37c212acba",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/mod.rs",
+      "exists": true,
+      "sha256": "103af4622f60433cdb6a3535111ebffdaac2b83e252e3425c1751dbc618a8cd5",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+      "exists": true,
+      "sha256": "84943d7e21680a5f0300a4336ef459d5a5f84801f7299201fb5f2c875947e75d",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs",
+      "exists": true,
+      "sha256": "95891d56d2c51f4014a1119438873cc65cc06852a1871ddd2765e9225bbc37d7",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs",
+      "exists": true,
+      "sha256": "0d481f30e9aaeec083e0b9dbce4b8e0883a012c1fa918e2a49dbeb1cc03e2f07",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs",
+      "exists": true,
+      "sha256": "868f418108fb700f0d16f8ebdaaeb331a021c3cd9be605a8ff08446dfb0ccd20",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs",
+      "exists": true,
+      "sha256": "41f44299ca914593180b6ca32c6eaa3a8d1dd3fc9a81034abc6dd52df9641428",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs",
+      "exists": false
+    },
+    {
+      "path": "source/codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs",
+      "exists": false
+    },
+    {
+      "path": "source/codex-rs/tui/src/chatwidget/tests/context_progress.rs",
+      "exists": false
+    },
+    {
+      "path": "source/codex-rs/Cargo.lock",
+      "exists": true,
+      "sha256": "22bd51f50864ce40f6686f3350c0547fdd50a8213240f54435ed394f68bf08e6",
+      "mode": "0o664"
+    },
+    {
+      "path": "source/codex-rs/Cargo.toml",
+      "exists": true,
+      "sha256": "4f9c16fb73cc8487e40dcbfca545f69e7595e6806e1a59b81ea8045b15364e49",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/token_usage.rs",
+      "exists": true,
+      "sha256": "ad4ce706d82377b20dd8433c22325e97f02098b7e2b0de86315292099466d625",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget.rs",
+      "exists": true,
+      "sha256": "915fc19f502aa3f0952163e43a35b969197b3782a4ec070fbb0ed7f753e8ff96",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/constructor.rs",
+      "exists": true,
+      "sha256": "ead1dd927d0a8614b0ab8d06810ac133134f8f60c43adae1a20828a54a0ab90e",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/protocol.rs",
+      "exists": true,
+      "sha256": "f2215080c2c9967ab6d45d3c5dbbdf13a260c7bf77295d679e6f26090e15f3d1",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/compaction.rs",
+      "exists": true,
+      "sha256": "553fef38ed49960688f0c00af390cde1360f9005d7b00d063491ec942a3334be",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/settings.rs",
+      "exists": true,
+      "sha256": "290e7779af68170626c3ed88358c3ecc77d924a3ea4dcb25566d0198d611519b",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/session_flow.rs",
+      "exists": true,
+      "sha256": "ae99739b757a0c1b339e1b61ae2a1f3e0cbc4aa097bea4ff26ae64cd6c931f6b",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/tests.rs",
+      "exists": true,
+      "sha256": "b56a6bfd8f19ad067c3e2dbb322c7a65d7e58a753e87630868b1cf37c212acba",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/mod.rs",
+      "exists": true,
+      "sha256": "103af4622f60433cdb6a3535111ebffdaac2b83e252e3425c1751dbc618a8cd5",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer.rs",
+      "exists": true,
+      "sha256": "84943d7e21680a5f0300a4336ef459d5a5f84801f7299201fb5f2c875947e75d",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/footer_state.rs",
+      "exists": true,
+      "sha256": "95891d56d2c51f4014a1119438873cc65cc06852a1871ddd2765e9225bbc37d7",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/composer_layout.rs",
+      "exists": true,
+      "sha256": "0d481f30e9aaeec083e0b9dbce4b8e0883a012c1fa918e2a49dbeb1cc03e2f07",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/status_surface_tests.rs",
+      "exists": true,
+      "sha256": "868f418108fb700f0d16f8ebdaaeb331a021c3cd9be605a8ff08446dfb0ccd20",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/mentions_layout_tests.rs",
+      "exists": true,
+      "sha256": "41f44299ca914593180b6ca32c6eaa3a8d1dd3fc9a81034abc6dd52df9641428",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/context_progress.rs",
+      "exists": false
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/bottom_pane/chat_composer/context_progress_tests.rs",
+      "exists": false
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/tui/src/chatwidget/tests/context_progress.rs",
+      "exists": false
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/Cargo.lock",
+      "exists": true,
+      "sha256": "360ea1e0ec391255ffc153a73548be524aa5d50c3476f247631cec184c21d4cb",
+      "mode": "0o664"
+    },
+    {
+      "path": "lock-candidate-20261103/codex-rs/Cargo.toml",
+      "exists": true,
+      "sha256": "4f9c16fb73cc8487e40dcbfca545f69e7595e6806e1a59b81ea8045b15364e49",
+      "mode": "0o664"
+    },
+    {
+      "path": "tmp/build-low-memory-once.py",
+      "exists": true,
+      "sha256": "9eaabd6d3a62fe84bfa7ba5e21c592e0458cc3d7c58a277428af87764036ad96",
+      "mode": "0o664"
+    },
+    {
+      "path": "tmp/reattach-low-memory-guard.py",
+      "exists": true,
+      "sha256": "a24ad22c261d21236502dd74b5f85c7e78917e5017b39df711252d997c30c677",
+      "mode": "0o664"
+    },
+    {
+      "path": "evidence-low-memory/low-memory-profile.toml",
+      "exists": true,
+      "sha256": "ab559d99312296b968c88d33a30c16ddf25bdd32d6b61ede9e1544b5492b4515",
+      "mode": "0o664"
+    },
+    {
+      "path": "docs/flows/codex-context-progress (thanh context tr\u00ean composer).md",
+      "exists": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+export type Note = {id:string;title:string;path:string;folder:string;type:string;category:'note'|'example'|'reference';sourceHash:string;updatedAt:string;bytes:number;excerpt:string;warning:string|null;tags:string[]};
+export type Detail = Note & {body:string;revision:string;links:{label:string;id:string|null}[]};
+export type Listing = {items:Note[];total:number;noteCount:number;exampleCount:number;referenceCount:number;revision:string;complete:boolean;issues:{code:string}[];nextCursor:string|null;dataset:'local'|'fixture'};
+export class ApiError extends Error {code:string;status:number;constructor(message:string,code:string,status:number){super(message);this.code=code;this.status=status;}}
+export async function request<T>(url:string, signal?:AbortSignal):Promise<T>{const r=await fetch(url,{signal});const body=await r.json();if(!r.ok)throw new ApiError(body.error?.message||'Không kết nối được API.',body.error?.code||'REQUEST_FAILED',r.status);return body;}
+export const folderNames:Record<string,string>={'00-inbox':'Inbox','01-to-do':'Việc cần làm','10-daily':'Theo ngày','20-meetings':'Cuộc họp','30-projects':'Dự án','50-learning':'Learning','60-guides':'Hướng dẫn','70-decisions':'Quyết định'};

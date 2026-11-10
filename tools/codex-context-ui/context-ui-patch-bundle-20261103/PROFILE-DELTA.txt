@@ -1,0 +1,13 @@
+Custom task-only release, not official/reproducible release.
+Official docs opened 2026-11-03:
+https://doc.rust-lang.org/cargo/reference/profiles.html
+https://doc.rust-lang.org/cargo/reference/config.html
+Cargo1.95.0 local --help confirms --config KEY=VALUE|PATH, --release, --locked, --offline.
+Changes via --config low-memory-profile.toml only:
+  whole release: lto thin -> false (no cross-crate LTO; Cargo may still use local thin LTO), codegen-units4 ->64, debug line-tables-only ->0.
+  codex-core only: opt-level3 ->1, because prior measured core compiler crossed3.5GiB RSS.
+  Others retain opt-level3. No manifest/lock/source/feature/security changes. debug-assertions=false, overflow-checks=false, panic=unwind remain upstream release defaults. split-debuginfo=off, strip=false, incremental=false unchanged.
+Rationale: one deliberate strategy reduces LLVM optimization/debug/link memory; no repeated trial of original command. More codegen units and less optimization can reduce runtime throughput or increase binary size; debug0 loses source-line backtraces. No claim of benchmarked runtime performance or byte-for-byte release parity.
+Validation: isolated tiny fixture deliberately named codex-core (version0.0.0, not real core) checks Cargo package override lowering and inherited release assertions/overflow/panic; real build wrapper verifies/logs production rustc flags before execution. Feature tree compared byte-for-byte against approved build graph.
+Full build: jobs1, nice10, no artificial RLIMIT_AS (RSS + MemAvailable guard instead), 0.25s sampling, proactive stop below2.25GiB available to protect2GiB headroom; starting tree RSS budget=min(3GiB, MemAvailable-2.25GiB), require budget>=2GiB; task cap40GiB, no cache deletion or downloads. This is a single new full-CLI attempt; guard/failure ends it, no automatic retry.
+Rollback build configuration: omit explicit --config path and wrapper for future builds; pristine and approved source files remain unchanged. Keep old artifacts/cache; no live activation in this phase.

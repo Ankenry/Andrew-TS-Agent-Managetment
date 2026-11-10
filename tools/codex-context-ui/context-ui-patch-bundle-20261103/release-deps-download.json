@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.75.tar.xz",
+    "expectedSha256": "de4e7e064c9ba451d5234dd46e897d7c71c96a9ebf9a0c445bc04f4742d83632",
+    "sha256": "de4e7e064c9ba451d5234dd46e897d7c71c96a9ebf9a0c445bc04f4742d83632",
+    "bytes": 197868,
+    "ok": true
+  },
+  {
+    "url": "https://github.com/openssl/openssl/releases/download/openssl-3.6.4/openssl-3.6.4.tar.gz",
+    "expectedSha256": "9bffaa1ad1e07b354c21bd3324ec02fa15579f45a7d0494b3e74bc449b7333ef",
+    "sha256": "9bffaa1ad1e07b354c21bd3324ec02fa15579f45a7d0494b3e74bc449b7333ef",
+    "bytes": 55003802,
+    "ok": true
+  },
+  {
+    "url": "https://github.com/openai/codex/releases/download/rusty-v8-v152.2.0/rusty_v8_ptrcomp_sandbox_release_x86_64-unknown-linux-musl.sha256",
+    "expectedSha256": "12acf8747729db642a9d49d3448174471fb07cf47e01a6238222e2d9299de72f",
+    "sha256": "12acf8747729db642a9d49d3448174471fb07cf47e01a6238222e2d9299de72f",
+    "bytes": 264,
+    "ok": true
+  }
+]

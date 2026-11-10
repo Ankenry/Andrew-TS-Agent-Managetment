@@ -1,0 +1,85 @@
+**Kết luận**
+
+Đây là một **feature request, không phải bug.** Air Reviews hiện emit `@id` dạng absolute URL (e.g. `https://saunom.com/products/havu-classic-sauna-hat#product`) — đây là behavior by design, verified từ source. Merchant muốn app đổi sang relative path để khớp với format của theme.
+
+Tuy nhiên, **claim "Google không merge được" của merchant cần verify thêm.** Root cause thực sự của inconsistent merge rating — nếu có — chưa xác định được rõ ràng từ Air Reviews codebase: không tìm thấy `ProductGroup` emission nào trong Air Reviews source, và logic guard `aggregateRating` là một metafield flag check đơn giản, không phải entity-hierarchy logic. Vấn đề có thể nằm hoàn toàn ở phía theme, không liên quan đến Air Reviews.
+
+---
+
+**Chi tiết**
+
+**Merchant request:**
+- saunom.com (zkzggu-gu.myshopify.com) — Air Reviews plan FREE, 652 approved reviews
+- Merchant phát hiện hai JSON-LD block trên product page:
+  - **Theme block:** `@type: ProductGroup`, `@id: "/products/havu-classic-sauna-hat#product"` (relative)
+  - **Air Reviews block:** `@type: Product`, `@id: "https://saunom.com/products/havu-classic-sauna-hat#product"` (absolute)
+- Yêu cầu: app đổi `@id` về relative path để "Google merge được"
+
+**Phân tích kỹ thuật (verified từ source):**
+
+**1. Relative vs Absolute `@id` — không phải root cause**
+
+Theo W3C JSON-LD 1.1 spec: relative IRI được resolve dựa trên `@base` của document. Cả hai format đều resolve về cùng một entity IRI → Google có thể và thường sẽ merge được. Việc thay `@id` từ absolute sang relative *không giải quyết* được vấn đề inconsistent merge rating.
+
+**2. Root cause thực sự: cần verify thêm**
+
+Air Reviews emit `@type: "Product"` (verified tại `air-reviews-json-ld.liquid:40`) — không có `isVariantOf`, không có `ProductGroup` emission nào trong toàn bộ Air Reviews codebase. Guard logic cho `aggregateRating` là một metafield flag check đơn giản (`app-embed.liquid:51`), không phải entity-hierarchy logic.
+
+Nếu theme merchant đang dùng `ProductGroup` model, thì đây là concern phía theme — không phải do Air Reviews emit sai. Tuy nhiên cần xác nhận live theme behavior trước khi kết luận, vì screenshot merchant gửi rõ ràng ghi "v26 – schema fix (test)" — tức là **draft theme**, không phải live.
+
+**3. Air Reviews `@id` format — verified từ source [`extensions/theme-extension/snippets/air-reviews-json-ld.liquid:38`](https://ts2.avada.net/chat?app=air-reviews&path=extensions%2Ftheme-extension%2Fsnippets%2Fair-reviews-json-ld.liquid&line=38):**
+
+```liquid
+{%- assign product_url = product.url | prepend: request.origin -%}
+...
+"@id": {{ product_url | append: '#product' | json }},
+```
+
+App dùng `product.url | prepend: request.origin` → luôn tạo absolute URL. Đây là hardcoded behavior trong theme extension Liquid snippet. Để thay đổi cần sửa source và deploy extension mới — không phải cái TS có thể tự fix.
+
+**4. Legacy script path (OS 1.x):** `AGGREGATE_RATING_SCRIPT` trong `assets.js:136` là code path cũ hơn cho OS 1.x theme inject — không có `@id` field nào cả, nên không phải issue ở đây.
+
+**Affected scope:**
+- Chỉ store này (zkzggu-gu.myshopify.com), plan FREE
+- Xảy ra trên mọi product page có reviews
+- Theme đang dùng draft v26 (screenshot từ Theme Editor) — cần xác nhận đây là live theme hay draft
+
+**Actions đã taken:**
+- CS (Avery) tạo ticket, gắn screenshots
+- Andrew nhận ticket, chuyển status → doing
+- Chưa có action kỹ thuật nào được thực hiện
+
+**Pending items:**
+
+1. **Confirm live theme behavior** — Screenshot merchant gửi là từ draft theme v26. Cần verify live theme (không phải draft) có cùng `@type: ProductGroup` schema không, vì nếu live theme dùng `@type: Product` thông thường thì vấn đề có thể ít nghiêm trọng hơn — hoặc hoàn toàn không tồn tại ở live store.
+
+2. **Root cause chưa xác định rõ** — Air Reviews không emit `ProductGroup` hay `isVariantOf` ở bất kỳ đâu. Nếu live theme cũng dùng `ProductGroup`, thì đây là incompatibility giữa theme schema model và Air Reviews' standalone `Product` emission — nhưng fix (nếu có) cần được escalate dev để đánh giá, không phải TS tự xử lý.
+
+3. **Escalate dev (request)** — Nếu sau khi verify live theme xác nhận issue thật sự tồn tại: đây là feature request — Air Reviews cần xem xét update JSON-LD template tại [`extensions/theme-extension/snippets/air-reviews-json-ld.liquid`](https://ts2.avada.net/chat?app=air-reviews&path=extensions%2Ftheme-extension%2Fsnippets%2Fair-reviews-json-ld.liquid&line=1). Mô tả rõ: theme dùng ProductGroup model → Air Reviews emit `Product` standalone không có linkage.
+
+4. **Workaround tạm thời:** Chưa thể confirm — cần verify xem "JSON-LD override" block setting có accessible trên FREE plan không trước khi offer merchant.
+
+**Reply merchant (draft cho Andrew):**
+
+Giải thích: (1) thay `@id` relative/absolute sẽ không giải quyết được vấn đề; (2) team cần xác nhận thêm behavior trên live theme của merchant; (3) đây là limitation của JSON-LD template hiện tại, team đang xem xét — không phải bug có thể fix ngay. Hỏi merchant xác nhận live theme (không phải draft) có cùng schema config không.
+
+**Cần verify thêm:**
+- Live theme của merchant có dùng `@type: ProductGroup` không, hay chỉ draft v26 — screenshot hiện tại rõ ràng ghi "v26 – schema fix (test)" tức là draft theme.
+- "JSON-LD override" block setting trên FREE plan có available không — cần check plan gating trong source hoặc test trực tiếp.
+
+---
+
+**Sources**
+- ✓ `extensions/theme-extension/snippets/air-reviews-json-ld.liquid` (master-v2) — xác nhận `@id` format absolute (line 38), `@type: "Product"` emission (line 40); không có `ProductGroup` emission trong toàn bộ file
+- ✓ `app-embed.liquid:51` — guard `aggregateRating` là metafield flag check đơn giản, không phải entity-hierarchy logic
+- ✓ `packages/functions/src/config/assets.js:131-146` — legacy OS 1.x script path (không có `@id`)
+- ✓ App-guide section "Review Rich Snippets" + "Rich snippets conflict" — confirmed Google merge behavior
+- ✓ Ticket AIR-260917-YpAND9 + Crisp chat — merchant description + screenshots
+- ✓ Screenshot từ merchant (hiển thị trong chat UI) — confirm draft theme v26 với `@type: ProductGroup`; live theme behavior chưa verified
+- ✗ capture.avada.io/i/wI1KYeFJwMrC + gzmB3TUMlUMd — archived, không load được (đã có screenshot trực tiếp trong chat)
+- ◦ InspectStorefront / live store check — skip vì cần merchant confirm live vs draft theme trước
+
+---
+⚠️ **Citation audit (harness):** 2 nguồn không khớp dữ liệu đã load trong run này — cần verify trước khi gửi merchant:
+- https://saunom.com/products/havu-classic-sauna-hat#product`
+- https://saunom.com/products/havu-classic-sauna-hat#product"`

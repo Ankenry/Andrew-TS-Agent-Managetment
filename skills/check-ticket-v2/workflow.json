@@ -1,0 +1,53 @@
+{
+  "investigateTimeoutMs": 300000,
+  "extraRoundTimeoutMs": 120000,
+  "finalizeTimeoutMs": 90000,
+  "writeTimeoutMs": 150000,
+  "maxTurns": 25,
+  "extraRoundMaxTurns": 6,
+  "maxFinalizeAttempts": 2,
+  "maxWriterRetries": 2,
+  "maxBrowserCalls": 3,
+  "maxCssPreviewCalls": 4,
+  "maxViewImageCalls": 4,
+  "crisp": {
+    "enabled": true,
+    "maxCalls": 2,
+    "timeoutMs": 120000,
+    "script": "apps_doc/chatty-check-skills/skills/read-crisp-chat/scripts/read_crisp_chat.py",
+    "envFile": "apps_doc/chatty-check-skills/.env"
+  },
+  "shopSettings": {
+    "enabled": true,
+    "maxCalls": 3,
+    "timeoutMs": 10000,
+    "keyFile": ".env_my",
+    "preRead": true
+  },
+  "searchRoots": [
+    "apps_doc",
+    "knowledge-base"
+  ],
+  "commentMaxChars": 12000,
+  "commentMinChars": 150,
+  "letterMinScore": 0.9,
+  "sourceApi": {
+    "enabled": true,
+    "endpoint": "https://ts2.avada.net/api/v1/source/search",
+    "timeoutMs": 8000,
+    "maxRetries": 1,
+    "keyFile": ".env_my"
+  },
+  "scopeLock": true,
+  "preSearch": {
+    "enabled": true,
+    "maxQueries": 10,
+    "maxChars": 3000,
+    "timeoutMs": 10000
+  },
+  "codex": {
+    "investigateReasoning": "",
+    "writeReasoning": "",
+    "stopAfterSubmit": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-03T17:55:40.895807+07:00",
+  "baselineBytesModesVerified": true,
+  "pristineGitClean": true,
+  "approvedLockUnchanged": true,
+  "contextConfigUnchanged": true,
+  "candidateEqualsBundle": true,
+  "testedProductionModuleHashesMatchFinal": true,
+  "gitDiffCheckExit": 0,
+  "footprintBytes": 16647925419,
+  "footprintRaces": 0,
+  "tests": {
+    "productionPure": 7,
+    "guardFakeProcess": 7,
+    "rustfmtCheck": 0
+  },
+  "notExecuted": [
+    "full CLI build since stop decision",
+    "whole TUI typecheck",
+    "ChatWidget/composer integration suites",
+    "VT100 fixture",
+    "live PTY",
+    "rollout"
+  ],
+  "secretScan": "allowlisted source/patch/manifests/tests only; no credential patterns; one public git ?rev query in source provenance"
+}

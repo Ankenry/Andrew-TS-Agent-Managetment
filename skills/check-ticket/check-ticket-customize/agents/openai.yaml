@@ -1,0 +1,4 @@
+interface:
+  display_name: "Customize ticket"
+  short_description: "Thử CSS và tạo link demo cho ticket Customize"
+  default_prompt: "Dùng $check-ticket-customize để kiểm tra ticket theo luồng đã thống nhất."

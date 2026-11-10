@@ -1,0 +1,48 @@
+--- a/tmp/build-low-memory-once.py
++++ b/tmp/build-low-memory-once.py
+@@ -28,35 +28,13 @@
+ # Exclusive marker enforces exactly one full-CLI attempt with this strategy.
+ (e/'full-build-attempt.started').open('x').write(preflight['at'])
+ args=[cargo,'--config',config,'build','--locked','--offline','--release','--target','x86_64-unknown-linux-musl','-p','codex-cli','--bin','codex']
+-def limits():
+- os.nice(10);resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+-def tree_stats(root):
+- rows={}
+- for d in Path('/proc').iterdir():
+-  if not d.name.isdigit():continue
+-  try:
+-   s=dict(l.split(':',1) for l in (d/'status').read_text().splitlines() if ':' in l)
+-   rows[int(d.name)]=(int(s['PPid']),int(s.get('VmRSS','0 kB').split()[0])*1024,int(s.get('VmSize','0 kB').split()[0])*1024)
+-  except (OSError,ValueError):pass
+- ids={root}
+- while True:
+-  more=ids|{i for i,(parent,_,_) in rows.items() if parent in ids}
+-  if more==ids:break
+-  ids=more
+- return sum(rows.get(i,(0,0,0))[1] for i in ids),max([rows.get(i,(0,0,0))[2] for i in ids] or [0])
+-peak=0;vmpeak=0;minimum=available;reason=None;last_disk=time.monotonic();start=datetime.datetime.now().astimezone().isoformat()
+-with (e/'unpatched-custom-profile.log').open('x') as out:
+- p=subprocess.Popen(args,cwd=src/'codex-rs',env=env,stdout=out,stderr=subprocess.STDOUT,preexec_fn=limits,start_new_session=True)
+- while p.poll() is None:
+-  rss,vm=tree_stats(p.pid);available=mem();peak=max(peak,rss);vmpeak=max(vmpeak,vm);minimum=min(minimum,available)
+-  if rss>rss_budget:reason='build tree RSS budget exceeded'
+-  if available<int(2.25*g):reason='proactive MemAvailable guard below2.25GiB to preserve2GiB'
+-  if time.monotonic()-last_disk>20:
+-   size=foot();last_disk=time.monotonic()
+-   if size>int(39.5*g):reason='proactive task footprint39.5GiB guard'
+-  if reason:os.killpg(p.pid,signal.SIGTERM);break
+-  time.sleep(0.25)
+- code=p.wait()
+-result={'startedAt':start,'finishedAt':datetime.datetime.now().astimezone().isoformat(),'exit':code,'profileSha256':sha(e/'low-memory-profile.toml'),'peakTreeRssBytes':peak,'peakProcessVmSizeBytes':vmpeak,'minMemAvailableBytes':minimum,'guardStop':reason,'rssBudgetBytes':rss_budget,'command':args,'lockSha256':sha(src/'codex-rs/Cargo.lock'),'footprintBytes':foot()}
+-(e/'unpatched-custom-profile.result.json').write_text(json.dumps(result,indent=2));print(json.dumps(result),flush=True)
+-raise SystemExit(code if code>=0 else 1)
++# The exclusive one-attempt marker above remains authoritative. Do not rerun this attempt.
++# Use the owning guard for any separately authorized future invocation; no attachment gap.
++import importlib.util
++spec=importlib.util.spec_from_file_location('task_build_guard',r/'tmp/task-build-guard.py')
++guard=importlib.util.module_from_spec(spec);spec.loader.exec_module(guard)
++result=guard.run_guarded(args,cwd=src/'codex-rs',env=env,task_root=r.resolve(),
++ log_path=e/'unpatched-custom-profile.log',result_path=e/'unpatched-custom-profile.result.json',
++ rss_budget=rss_budget,min_available=int(2.25*g),max_footprint=int(39.5*g))
++print(json.dumps(result),flush=True)
++raise SystemExit(0 if result['exit']==0 and not result['guardStop'] else 1)

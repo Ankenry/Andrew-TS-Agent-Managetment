@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171a23" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Hachimi Trace">
+  <meta name="format-detection" content="telephone=no">
+  <title>Hachimi Trace</title>
+  <link rel="icon" type="image/png" href="/logo-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/logo-256.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="/logo-128.png" alt="" width="40" height="40">
+      <div>
+        <h1>Hachimi Trace</h1>
+        <p class="sub"><span class="sub-long">Tracing suy luận khi check ticket · </span>tự xóa sau <span id="retentionDays">10</span> ngày</p>
+      </div>
+    </div>
+    <div class="stats" id="stats" aria-live="polite">
+      <div class="stat"><span class="k">Phiên</span><span class="v" id="stSessions">–</span></div>
+      <div class="stat"><span class="k">Đang chạy</span><span class="v" id="stActive">–</span></div>
+      <div class="stat"><span class="k">Sự kiện</span><span class="v" id="stEvents">–</span></div>
+      <div class="stat"><span class="k">Artifact</span><span class="v" id="stArtifacts">–</span></div>
+      <div class="stat"><span class="k">Nguồn dữ liệu</span><span class="v" id="stSources">–</span></div>
+      <div class="stat"><span class="k">Sắp hết hạn (24h)</span><span class="v" id="stExpiring">–</span></div>
+      <div class="stat"><span class="k">Dung lượng</span><span class="v" id="stStorage">–</span></div>
+      <div class="stat"><span class="k">Dọn lần cuối</span><span class="v small" id="stPurge">–</span></div>
+    </div>
+    <div class="actions">
+      <span class="live" id="live" title="Kết nối realtime"><span class="dot"></span><span id="liveText">Đang kết nối…</span></span>
+      <span class="tools">
+        <button class="btn" id="btnSync" title="Đồng bộ trace từ runtime/check-ticket vào DB">Đồng bộ file</button>
+        <button class="btn danger" id="btnPurge" title="Xóa ngay các phiên đã quá hạn">Dọn hết hạn</button>
+      </span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="filters">
+        <input id="q" type="search" placeholder="Tìm ticket, tiêu đề, id…" autocomplete="off">
+        <div class="row">
+          <select id="fSource" aria-label="Nguồn">
+            <option value="">Mọi nguồn</option>
+            <option value="automatic">automatic</option>
+            <option value="widget">widget</option>
+            <option value="manual">manual</option>
+          </select>
+          <select id="fStatus" aria-label="Trạng thái">
+            <option value="">Mọi trạng thái</option>
+            <option value="active">Đang chạy</option>
+            <option value="terminal">Đã kết thúc</option>
+          </select>
+        </div>
+      </div>
+      <div class="context-chip" id="contextChip" hidden><span id="contextText"></span><button class="link" id="contextClear" title="Bỏ lọc">✕</button></div>
+      <div class="list-head"><span id="listCount">0 phiên</span><button class="link" id="btnMore" hidden>Tải thêm</button></div>
+      <ul class="sessions" id="sessions" role="listbox"></ul>
+    </aside>
+
+    <section class="detail" id="detail">
+      <div class="empty" id="emptyDetail">
+        <div class="empty-art" aria-hidden="true"></div>
+        <h2>Chọn một phiên check ticket</h2>
+        <p>Timeline suy luận, các pha xử lý, nguồn dữ liệu đã dùng (docs/skill/KB) và artifact của phiên sẽ hiện ở đây. Phiên mới sẽ tự xuất hiện khi Hachimi bắt đầu check ticket.</p>
+        <details class="howto">
+          <summary>Cách gửi trace vào đây</summary>
+<pre>node scripts/hachimi-trace-client.mjs \
+  --source manual --id &lt;trace-id&gt; --ticket JOY-260925-xxxx \
+  --kind thinking --phase elite --text "Đang đọc kết quả…" \
+  --doc knowledge-base/knowledge/joy/faq.md --skill skills/check-ticket/SKILL.md
+
+# hoặc HTTP
+POST /api/trace/events
+{ "source":"manual", "id":"trace-1", "ticketReference":"JOY-…",
+  "events":[{ "kind":"thinking", "text":"…", "phase":"classify",
+    "sources":[{ "type":"docs", "path":"knowledge-base/knowledge/joy/faq.md", "excerpt":"…" }] }] }</pre>
+        </details>
+      </div>
+
+      <div class="session-view" id="sessionView" hidden>
+        <!-- Phone layout only: the list and the session are two screens. -->
+        <div class="detail-bar">
+          <button class="back" id="btnBack" type="button" aria-label="Về danh sách phiên"><span aria-hidden="true">‹</span> Danh sách</button>
+          <span class="detail-ref" id="sRef"></span>
+          <span class="live" id="liveMini" title="Kết nối realtime"><span class="dot"></span></span>
+        </div>
+        <div class="session-head">
+          <div class="session-title">
+            <div class="badges" id="sBadges"></div>
+            <h2 id="sTitle">–</h2>
+            <p class="meta" id="sMeta"></p>
+          </div>
+          <div class="session-actions">
+            <a class="btn" id="sTicketLink" target="_blank" rel="noopener" hidden>Mở Helpdesk ↗</a>
+            <button class="btn" id="btnCopyId" title="Sao chép source:id">Sao chép id</button>
+            <button class="btn danger" id="btnDelete">Xóa phiên</button>
+          </div>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="timeline" role="tab">Timeline <span class="count" id="cEvents">0</span></button>
+          <button class="tab" data-tab="sources" role="tab">Nguồn dữ liệu <span class="count" id="cSources">0</span></button>
+          <button class="tab" data-tab="artifacts" role="tab">Artifacts <span class="count" id="cArtifacts">0</span></button>
+          <button class="tab" data-tab="metadata" role="tab">Metadata</button>
+        </div>
+
+        <div class="panel active" data-panel="timeline">
+          <div class="kind-filter" id="kindFilter"></div>
+          <ol class="timeline" id="timeline"></ol>
+          <div class="tail" id="tail"></div>
+        </div>
+        <div class="panel" data-panel="sources">
+          <div class="sources-head">
+            <div class="kind-filter" id="sourceTypeFilter"></div>
+            <p class="hint">Dữ liệu AI đã lấy để check ticket (docs, skill, KB, trích dẫn TS Elite 2, ticket, liên kết), xếp theo từng mốc timeline. Bấm một nguồn để mở nội dung ở cửa sổ mới.</p>
+          </div>
+          <ol class="source-groups" id="sourceGroups"></ol>
+        </div>
+        <div class="panel" data-panel="artifacts">
+          <div class="artifacts">
+            <ul class="artifact-list" id="artifactList"></ul>
+            <div class="artifact-body"><div class="artifact-name" id="artifactName">Chọn một artifact</div><pre id="artifactContent"></pre></div>
+          </div>
+        </div>
+        <div class="panel" data-panel="metadata"><pre id="metadata"></pre></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>

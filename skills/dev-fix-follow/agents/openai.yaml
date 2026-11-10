@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dev fix follow"
+  short_description: "Theo dõi tiến độ dev fix và soạn mail nháp báo khách"
+  default_prompt: "Dùng $dev-fix-follow để cập nhật tiến độ các ticket đang chờ dev fix."

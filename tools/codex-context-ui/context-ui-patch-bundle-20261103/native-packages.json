@@ -1,0 +1,250 @@
+[
+  {
+    "package": "cmake-data",
+    "version": "4.2.3-2ubuntu2",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake-data_4.2.3-2ubuntu2_all.deb",
+    "filename": "cmake-data_4.2.3-2ubuntu2_all.deb",
+    "sha256": "9f4cc6f77e7c09929f80fc5534b638b95d257a90d6bf43c59d2232514759eb9d",
+    "size": 2581178
+  },
+  {
+    "package": "libjsoncpp26",
+    "version": "1.9.6-5",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/libj/libjsoncpp/libjsoncpp26_1.9.6-5_amd64.deb",
+    "filename": "libjsoncpp26_1.9.6-5_amd64.deb",
+    "sha256": "2b42b79a81f9407d0ae9650541dca2e416b76b6ad9f7794737bac8c6d6f56823",
+    "size": 84026
+  },
+  {
+    "package": "librhash1",
+    "version": "1.4.6-1.1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/r/rhash/librhash1_1.4.6-1.1_amd64.deb",
+    "filename": "librhash1_1.4.6-1.1_amd64.deb",
+    "sha256": "cb935821161fdfdbd30afdbcb8ceeab736f9a4df84f02df883a41d911951e398",
+    "size": 132514
+  },
+  {
+    "package": "cmake",
+    "version": "4.2.3-2ubuntu2",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/c/cmake/cmake_4.2.3-2ubuntu2_amd64.deb",
+    "filename": "cmake_4.2.3-2ubuntu2_amd64.deb",
+    "sha256": "87c496f1e37b64bc0b4ad9c5fe0e75c09655f5399ed39695b876afba55becc61",
+    "size": 13742846
+  },
+  {
+    "package": "libcc1-0",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libcc1-0_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libcc1-0_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "484ac5fd30a19bfade8db336fe70f3c046beccd1c9a9ac327fcd89d29dd5a125",
+    "size": 51154
+  },
+  {
+    "package": "libitm1",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libitm1_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libitm1_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "ef841c269b5e9f324e38b1069f712a13c29237051f037847d1de79441dc3a9a2",
+    "size": 30036
+  },
+  {
+    "package": "libasan8",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libasan8_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libasan8_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "d59b3a851c0b58759e9f940fa407f68a6ef46401381e5389c74e5ded5419262d",
+    "size": 3184374
+  },
+  {
+    "package": "liblsan0",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/liblsan0_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "liblsan0_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "c90895d3b6cd164fcb54def68c7dff74419f869c837fa607e3f54c1a0e742263",
+    "size": 1394078
+  },
+  {
+    "package": "libtsan2",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libtsan2_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libtsan2_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "95b7a9b63096840cb960562d190a802a541055366eb4bc756c763d7de6e174d8",
+    "size": 2848714
+  },
+  {
+    "package": "libubsan1",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libubsan1_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libubsan1_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "cde09806b1b60d0ab8ab96033177cb21a0290333a946f25572de8f72b4403695",
+    "size": 1239750
+  },
+  {
+    "package": "libhwasan0",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libhwasan0_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libhwasan0_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "6bd25c936289463c6472290d3b4377edf8dd4f5e3a07f356fb0adf2de04a8055",
+    "size": 1731164
+  },
+  {
+    "package": "libquadmath0",
+    "version": "16-20260322-1ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-16/libquadmath0_16-20260322-1ubuntu1_amd64.deb",
+    "filename": "libquadmath0_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "420e777fef436f397a85ddedde53fbb44f92c7ca8e87d581f9d86573859e1aa4",
+    "size": 155450
+  },
+  {
+    "package": "libgcc-15-dev",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "libgcc-15-dev_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "32fa5bde1891f46fd4f422e466c863fb78e834b634e1aa08211c8eea68870af5",
+    "size": 2866236
+  },
+  {
+    "package": "gcc-15-x86-64-linux-gnu",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "gcc-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "df0e5375c9e981b18e396c2e9ec1e359f226576a9b94a311bf07603f3ca6023a",
+    "size": 25433044
+  },
+  {
+    "package": "gcc-15",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/gcc-15_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "gcc-15_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "28da225c111d3ce9d230209cca24db46ec645f631f593f188bef718d8a1e4711",
+    "size": 539118
+  },
+  {
+    "package": "gcc-x86-64-linux-gnu",
+    "version": "4:15.2.0-5ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc-x86-64-linux-gnu_15.2.0-5ubuntu1_amd64.deb",
+    "filename": "gcc-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb",
+    "sha256": "7393f33be5584941bcfbd03a25901058c708046ee5dded01c21d56652a2d0eb7",
+    "size": 1208
+  },
+  {
+    "package": "gcc",
+    "version": "4:15.2.0-5ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/gcc_15.2.0-5ubuntu1_amd64.deb",
+    "filename": "gcc_4%3a15.2.0-5ubuntu1_amd64.deb",
+    "sha256": "d780844418b745c432a5d6c85f055625f37e27523b026baee0c87d386a0aab0a",
+    "size": 5010
+  },
+  {
+    "package": "libstdc++-15-dev",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/libstdc%2b%2b-15-dev_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "libstdc++-15-dev_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "9a400597b1db45cf51238c9eb556e211ec092d363cfb7ebebac627750ba56433",
+    "size": 2920128
+  },
+  {
+    "package": "g++-15-x86-64-linux-gnu",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/g%2b%2b-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "g++-15-x86-64-linux-gnu_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "8673a23519f570b4a5b4a663a9ce3b0e2f0be50c7250ce7fdae19eb064c3d6aa",
+    "size": 14444618
+  },
+  {
+    "package": "g++-15",
+    "version": "15.2.0-16ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-15/g%2b%2b-15_15.2.0-16ubuntu1_amd64.deb",
+    "filename": "g++-15_15.2.0-16ubuntu1_amd64.deb",
+    "sha256": "cb7771861d821e48d38253f2397217920d5cf8020ed9de8372a625d080dcc6be",
+    "size": 26746
+  },
+  {
+    "package": "g++-x86-64-linux-gnu",
+    "version": "4:15.2.0-5ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/g%2b%2b-x86-64-linux-gnu_15.2.0-5ubuntu1_amd64.deb",
+    "filename": "g++-x86-64-linux-gnu_4%3a15.2.0-5ubuntu1_amd64.deb",
+    "sha256": "45d8edc3e6775179bee9ecb0211727e3e8d53ee3caf4ddb2e1310ac28080053d",
+    "size": 968
+  },
+  {
+    "package": "g++",
+    "version": "4:15.2.0-5ubuntu1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/g/gcc-defaults/g%2b%2b_15.2.0-5ubuntu1_amd64.deb",
+    "filename": "g++_4%3a15.2.0-5ubuntu1_amd64.deb",
+    "sha256": "2be84461c2f47fd7ce2cfea2e35d775d0e30582879bf1c0e80a1c22f92a2cdac",
+    "size": 1100
+  },
+  {
+    "package": "libcap-dev",
+    "version": "1:2.75-10ubuntu2",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap-dev_2.75-10ubuntu2_amd64.deb",
+    "filename": "libcap-dev_1%3a2.75-10ubuntu2_amd64.deb",
+    "sha256": "74fa71aa089d90d720722f6278314b90b72fa2e1631aea5dc32b770d0324ce86",
+    "size": 619148
+  },
+  {
+    "package": "libpkgconf7",
+    "version": "2.5.1-4",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/libpkgconf7_2.5.1-4_amd64.deb",
+    "filename": "libpkgconf7_2.5.1-4_amd64.deb",
+    "sha256": "353f622f6432a3d65bedd3c23e0af98c2c438650b497b355772a56a05ebf7dd0",
+    "size": 38796
+  },
+  {
+    "package": "make",
+    "version": "4.4.1-3",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/m/make-dfsg/make_4.4.1-3_amd64.deb",
+    "filename": "make_4.4.1-3_amd64.deb",
+    "sha256": "a86f39d57a32b7c919c0ad721fc2f17ab533a42fda348c8d81a4eea1577a014f",
+    "size": 196620
+  },
+  {
+    "package": "pkgconf-bin",
+    "version": "2.5.1-4",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf-bin_2.5.1-4_amd64.deb",
+    "filename": "pkgconf-bin_2.5.1-4_amd64.deb",
+    "sha256": "9690471f395b6652f2cd8962334b9400e26a10daf4af7bf2f2c1a0325c193f0b",
+    "size": 22724
+  },
+  {
+    "package": "pkgconf",
+    "version": "2.5.1-4",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkgconf_2.5.1-4_amd64.deb",
+    "filename": "pkgconf_2.5.1-4_amd64.deb",
+    "sha256": "9d23ccd2a24d8618ca8bc7f1e14e1d02b9632854d69c82b6f8753dc5c1a98b16",
+    "size": 20022
+  },
+  {
+    "package": "pkg-config",
+    "version": "2.5.1-4",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/main/p/pkgconf/pkg-config_2.5.1-4_amd64.deb",
+    "filename": "pkg-config_2.5.1-4_amd64.deb",
+    "sha256": "0ec36b7cce8fa2072260020a42d2b77ddc31b2eba606356ccc4120f4caddb805",
+    "size": 7684
+  },
+  {
+    "package": "musl",
+    "version": "1.2.5-3build1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/universe/m/musl/musl_1.2.5-3build1_amd64.deb",
+    "filename": "musl_1.2.5-3build1_amd64.deb",
+    "sha256": "ab4117a96375bd25db6be0be00fc1552d1747b7ed2401e96c48171a9e309c5b3",
+    "size": 425264
+  },
+  {
+    "package": "musl-dev",
+    "version": "1.2.5-3build1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/universe/m/musl/musl-dev_1.2.5-3build1_amd64.deb",
+    "filename": "musl-dev_1.2.5-3build1_amd64.deb",
+    "sha256": "6a254be70caa3515b04e5b1abd048bc158ad6cd58a5c61a907d3deb744104dc1",
+    "size": 626486
+  },
+  {
+    "package": "musl-tools",
+    "version": "1.2.5-3build1",
+    "url": "http://vn.archive.ubuntu.com/ubuntu/pool/universe/m/musl/musl-tools_1.2.5-3build1_amd64.deb",
+    "filename": "musl-tools_1.2.5-3build1_amd64.deb",
+    "sha256": "db41428e8dc59fe0f9f299e5a2f33efa842fe7abf50359e3aedac236b11de49e",
+    "size": 5538
+  }
+]

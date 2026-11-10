@@ -1,0 +1,50 @@
+{
+  "seedReference": "seed:a1627c4f8ab555b5",
+  "assignedIndex": 5,
+  "assignedCandidate": "Ma trận tình huống–nguồn",
+  "mode": "operate",
+  "selected": null,
+  "referenceViewed": [
+    "manual board",
+    "manual hero"
+  ],
+  "modeTranslation": "World contributes type, palette, density and one signature only; familiar web note-app navigation and controls.",
+  "verdicts": [
+    {
+      "catalogId": "rw-manual-acetate-tab-board",
+      "verdict": "competitive",
+      "case": "Gần việc tra cứu và học; product clarity ngang ma trận, audience identification nhỉnh hơn.",
+      "kept": null
+    },
+    {
+      "catalogId": "operate-b-exposure-record-zone-sheets",
+      "verdict": "declined",
+      "case": "Không gần công việc TS; các ký hiệu phơi sáng làm trạng thái khó đọc.",
+      "kept": "Giữ kỷ luật trạng thái, không lấy hatch/kính mờ."
+    },
+    {
+      "catalogId": "notation-diagram-systems-labanotation",
+      "verdict": "declined",
+      "case": "Ký pháp không có cơ sở quen thuộc; không làm nhiệm vụ rõ hơn.",
+      "kept": "Giữ sự tương ứng giữa đoạn và nguồn chọn."
+    },
+    {
+      "catalogId": "crouwel-grid-specimen",
+      "verdict": "declined",
+      "case": "Khó gần nghề hơn và không tăng rõ ràng so ma trận.",
+      "kept": "Giữ căn hàng chính xác, không grid trang trí."
+    },
+    {
+      "catalogId": "digital-design-canon-monochrome-product-marketing",
+      "verdict": "declined",
+      "case": "Bỏ bố cục marketing thì còn neutral UI quen thuộc, không thắng cả hai trục.",
+      "kept": "Giữ lời nói có nguồn, không mang campaign vào app."
+    },
+    {
+      "catalogId": "vernacular-ephemera-boarding-pass-and-gate-board",
+      "verdict": "declined",
+      "case": "Ẩn dụ du lịch không giúp hiểu brain; thứ tự giờ không phù hợp mọi note.",
+      "kept": "Giữ danh tính và focus khi sắp xếp lại."
+    }
+  ]
+}
